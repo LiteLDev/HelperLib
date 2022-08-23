@@ -8,14 +8,8 @@
 /// <reference path="DataAPI/DataBase.d.ts" />
 
 // GameAPI文件
-/// <reference path="GameAPI/Basic/IntPos.d.ts" />
-/// <reference path="GameAPI/Basic/FloatPos.d.ts" />
-/// <reference path="GameAPI/Basic/DirectionAngle.d.ts" />
-/// <reference path="GameAPI/Basic/mc.d.ts" />
-
-/// <reference path="GameAPI/Block/Block.d.ts" />
-/// <reference path="GameAPI/Block/mc.d.ts" />
-
+/// <reference path="GameAPI/Basic/index.d.ts" />
+/// <reference path="GameAPI/Block/index.d.ts" />
 /// <reference path="GameAPI/BlockEntity.d.ts" />
 /// <reference path="GameAPI/Container.d.ts" />
 /// <reference path="GameAPI/Device.d.ts" />
