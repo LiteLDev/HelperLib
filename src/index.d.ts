@@ -25,7 +25,7 @@
 /// <reference path="GameAPI/ScoreBoard.d.ts" />
 /// <reference path="GameAPI/Server.d.ts" />
 
-//EventAPI 文件
+// EventAPI 文件
 /// <reference path="EventAPI/BlockEvents.d.ts" />
 
 // GuiAPI 文件
