@@ -1,8 +1,6 @@
-import "./DataAPI/ConfigFile"
-import "./DataAPI/DataBase"
-import "./DataAPI/Economy"
-import "./DataAPI/OtherData"
-import "./DataAPI/PlayerData"
-import "./GameAPI/Basic"
-import "./GameAPI/Block"
-import "./NbtAPI/NBTCompound"
+
+
+/// <reference path="DataAPI/OtherData.d.ts" />
+
+
+data.
