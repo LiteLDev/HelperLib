@@ -13,7 +13,9 @@
 /// <reference path="GameAPI/Basic/DirectionAngle.d.ts" />
 /// <reference path="GameAPI/Basic/mc.d.ts" />
 
-/// <reference path="GameAPI/Block.d.ts" />
+/// <reference path="GameAPI/Block/Block.d.ts" />
+/// <reference path="GameAPI/Block/mc.d.ts" />
+
 /// <reference path="GameAPI/BlockEntity.d.ts" />
 /// <reference path="GameAPI/Container.d.ts" />
 /// <reference path="GameAPI/Device.d.ts" />

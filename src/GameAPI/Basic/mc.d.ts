@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/triple-slash-reference */
 /// <reference path="../../index.d.ts" />
-/// <reference path="../../baseTypes.d.ts" />
 
 declare namespace mc {
   /**
@@ -18,12 +17,7 @@ declare namespace mc {
    *
    * @returns 一个整数坐标对象
    */
-  function newIntPos(
-    x: Integer,
-    y: Integer,
-    z: Integer,
-    dimId: Integer
-  ): IntPos;
+  function newIntPos(x: number, y: number, z: number, dimId: 0 | 1 | 2): IntPos;
 
   /**
    * ### 生成一个浮点数坐标对象
@@ -40,5 +34,10 @@ declare namespace mc {
    *
    * @returns 一个浮点数坐标对象
    */
-  function newFloatPos(x: Float, y: Float, z: Float, dimId: Integer): FloatPos;
+  function newFloatPos(
+    x: number,
+    y: number,
+    z: number,
+    dimId: 0 | 1 | 2
+  ): FloatPos;
 }
