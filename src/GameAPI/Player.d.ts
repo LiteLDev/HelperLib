@@ -302,11 +302,7 @@ declare class Player extends Entity {
    * @param sortOrder （可选参数）侧边栏内容的排序顺序。`0`为按分数升序，`1`为按分数降序。默认值为`1`
    * @returns boolean 是否成功设置
    */
-  setSidebar(
-    title: string,
-    data: Object,
-    sortOrder?: sidebar | 0 | 1
-  ): boolean;
+  setSidebar(title: string, data: Object, sortOrder?: sidebar | 0 | 1): boolean;
 
   /**
    * 移除玩家自定义侧边栏
@@ -397,10 +393,10 @@ declare class Player extends Entity {
 
   /**
    * 获取玩家计分项的分数（方便函数）
-   * @param name 计分项名称 
+   * @param name 计分项名称
    * @returns number 计分板上的数值
    */
-  getScore(name:string):number;
+  getScore(name: string): number;
 
   /**
    * 修改玩家计分项的分数（方便函数）
@@ -408,7 +404,7 @@ declare class Player extends Entity {
    * @param value 要设置的数值
    * @returns boolean 是否设置成功
    */
-  setScore(name:string,value:number):boolean;
+  setScore(name: string, value: number): boolean;
 
   /**
    * 修改玩家计分项的分数（方便函数）
@@ -416,7 +412,7 @@ declare class Player extends Entity {
    * @param value 要增加的数值
    * @returns boolean 是否设置成功
    */
-  addScore(name:string,value:number):boolean;
+  addScore(name: string, value: number): boolean;
 
   /**
    * 修改玩家计分项的分数（方便函数）
@@ -424,14 +420,54 @@ declare class Player extends Entity {
    * @param value 要设减少的数值
    * @returns boolean 是否设置成功
    */
-  reduceScore(name:string,value:number):boolean;
+  reduceScore(name: string, value: number): boolean;
 
   /**
    * 玩家停止跟踪计分项（方便函数）
    * @param name 计分项名称
    * @returns boolean 是否移除成功
    */
-  deleteScore(name:string):boolean;
+  deleteScore(name: string): boolean;
+
+  /**
+   * 向玩家发送模式表单
+   * @param title 表单标题
+   * @param content 表单内容
+   * @param confirmButton 按钮1文本的字符串
+   * @param cancelButton 按钮2文本的字符串
+   * @param callback 玩家点击按钮之后被调用的回调函数。
+   * @returns number|null 发送的表单ID
+   */
+  sendModalForm(
+    title: string,
+    content: string,
+    confirmButton: string,
+    cancelButton: string,
+    callback: (player: Player, result: boolean) => void
+  ): number | null;
+
+  /**
+   * 向玩家发送普通表单
+   * @param title 表单标题
+   * @param content 表单内容
+   * @param buttons 各个按钮文本的字符串数组
+   * @param images 各个按钮对应的图片路径
+   * @param callback 玩家点击按钮之后被调用的回调函数。
+   */
+  sendSimpleForm(
+    title: string,
+    content: string,
+    buttons: Array<string>,
+    images: Array<string>,
+    callback: (player: Player, id: number) => void
+  ): number | null;
+
+  /**
+   * 向玩家发送自定义表单（Json格式）
+   * @param json 自定义表单json字符串
+   * @param callback 玩家提交表单之后被调用的回调函数。
+   */
+  sendCustomForm(json:string,callback:(player:Player,data:Array<any>)=>void):number|null;
 }
 
 declare namespace mc {

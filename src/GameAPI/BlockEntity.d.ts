@@ -25,5 +25,5 @@ declare class BlockEntity{
      * 获取方块实体对应的方块对象
      * @returns block 方块实体对应的方块对象
      */
-    getBlock():block
+    getBlock():Block
 }
