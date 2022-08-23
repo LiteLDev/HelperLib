@@ -8,18 +8,7 @@
 /// <reference path="DataAPI/DataBase.d.ts" />
 
 // GameAPI文件
-/// <reference path="GameAPI/Basic/index.d.ts" />
-/// <reference path="GameAPI/Block/index.d.ts" />
-/// <reference path="GameAPI/BlockEntity.d.ts" />
-/// <reference path="GameAPI/Container.d.ts" />
-/// <reference path="GameAPI/Device.d.ts" />
-/// <reference path="GameAPI/Entity.d.ts" />
-/// <reference path="GameAPI/GameUtils.d.ts" />
-/// <reference path="GameAPI/Player.d.ts" />
-/// <reference path="GameAPI/Item.d.ts" />
-/// <reference path="GameAPI/Packet.d.ts" />
-/// <reference path="GameAPI/ScoreBoard.d.ts" />
-/// <reference path="GameAPI/Server.d.ts" />
+/// <reference path="GameAPI/index.d.ts" />
 
 // EventAPI 文件
 /// <reference path="EventAPI/BlockEvents.d.ts" />

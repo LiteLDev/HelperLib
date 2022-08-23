@@ -6,8 +6,6 @@
  *
  * 在LLSE中，使用「方块对象」来操作和获取某一类方块的相关信息
  *
- * 该类对象属性都是**只读**的，无法被修改
- *
  * 该类**没有构造函数**
  *
  * **注意**：不要**长期保存**一个方块对象\
@@ -50,6 +48,12 @@ declare class Block {
   getNbt(): NbtCompound;
 
   /**
+   * @deprecated
+   * @alias {@linkcode getNbt()}
+   */
+  getTag(): NbtCompound;
+
+  /**
    * ### 写入方块对应的NBT对象
    *
    * 关于NBT对象的更多使用，请参考 [NBT接口文档](https://docs.litebds.com/#/zh_CN/Development/NbtAPI/NBT)
@@ -61,6 +65,12 @@ declare class Block {
    * @returns 是否成功写入
    */
   setNbt(nbt: NbtCompound): boolean;
+
+  /**
+   * @deprecated
+   * @alias {@linkcode setNbt()}
+   */
+  setTag(nbt: NbtCompound): boolean;
 
   /**
    * ### 获取方块的BlockState
@@ -90,7 +100,7 @@ declare class Block {
    * ### 获取方块所拥有的容器对象
    *
    * 如箱子、桶等容器，他们各自拥有一个属于自己的容器对象
-   * 
+   *
    * 关于容器对象的更多使用，请参考 [容器对象 API文档](https://docs.litebds.com/#/zh_CN/Development/GameAPI/Container)
    *
    * @returns 这个方块所拥有的容器对象
@@ -123,4 +133,6 @@ declare class Block {
    * @returns 是否成功删除
    */
   removeBlockEntity(): boolean;
+
+  getRawPtr(): number;
 }
