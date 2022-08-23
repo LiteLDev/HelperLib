@@ -8,6 +8,8 @@
  * 成员均为**浮点数**，多用来表示实体坐标等用无法用整数表示的位置
  *
  * 坐标对象的各个成员都是**可读写**的
+ * 
+ * @see [坐标对象](https://docs.litebds.com/#/zh_CN/Development/GameAPI/Basic?id=%f0%9f%8e%af-%e5%9d%90%e6%a0%87%e5%af%b9%e8%b1%a1)
  */
 declare class FloatPos {
   constructor(x: Float, y: Float, z: Float, dimId: Integer);
@@ -22,7 +24,7 @@ declare class FloatPos {
   z: Float;
 
   /**
-   * 维度文字名
+   * ### 维度文字名
    *
    * 主世界 - `Overworld`\
    * 下界 - `Nether`\
@@ -31,7 +33,7 @@ declare class FloatPos {
   dim: string;
 
   /**
-   * 维度ID
+   * ### 维度ID
    *
    * 主世界 - `0`\
    * 下界 - `1`\

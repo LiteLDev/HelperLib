@@ -4,7 +4,7 @@
 
 declare namespace mc {
   /**
-   * 生成一个整数坐标对象
+   * ### 生成一个整数坐标对象
    *
    * @param x x坐标
    * @param y y坐标
@@ -26,7 +26,7 @@ declare namespace mc {
   ): IntPos;
 
   /**
-   * 生成一个浮点数坐标对象
+   * ### 生成一个浮点数坐标对象
    *
    * @param x x坐标
    * @param y y坐标
