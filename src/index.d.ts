@@ -17,6 +17,14 @@
 /// <reference path="GameAPI/Player.d.ts" />
 /// <reference path="GameAPI/Item.d.ts" />
 /// <reference path="GameAPI/Packet.d.ts" />
+/// <reference path="GameAPI/ScoreBoard.d.ts" />
+/// <reference path="GameAPI/Server.d.ts" />
+
+//EventAPI 文件
+/// <reference path="EventAPI/BlockEvents.d.ts" />
+
+// GuiAPI 文件
+/// <reference path="GuiAPI/Form.d.ts" />
 
 
 //NbtAPI 文件
