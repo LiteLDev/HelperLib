@@ -1,3 +1,3 @@
-export interface Container{
+declare class Container{
     
 }

@@ -1,5 +1,6 @@
 /** 创建或打开一个 Json 配置文件*/
-export interface JsonConfigFile {
+declare class JsonConfigFile {
+  constructor(path:string,_default?:string)
   /**配置文件所在路径，以BDS根目录为基准  
     如果配置文件路径中有目录尚不存在，LLSE会自动创建 */
   path: string;
@@ -72,7 +73,8 @@ export interface JsonConfigFile {
 }
 
 /**创建或打开一个 Ini 配置文件 */
-export interface IniConfigFile {
+declare class IniConfigFile {
+  constructor(path:string,_default?:string);
   /**
     配置文件所在路径，以BDS根目录为基准  
     如果配置文件路径中有目录尚不存在，LLSE会自动创建 */

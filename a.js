@@ -1,4 +1,5 @@
 //LiteLoaderScript Dev Helper
-/// <reference path="./DataAPI/PlayerData.d.ts" />
+/// <reference path="./src/index.d.ts" />
 
+var pl = new Player()
 

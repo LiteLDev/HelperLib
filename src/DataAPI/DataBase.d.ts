@@ -1,5 +1,6 @@
 /**创建 / 打开一个键值对数据库 */
-export interface KVDatabase{
+declare class KVDatabase{
+    constructor(dir:string);
     /**数据库的储存目录路径，以BDS根目录为基准 */
     dir: string
 
@@ -37,7 +38,7 @@ export interface KVDatabase{
     close(): boolean;
 }
 
-export interface DataBase_Params{
+declare class DataBase_Params{
     /**指定数据库所在路径 */
     path:string;
 
@@ -52,7 +53,8 @@ export interface DataBase_Params{
 }
 
 /**打开一个SQL数据库会话 */
-export interface DBSession{
+declare class DBSession{
+    constructor(type:"sqlite3",params:DataBase_Params);
     type: "sqlite3";
     params: DataBase_Params;
 
@@ -99,7 +101,7 @@ export interface DBSession{
 }
 
 /**SQL预准备语句 */
-export interface DBStmt{
+declare class DBStmt{
     /**
      * 绑定参数到一个SQL语句
      * @param val 要绑定的值

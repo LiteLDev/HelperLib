@@ -1,9 +1,6 @@
-import { FloatPos, IntPos } from "./Basic";
-import { NbtCompound } from "../NbtAPI/NBTCompound";
-import { Container } from "./Container";
-import { BlockEntity } from "./BlockEntity";
+/// <reference path="../index.d.ts" />
 
-export interface block {
+declare class Block {
   /**游戏内显示的方块名称 */
   readonly name: string;
 
@@ -83,7 +80,7 @@ declare namespace mc {
    * @param pos 方块所在坐标
    * @returns block|null 方块对象
    */
-  function getBlock(pos: IntPos): block | null;
+  function getBlock(pos: IntPos): Block | null;
 
   /**
    *
@@ -98,7 +95,7 @@ declare namespace mc {
     y: number,
     z: number,
     dimid: 0 | 1 | 2
-  ): block | null;
+  ): Block | null;
 
   /**
    *
@@ -109,7 +106,7 @@ declare namespace mc {
    */
   function setBlock(
     pos: IntPos,
-    block: block | string | NbtCompound,
+    block: Block | string | NbtCompound,
     tiledata: number
   ): boolean;
 
@@ -128,7 +125,7 @@ declare namespace mc {
     y: number,
     z: number,
     dimid: 0 | 1 | 2,
-    block: block | string | NbtCompound,
+    block: Block | string | NbtCompound,
     tiledata: number
   ): boolean;
 

@@ -1,5 +1,5 @@
 /**整数 坐标对象 */
-export interface IntPos {
+declare class IntPos {
   /**x 坐标 */
   x: number;
 
@@ -17,7 +17,7 @@ export interface IntPos {
 }
 
 /**浮点数 坐标对象 */
-export interface FloatPos {
+declare class FloatPos {
   /**x 坐标 */
   x: number;
 
@@ -64,7 +64,7 @@ declare namespace mc {
  * 方向角对象 
  * @tips 由于MC的实体系统不存在 自转 的概念，所以没有翻滚角相关数据
  */
-export interface DirectionAngle{
+ declare class DirectionAngle{
     /**俯仰角（-90° ~ 90°） */
     pitch: number;
 

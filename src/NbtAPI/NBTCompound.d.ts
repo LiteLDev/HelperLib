@@ -1,3 +1,3 @@
-export interface NbtCompound{
+declare class NbtCompound{
     
 }

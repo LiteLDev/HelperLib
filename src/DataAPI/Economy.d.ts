@@ -1,4 +1,6 @@
-export interface record {
+/* eslint-disable @typescript-eslint/triple-slash-reference */
+
+declare class record {
   /**此项交易的发起者玩家Xuid */
   from: string;
   /**此项交易的接收者玩家Xuid */

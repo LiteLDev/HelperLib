@@ -1,9 +1,7 @@
-import { NbtCompound } from "../NbtAPI/NBTCompound"
-import { IntPos } from "./Basic"
-import { block } from "./Block";
+/// <reference path="../index.d.ts" />
 
 
-export interface BlockEntity{
+declare class BlockEntity{
     /**方块实体对应方块所在的坐标*/
     readonly pos:IntPos
 
