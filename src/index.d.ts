@@ -1,13 +1,18 @@
+/* eslint-disable @typescript-eslint/triple-slash-reference */
 
-//Data数据文件
+// Data数据文件
 /// <reference path="DataAPI/OtherData.d.ts" />
 /// <reference path="DataAPI/PlayerData.d.ts" />
 /// <reference path="DataAPI/Economy.d.ts" />
 /// <reference path="DataAPI/ConfigFile.d.ts" />
 /// <reference path="DataAPI/DataBase.d.ts" />
 
-//GameAPI文件
-/// <reference path="GameAPI/Basic.d.ts" />
+// GameAPI文件
+/// <reference path="GameAPI/Basic/IntPos.d.ts" />
+/// <reference path="GameAPI/Basic/FloatPos.d.ts" />
+/// <reference path="GameAPI/Basic/DirectionAngle.d.ts" />
+/// <reference path="GameAPI/Basic/mc.d.ts" />
+
 /// <reference path="GameAPI/Block.d.ts" />
 /// <reference path="GameAPI/BlockEntity.d.ts" />
 /// <reference path="GameAPI/Container.d.ts" />
@@ -19,7 +24,7 @@
 /// <reference path="GameAPI/Packet.d.ts" />
 
 
-//NbtAPI 文件
+// NbtAPI 文件
 /// <reference path="NbtAPI/NBTCompound.d.ts" />
 
-//个体文件
+// 个体文件
