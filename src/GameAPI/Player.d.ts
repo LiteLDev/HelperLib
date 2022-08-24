@@ -500,7 +500,7 @@ declare namespace mc {
    * @param type （可选参数）发送的文本消息类型，默认为0
    * @returns boolean 是否成功发送
    */
-  function BroadcastChannel(msg: string, type?: sendTextType | number): boolean;
+  function Broadcast(msg: string, type?: sendTextType | number): boolean;
 
   /**
    * 创建一个模拟玩家
