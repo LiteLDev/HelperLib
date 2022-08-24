@@ -467,7 +467,30 @@ declare class Player extends Entity {
    * @param json 自定义表单json字符串
    * @param callback 玩家提交表单之后被调用的回调函数。
    */
-  sendCustomForm(json:string,callback:(player:Player,data:Array<any>)=>void):number|null;
+  sendCustomForm(
+    json: string,
+    callback: (player: Player, data: Array<any>) => void
+  ): number | null;
+
+  /**
+   * 发送表单
+   * @param fm 配置好的表单对象
+   * @param callback 玩家与表单元素互动之后被调用的回调函数。
+   */
+  sendForm(
+    fm: SimpleForm,
+    callback: (player: Player, id: Integer) => void
+  ): Integer | null;
+
+  /**
+   * 发送表单
+   * @param fm 配置好的表单对象
+   * @param callback 玩家与表单元素互动之后被调用的回调函数。
+   */
+  sendForm(
+    fm: CustomForm,
+    callback: (player: Player, data: Array<any>) => void
+  ): Integer | null;
 }
 
 declare namespace mc {

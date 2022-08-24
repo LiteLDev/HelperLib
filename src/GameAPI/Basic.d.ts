@@ -61,19 +61,19 @@ declare namespace mc {
 }
 
 /**
- * 方向角对象 
+ * 方向角对象
  * @tips 由于MC的实体系统不存在 自转 的概念，所以没有翻滚角相关数据
  */
- declare class DirectionAngle{
-    /**俯仰角（-90° ~ 90°） */
-    pitch: number;
+declare class DirectionAngle {
+  /**俯仰角（-90° ~ 90°） */
+  pitch: number;
 
-    /**偏航角（旋转角） */
-    yaw:number;
+  /**偏航角（旋转角） */
+  yaw: number;
 
-    /**
-     * 将偏航角转换为基本朝向
-     * @returns 0代表北 1代表东 2代表南 3代表西
-     */
-    toFacing():0|1|2|3
+  /**
+   * 将偏航角转换为基本朝向
+   * @returns 0代表北 1代表东 2代表南 3代表西
+   */
+  toFacing(): 0 | 1 | 2 | 3;
 }
