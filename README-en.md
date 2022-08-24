@@ -8,20 +8,21 @@
 
 ## 🔧 Use
 
-### Use with the VSCode plugin `LLScriptHelper`
-
-Put all the files & folders in the `src` folder of this repository into the `JS` folder of the LLScriptHelper plugin's fixed location of the complementary repository
-
-### Separate use
-
-Please add a comment at the top of the plugin file you write
+### Standalone use (not recommended)
+1. Download this repository and unzip it to a convenient place
+2. Add a comment line at the top of the plugin file you write
 
 ```js
 /// <reference path="[root path of this repository]/src/index.d.ts" />
 ```
+### ⭐ Use with VSCode plugin `LLScriptHelper2.0` (recommended) ⭐
+
+1. Download `LLScriptHelper2.0` from `Visual Studio Code`.
+2. Follow the guide to download the `completion library`.
+3. Type `.lls` before you start writing the plugin to add the complement library introduction
 
 ## 🏆 Contribution
 
 - Thanks to [HuoHuas001](https://github.com/HuoHuas001) for the main conversion from documentation
-- Thanks to [moxidev](https://github.com/moxidev) for his help
+- Thanks to [moxidev](https://github.com/moxidev) for help
 - Thanks to [lgc233](https://github.com/lgc2333) for their contribution
