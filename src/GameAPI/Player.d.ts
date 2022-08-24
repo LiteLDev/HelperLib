@@ -528,6 +528,19 @@ declare namespace mc {
     z: number,
     dimid: 0 | 1 | 2
   ): SimulatedPlayer | null;
+
+  /**
+   * 从现有玩家获取
+   * @param info 玩家的名字或者Xuid
+   * @returns Player 生成的玩家对象
+   */
+  function getPlayer(info:string):Player;
+
+  /**
+   * 获取所有在线玩家
+   * @returns Array<Player> 玩家对象的数组
+   */
+  function getOnlinePlayers():Array<Player>;
 }
 
 declare enum sidebar {

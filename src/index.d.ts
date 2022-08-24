@@ -16,6 +16,7 @@
 /// <reference path="GameAPI/Block/index.d.ts" />
 /// <reference path="GameAPI/BlockEntity/index.d.ts" />
 /// <reference path="GameAPI/Container.d.ts" />
+/// <reference path="GameAPI/Command.d.ts" />
 /// <reference path="GameAPI/Device.d.ts" />
 /// <reference path="GameAPI/Entity.d.ts" />
 /// <reference path="GameAPI/GameUtils.d.ts" />

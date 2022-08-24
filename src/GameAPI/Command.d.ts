@@ -11,9 +11,33 @@ declare enum PermType {
   Console,
 }
 
-declare enum ParamType {}
+declare enum ParamType {
+  
+  Bool,     /**布尔值参数 */
+  Int,      /**整数参数 */
+  Float,    /**浮点数参数 */
+  String,   /** 字符串参数*/
+  Actor,    /** 实体目标选择器参数*/
+  Player,   /** 玩家目标选择器参数*/
+  BlockPos, /** 整数坐标参数*/
+  Vec3,     /** 浮点数坐标参数*/
+  RawText,  /** 原始字符串参数（可包含特殊字符，如逗号空格*/
+  Message,  /** 消息类型参数（同 `/say,指令参数，会自动展开目标选择器等） */
+  JsonValue,/** `Json`字符串参数*/
+  Item,     /** 物品类型参数*/
+  Block,    /** 方块类型参数*/
+  Effect,   /** 效果类型参数*/
+  Enum,     /** 枚举参数*/
+  SoftEnum, /** 可变枚举参数*/
+  ActorType,/** 实体类型参数*/
+  Command,  /** 指令名称参数（仅供测试）*/
+}
 
-declare class orgin {
+declare enum OriginType{
+  
+}
+
+declare class CommandOrigin {
   //指令执行主体类型
   type: unknown;
 
@@ -33,7 +57,7 @@ declare class orgin {
   player: Player | null;
 }
 
-declare class output {
+declare class CommandOutput {
   /**
    * 输出一条成功信息
    * @param msg 要输出的信息
@@ -121,8 +145,8 @@ declare class Command {
   setCallback(
     callback: (
       cmd: string,
-      origin: orgin,
-      output: output,
+      origin: CommandOrigin,
+      output: CommandOutput,
       result: Object
     ) => void
   ): boolean;
