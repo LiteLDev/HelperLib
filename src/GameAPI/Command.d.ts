@@ -11,6 +11,7 @@ declare enum PermType {
   Console,
 }
 
+
 declare enum ParamType {
   
   Bool,     /**布尔值参数 */
@@ -34,7 +35,7 @@ declare enum ParamType {
 }
 
 declare enum OriginType{
-  
+
 }
 
 declare class CommandOrigin {
