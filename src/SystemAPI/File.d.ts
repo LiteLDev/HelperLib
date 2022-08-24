@@ -28,7 +28,7 @@ export declare class File {
    * @param path 目标文件的路径，相对路径以BDS根目录为基准
    * @returns string 文件的所有数据
    */
-  static readForm(path: string): string | null;
+  static readFrom(path: string): string | null;
 
   /**
    * 向指定文件写入内容

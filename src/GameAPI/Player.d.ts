@@ -491,6 +491,12 @@ declare class Player extends Entity {
     fm: CustomForm,
     callback: (player: Player, data: Array<any>) => void
   ): Integer | null;
+
+  /**
+   * 函数已弃用
+   * @deprecated 函数已弃用 请使用 getInventory()
+   */
+  getContainer():void;
 }
 
 declare namespace mc {

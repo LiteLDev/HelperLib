@@ -118,7 +118,8 @@ declare class Entity {
   hasContainer(): boolean;
 
   /**
-   * 获取生物所拥有的容器对象（盔甲栏除外）
+   * 获取生物所拥有的容器对象（盔甲栏除外）（仅用于`Entity`）
+   * @warn Player获取背包请使用 `getInventory()`
    * @returns Container 这个生物实体所拥有的容器对象
    */
   getContainer(): Container;
