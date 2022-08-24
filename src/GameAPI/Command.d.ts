@@ -11,7 +11,26 @@ declare enum PermType {
   Console,
 }
 
-declare enum ParamType {}
+declare enum ParamType{
+    /**布尔值参数*/Bool,
+    /**整数参数*/Int,
+    /**浮点数参数*/Float,
+    /**字符串参数*/String,
+    /**实体目标选择器参数*/Actor,
+    /**玩家目标选择器参数*/Player,
+    /**整数坐标参数*/BlockPos,
+    /**浮点数坐标参数*/Vec3,
+    /**原始字符串参数（可包含特殊字符，如逗号空格）*/RawText,
+    /**消息类型参数（同 /say 指令参数，会自动展开目标选择器等）*/Message,
+    /**Json字符串参数*/JsonValue,
+    /**物品类型参数*/Item,
+    /**方块类型参数*/Block,
+    /**效果类型参数*/Effect,
+    /**枚举参数*/Enum,
+    /**可变枚举参数*/SoftEnum,
+    /**实体类型参数*/ActorType,
+    /**指令名称参数（仅供测试）*/Command
+}
 
 declare class orgin {
   //指令执行主体类型
