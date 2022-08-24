@@ -13,8 +13,8 @@
 /// <reference path="GameAPI/Basic/DirectionAngle.d.ts" />
 /// <reference path="GameAPI/Basic/mc.d.ts" />
 
-/// <reference path="GameAPI/Block.d.ts" />
-/// <reference path="GameAPI/BlockEntity.d.ts" />
+/// <reference path="GameAPI/Block/index.d.ts" />
+/// <reference path="GameAPI/BlockEntity/index.d.ts" />
 /// <reference path="GameAPI/Container.d.ts" />
 /// <reference path="GameAPI/Device.d.ts" />
 /// <reference path="GameAPI/Entity.d.ts" />
@@ -52,6 +52,12 @@
 //SystemAPI 文件
 /// <reference path="SystemAPI/File.d.ts" />
 /// <reference path="SystemAPI/Network.d.ts" />
+/// <reference path="SystemAPI/SystemCall.d.ts" />
+
+// NativeAPI文件
+/// <reference path="NativeAPI/NativeFunction.d.ts" />
+/// <reference path="NativeAPI/NativePointer.d.ts" />
+/// <reference path="NativeAPI/NativePatch.d.ts" />
 
 // 个体文件
 /// <reference path="baseTypes.d.ts" />
