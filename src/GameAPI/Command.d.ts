@@ -136,7 +136,7 @@ declare class Command {
    * @param params 参数标识符，重载所用到的参数列表，可用 参数标识符、枚举名、参数名。
    * @returns boolean  是否成功设置
    */
-  overload(params: Array<string>): boolean;
+  overload(params?: Array<string>): boolean;
 
   /**
    * 设置指令回调
