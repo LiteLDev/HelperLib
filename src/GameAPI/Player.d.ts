@@ -473,7 +473,7 @@ declare class Player extends Entity {
   ): number | null;
 
   /**
-   * 发送表单
+   * 发送SimpleForm表单
    * @param fm 配置好的表单对象
    * @param callback 玩家与表单元素互动之后被调用的回调函数。
    */
@@ -483,7 +483,7 @@ declare class Player extends Entity {
   ): Integer | null;
 
   /**
-   * 发送表单
+   * 发送CustomForm表单
    * @param fm 配置好的表单对象
    * @param callback 玩家与表单元素互动之后被调用的回调函数。
    */
@@ -496,7 +496,7 @@ declare class Player extends Entity {
    * 函数已弃用
    * @deprecated 函数已弃用 请使用 getInventory()
    */
-  getContainer():void;
+  getContainer():Container;
 }
 
 declare namespace mc {
@@ -506,7 +506,7 @@ declare namespace mc {
    * @param type （可选参数）发送的文本消息类型，默认为0
    * @returns boolean 是否成功发送
    */
-  function Broadcast(msg: string, type?: sendTextType | number): boolean;
+  function broadcast(msg: string, type?: sendTextType | number): boolean;
 
   /**
    * 创建一个模拟玩家
