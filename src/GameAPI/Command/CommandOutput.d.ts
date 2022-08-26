@@ -17,23 +17,29 @@ declare class CommandOutput {
   readonly successCount: number;
 
   /**
-   * 输出一条成功信息
+   * ### 输出一条成功信息
+   * 
    * @param msg 要输出的信息
-   * @returns boolean 是否成功输出
+   * 
+   * @returns 是否成功输出
    */
   success(msg: string): boolean;
 
   /**
-   * 输出一条错误信息
+   * ### 输出一条错误信息
+   * 
    * @param msg 要输出的信息
-   * @returns boolean 是否成功输出
+   * 
+   * @returns 是否成功输出
    */
   error(msg: string): boolean;
 
   /**
-   * 输出一条普通信息
+   * ### 输出一条普通信息
+   * 
    * @param msg 要输出的信息
-   * @returns boolean 是否成功输出
+   * 
+   * @returns 是否成功输出
    */
   addMessage(msg: string): boolean;
 
