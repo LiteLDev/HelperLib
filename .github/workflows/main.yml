@@ -14,12 +14,5 @@ jobs:
       - run: mv src.zip out
       - run: ls out
       
-      - name: Git Commit and Push
-        uses: github-actions-x/commit@v2.9
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: master
-          files: out/src.zip
-          commit-message: "auto-release"
-          force-add: true
-          force-push: true
+      - name: Push new files back to master.
+        uses: mikeal/publish-to-github-action@1.0.0
