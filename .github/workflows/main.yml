@@ -11,8 +11,8 @@ jobs:
         with:
           args: zip -qq -r src.zip . -i *
       - run: mkdir out
-      - run: ls out
       - run: mv src.zip out
+      - run: ls out
       
       - name: Git Commit and Push
         uses: github-actions-x/commit@v2.9
@@ -20,6 +20,6 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: master
           files: out
-          commit-message: "auto-rele"
+          commit-message: "auto-release"
           force-add: true
           force-push: true
