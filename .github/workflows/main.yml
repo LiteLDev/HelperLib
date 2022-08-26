@@ -10,7 +10,6 @@ jobs:
       - uses: montudor/action-zip@v1
         with:
           args: zip -qq -r src.zip . -i *
-      - run: mkdir out
       - run: mv src.zip out
       - run: ls out
       
