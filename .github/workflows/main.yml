@@ -9,9 +9,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: montudor/action-zip@v1
         with:
-          args: zip -qq -r src.zip *
-      - run: mv src.zip out
+          args: zip -qq -r src.zip . -i *
       - run: ls
+      - run: mv src.zip out
       
       - name: Git Commit and Push
         uses: github-actions-x/commit@v2.9
