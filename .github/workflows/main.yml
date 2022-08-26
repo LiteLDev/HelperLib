@@ -10,7 +10,8 @@ jobs:
       - uses: montudor/action-zip@v1
         with:
           args: zip -qq -r src.zip . -i *
-      - run: ls
+      - run: mkdir out
+      - run: ls out
       - run: mv src.zip out
       
       - name: Git Commit and Push
@@ -18,6 +19,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: master
+          files: out
           commit-message: "auto-rele"
           force-add: true
           force-push: true
