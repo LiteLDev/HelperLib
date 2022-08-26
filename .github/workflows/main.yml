@@ -19,7 +19,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: master
-          files: out
+          files: out/src.zip
           commit-message: "auto-release"
           force-add: true
           force-push: true
