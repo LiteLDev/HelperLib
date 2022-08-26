@@ -25,4 +25,4 @@
 
 - Thanks to [HuoHuas001](https://github.com/HuoHuas001) for the main conversion from documentation
 - Thanks to [moxidev](https://github.com/moxidev) for help
-- Thanks to [lgc233](https://github.com/lgc2333) for their contribution
+- Thanks to [lgc2333](https://github.com/lgc2333) for their contribution
