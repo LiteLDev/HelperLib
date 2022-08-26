@@ -5,7 +5,7 @@
         "javascript": {
             "version": "1.0.0",
             "index": ".*/src/index.d.ts",
-            "download_url": "https://cdn.jsdelivr.net/gh/LiteLScript-Dev/HelperLib@1.0.0/out/src.zip"
+            "download_url": "https://cdn.jsdelivr.net/gh/LiteLScript-Dev/HelperLib@1.0.0b/out/src.zip"
         },
         "lua":null
     }
