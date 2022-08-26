@@ -1,0 +1,12 @@
+{
+    "name": "Official library By Jsdelivr",
+    "source": "https://github.com/LiteLScript-Dev/HelperLib",
+    "library":{
+        "javascript": {
+            "version": "1.0.0",
+            "index": ".*/src/index.d.ts",
+            "download_url": "https://cdn.jsdelivr.net/gh/LiteLScript-Dev/HelperLib@master/out/src.zip"
+        },
+        "lua":null
+    }
+}
