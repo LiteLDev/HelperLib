@@ -1,11 +1,11 @@
 {
-    "name": "Official library By Jsdelivr",
+    "name": "Official library By FastGit",
     "source": "https://github.com/LiteLScript-Dev/HelperLib",
     "library":{
         "javascript": {
             "version": "1.0.0",
             "index": ".*/src/index.d.ts",
-            "download_url": "https://cdn.jsdelivr.net/gh/LiteLScript-Dev/HelperLib@1.0.0b/out/src.zip"
+            "download_url": "https://hub.fastgit.xyz/LiteLScript-Dev/HelperLib/archive/refs/heads/master.zip"
         },
         "lua":null
     }
