@@ -6,6 +6,7 @@
 /// <reference path="DataAPI/Economy.d.ts" />
 /// <reference path="DataAPI/ConfigFile.d.ts" />
 /// <reference path="DataAPI/DataBase.d.ts" />
+/// <reference path="DataAPI/PermAPI.d.ts" />
 
 // GameAPI文件
 /// <reference path="GameAPI/Basic/index.d.ts" />
@@ -39,6 +40,7 @@
 /// <reference path="ScriptAPI/Li.d.ts" />
 /// <reference path="ScriptAPI/Logger.d.ts" />
 /// <reference path="ScriptAPI/ScriptHelper.d.ts" />
+/// <reference path="ScriptAPI/i18n.d.ts" />
 
 // NbtAPI 文件
 /// <reference path="NbtAPI/NBT.d.ts" />
