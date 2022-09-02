@@ -26,3 +26,4 @@
 - 感谢[HuoHuas001](https://github.com/HuoHuas001)的主要从文档转换
 - 感谢[moxidev](https://github.com/moxidev)的帮助
 - 感谢[lgc2333](https://github.com/lgc2333)的贡献
+- 感谢[harry-xi](https://github.com/harry-xi)的贡献
