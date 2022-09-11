@@ -1,7 +1,7 @@
 /// <reference path="../../index.d.ts" />
 
 /**
- * ### 方块对象
+ * ### 📦 方块对象
  *
  * 在LLSE中，使用「方块对象」来操作和获取某一类方块的相关信息
  *
@@ -11,7 +11,7 @@
  * 当方块对象对应的方块被销毁时，对应的方块对象将变得无效。\
  * 因此，如果有长期操作某个方块的需要，请通过**事件提供的参数**或者**使用**{@linkcode mc.getBlock()}获取实时的方块对象
  *
- * @see [方块对象](https://docs.litebds.com/#/zh_CN/Development/GameAPI/Block)
+ * @see [📦 方块对象](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Block)
  */
 declare class Block {
   /** 游戏内显示的方块名称（例：`Stone`） */
@@ -133,5 +133,5 @@ declare class Block {
    */
   removeBlockEntity(): boolean;
 
-  getRawPtr(): number;
+  asPointer(): NativePointer;
 }

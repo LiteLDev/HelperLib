@@ -1,7 +1,7 @@
 /// <reference path="../../index.d.ts" />
 
 /**
- * ### 指令对象
+ * ### 🎯 指令对象
  *
  * 通过对接 BDS 内置的命令系统，你注册的命令可以由玩家、控制台、命令方块、NPC等各种游戏中可以执行命令的对象所使用，\
  * 在 addon 中，也可以使用这里所注册的命令。
@@ -10,7 +10,7 @@
  *
  * 该类**没有构造函数**，请使用{@linkcode mc.newCommand()}创建
  *
- * @see [命令注册API](https://docs.litebds.com/#/zh_CN/Development/GameAPI/Command?id=%e5%91%bd%e4%bb%a4%e6%b3%a8%e5%86%8c-api)
+ * @see [🎯 命令注册API](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Command)
  */
 declare class Command {
   readonly name: string;

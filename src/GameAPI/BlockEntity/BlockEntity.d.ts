@@ -47,5 +47,5 @@ declare class BlockEntity {
    */
   getBlock(): Block;
 
-  getRawPtr(): number;
+  asPointer(): NativePointer;
 }

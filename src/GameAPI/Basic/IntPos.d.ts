@@ -1,11 +1,11 @@
 /// <reference path="../../index.d.ts" />
 
 /**
- * ### 整数 坐标对象
+ * ### 🎯 整数 坐标对象
  *
  * x y z坐标均为**整数**，多用来表示方块坐标等用整数表示的位置
  *
- * @see [坐标对象](https://docs.litebds.com/#/zh_CN/Development/GameAPI/Basic?id=%f0%9f%8e%af-%e5%9d%90%e6%a0%87%e5%af%b9%e8%b1%a1)
+ * @see [🎯 坐标对象](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Basic?id=%f0%9f%8e%af-%e5%9d%90%e6%a0%87%e5%af%b9%e8%b1%a1)
  */
 declare class IntPos {
   /**
