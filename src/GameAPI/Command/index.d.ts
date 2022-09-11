@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/triple-slash-reference */
-
 /// <reference path="./Command.d.ts" />
 /// <reference path="./CommandOrigin.d.ts" />
 /// <reference path="./CommandOutput.d.ts" />
