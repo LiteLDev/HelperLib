@@ -111,7 +111,7 @@ declare class Command {
    */
   setCallback(
     callback: (
-      cmd: string,
+      cmd: Command,
       origin: CommandOrigin,
       output: CommandOutput,
       result: object
