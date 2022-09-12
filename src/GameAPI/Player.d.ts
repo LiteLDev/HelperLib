@@ -134,7 +134,7 @@ declare class Player extends Entity {
    * 获取玩家对应的设备信息对象
    * @returns Device 玩家对应的设备信息对象
    */
-  getDevice(): device;
+  getDevice(): Device;
 
   /**
    * 获取玩家主手中的物品对象
