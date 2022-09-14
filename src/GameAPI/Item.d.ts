@@ -83,7 +83,7 @@ declare namespace mc {
    * @param x x坐标
    * @param y y坐标
    * @param z z坐标
-   * @param dimid 维度Id
+   * @param dimId 维度Id
    * @returns Entity|null 生成的掉落物实体对象
    */
   function spawnItem(
@@ -91,7 +91,7 @@ declare namespace mc {
     x: number,
     y: number,
     z: number,
-    dimid: 0 | 1 | 2
+    dimId: 0 | 1 | 2
   ): Entity | null;
 
   /**

@@ -40,7 +40,7 @@ declare namespace mc {
   /**玩家切换维度*/
   function listen(
     event: "onChangeDim",
-    listener: (player: Player, dimid: 0 | 1 | 2) => void
+    listener: (player: Player, dimId: 0 | 1 | 2) => void
   ): boolean;
 
   /**玩家跳跃*/

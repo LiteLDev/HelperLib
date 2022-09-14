@@ -525,14 +525,14 @@ declare namespace mc {
    * @param x x坐标
    * @param y y坐标
    * @param z z坐标
-   * @param dimid 维度Id
+   * @param dimId 维度Id
    */
   function spawnSimulatedPlayer(
     name: string,
     x: number,
     y: number,
     z: number,
-    dimid: 0 | 1 | 2
+    dimId: 0 | 1 | 2
   ): SimulatedPlayer | null;
 
   /**
