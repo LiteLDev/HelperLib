@@ -192,7 +192,7 @@ declare class Entity {
   // setScale(scale: number): boolean;
 
   /**
-   * #d# 获取实体到指定坐标的距离
+   * ### 获取实体到指定坐标的距离
    *
    * @param pos 目标位置
    *
@@ -236,7 +236,7 @@ declare class Entity {
   toItem(): Item | null;
 
   /**
-   * ##d 获取实体当前站立所在的方块
+   * ### 获取实体当前站立所在的方块
    *
    * @returns 当前站立在的方块对象
    */
@@ -363,7 +363,7 @@ declare class Entity {
   ): Block | null;
 
   /**
-   * ##d 快速执行Molang表达式
+   * ### 快速执行Molang表达式
    *
    * 关于Molang的详细使用方法，请参考 [MOLANG文档 bedrock.dev](https://bedrock.dev/zh/docs/stable/Molang)
    *
