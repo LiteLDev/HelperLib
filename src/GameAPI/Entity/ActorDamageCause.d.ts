@@ -3,7 +3,7 @@
 /**
  * @see {@linkcode Entity.hurt()}
  * @see [对实体造成伤害](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Entity?id=%e5%af%b9%e5%ae%9e%e4%bd%93%e9%80%a0%e6%88%90%e4%bc%a4%e5%ae%b3)
- * @aee [LiteLoaderBDS/ScriptEngine/API/EntityAPI.cpp](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/ScriptEngine/API/EntityAPI.cpp#L93)
+ * @see [LiteLoaderBDS/ScriptEngine/API/EntityAPI.cpp](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/ScriptEngine/API/EntityAPI.cpp#L93)
  */
 declare class ActorDamageCause {
   readonly Override = 0;
