@@ -4,16 +4,18 @@
     "library": [
         {
             "type": "js",
-            "name": "JavaScript DTS [zh-chs]",
+            "name": "JavaScript DTS",
             "version": "1.0.0",
             "index": ".*/src/index.d.ts",
+            "language":"zh-hans",
             "download_url": "https://github.com/LiteLScript-Dev/HelperLib/archive/refs/heads/master.zip"
         },
         {
             "type": "js",
-            "name": "JavaScript DTS [zh-hans]",
+            "name": "JavaScript DTS",
             "version": "1.0.1",
             "index": ".*/src/index.d.ts",
+            "language": "zh-hant",
             "download_url": "https://github.com/LiteLScript-Dev/HelperLib/archive/refs/heads/master.zip"
         }
     ]
