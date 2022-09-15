@@ -1,0 +1,20 @@
+{
+    "name": "Official Library Based On Github",
+    "source": "https://github.com/LiteLScript-Dev/HelperLib",
+    "library": [
+        {
+            "type": "js",
+            "name": "JavaScript DTS [zh-chs]",
+            "version": "1.0.0",
+            "index": ".*/src/index.d.ts",
+            "download_url": "https://github.com/LiteLScript-Dev/HelperLib/archive/refs/heads/master.zip"
+        },
+        {
+            "type": "js",
+            "name": "JavaScript DTS [zh-hans]",
+            "version": "1.0.1",
+            "index": ".*/src/index.d.ts",
+            "download_url": "https://github.com/LiteLScript-Dev/HelperLib/archive/refs/heads/master.zip"
+        }
+    ]
+}
