@@ -3,7 +3,7 @@
     "source": "https://github.com/LiteLScript-Dev/HelperLib",
     "library": [
         {
-            "type": "js",
+            "type": "dts",
             "name": "JavaScript DTS",
             "version": "1.0.0",
             "index": ".*/src/index.d.ts",
@@ -11,7 +11,7 @@
             "download_url": "https://github.com/LiteLScript-Dev/HelperLib/archive/refs/heads/master.zip"
         },
         {
-            "type": "js",
+            "type": "dts",
             "name": "JavaScript DTS",
             "version": "1.0.1",
             "index": ".*/src/index.d.ts",
