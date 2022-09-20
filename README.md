@@ -8,6 +8,12 @@
 
 ## 🔧 使用
 
+### ⭐搭配 VSCode 插件 [`LiteLoaderSE-Aids`](https://github.com/LiteLScript-Dev/LiteLoaderSE-Aids) 使用（推荐）⭐
+
+1. 从`Visual Studio Code`扩展商店下载[`LiteLoaderSE-Aids`](https://marketplace.visualstudio.com/items?itemName=moxicat.LLScriptHelper)
+2. 根据引导提示下载`补全库`
+3. 在开始写插件之前输入`lls`即可添加补全库引入
+
 ### 单独使用（不推荐）
 1. 下载本仓库并解压到一个方便的地方
 2. 请在你编写的插件文件最顶上添加一行注释
@@ -15,11 +21,6 @@
 ```js
 /// <reference path="[本仓库根目录路径]/src/index.d.ts" />
 ```
-### ⭐搭配 VSCode 插件 `LLScriptHelper2.0` 使用（推荐）⭐
-
-1. 从`Visual Studio Code`下载`LLScriptHelper2.0`
-2. 根据引导提示下载`补全库`
-3. 在开始写插件之前输入`.lls`即可添加补全库引入
 
 ## 🏆 贡献
 
