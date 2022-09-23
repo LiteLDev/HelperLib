@@ -72,4 +72,6 @@ declare class Device {
 
   /** 玩家客户端的识别码ID */
   readonly clientId: string;
+
+  readonly inputMode: 0 | 1 | 2
 }

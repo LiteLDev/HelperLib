@@ -374,4 +374,11 @@ declare class Entity {
   quickEvalMolangScript(str: string): number;
 
   asPointer(): NativePointer | null;
+
+  /**
+   * 缩放实体
+   * @param scale 新的玩家实体 (整数)
+   * @returns boolean 是否缩放成功
+   */
+  setScale(scale:number): boolean
 }

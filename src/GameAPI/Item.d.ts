@@ -66,6 +66,13 @@ declare class Item {
    * @returns boolean 是否设置成功
    */
   setLore(names: Array<string>): boolean;
+
+  /**
+   * 设置自定义物品名称
+   * @param name 新物品名称
+   * @returns 是否成功
+   */
+  setDisplayName(name:string): boolean
 }
 
 declare namespace mc {

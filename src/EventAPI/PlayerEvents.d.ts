@@ -212,4 +212,10 @@ declare namespace mc {
     event: "onBedEnter",
     listener: (player: Player, pos: IntPos) => boolean | void
   ): boolean;
+
+  /**玩家使用桶装东西 */
+  function listen(
+    event: "onUseBucketPlace",
+    listener: (player: Player,item: Item,block: Block | Item,side: 1 | 2 | 3 | 4 | 5 | 6 ,pos: FloatPos) => boolean | void
+    ): boolean;
 }

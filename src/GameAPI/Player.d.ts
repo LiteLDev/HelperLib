@@ -497,6 +497,13 @@ declare class Player extends Entity {
    * @deprecated 函数已弃用 请使用 getInventory()
    */
   getContainer():Container;
+
+  /**
+   * 缩放玩家
+   * @param scale 新的玩家体积 (整数)
+   * @returns boolean 是否缩放成功
+   */
+     setScale(scale:number): boolean
 }
 
 declare namespace mc {
