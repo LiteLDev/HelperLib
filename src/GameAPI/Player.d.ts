@@ -65,6 +65,9 @@ declare class Player extends Entity {
   /**玩家是否正在加载   */
   readonly isLoading: boolean;
 
+  /** 玩家是否移动 */
+  readonly isMoving: boolean;
+
   /**
    * 判断玩家是否为OP
    * @returns boolean 玩家是否为OP
@@ -503,7 +506,32 @@ declare class Player extends Entity {
    * @param scale 新的玩家体积 (整数)
    * @returns boolean 是否缩放成功
    */
-     setScale(scale:number): boolean
+  setScale(scale:number): boolean;
+
+  /**
+   * 设置玩家显示标题
+   * @param content 欲设置标题内容
+   * @param type 设置的标题类型 默认为2
+   * @param fadeInTime 淡入时间，单位为 Tick ，默认为10
+   * @param stayTime 停留时间，单位为 Tick ，默认为70
+   * @param fadeOutTime 淡出时间，单位为 Tick，默认为20
+   * @returns 是否成功发送
+   */
+  setTitle(content:string,type?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 ,fadeInTime?:number,stayTime?:number,fadeOutTime?:number):boolean;
+
+  /**
+   * 熄灭玩家
+   */
+  stopFire():boolean;
+
+  /**
+   * ### 获取玩家到坐标的距离
+   * 
+   * @param pos 目标位置
+   * 
+   * @returns 到坐标的距离(方块)
+   */
+  distanceToPos(pos: IntPos | FloatPos):number;
 }
 
 declare namespace mc {

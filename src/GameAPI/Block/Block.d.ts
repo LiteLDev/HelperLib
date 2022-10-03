@@ -29,6 +29,54 @@ declare class Block {
   /** 方块数据值 */
   readonly tileData: number;
 
+  /** The block variant */
+  readonly variant: number;
+
+  /** 方块透明度 */
+  readonly translucency: number;
+
+  /** 方块厚度 */
+  readonly thickness: number;
+
+  /** 方块是否为空气 */
+  readonly isAir: boolean;
+
+  /** 是否为可弹跳方块 */
+  readonly isBounceBlock: boolean;
+
+  /** 是否为按钮方块 */
+  readonly isButtonBlock: boolean;
+
+  /** 是否为农作物方块 */
+  readonly isCropBlock: boolean;
+
+  /** 是否为门方块 */
+  readonly isDoorBlock: boolean;
+
+  /** 是否为栅栏方块 */
+  readonly isFenceBlock: boolean;
+
+  /** 是否为栅栏门方块 */
+  readonly isFenceGateBlock: boolean;
+
+  /** 是否为细栅栏方块 */
+  readonly isThinFenceBlock: boolean;
+
+  /** 是否为重的方块 */
+  readonly isHeavyBlock: boolean;
+
+  /** 是否为干方块 */
+  readonly isStemBlock: boolean;
+
+  /** 是否为半砖方块 */
+  readonly isSlabBlock: boolean;
+
+  /** 方块是否为不可破坏 */
+  readonly isUnbreakable: boolean;
+
+  /** 方块是否可阻挡水 */
+  readonly isWaterBlockingBlock: boolean;
+
   /**
    * ### 破坏方块
    *

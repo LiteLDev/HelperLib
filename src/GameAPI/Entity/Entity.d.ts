@@ -122,6 +122,12 @@ declare class Entity {
   /** 实体是否生气 */
   readonly isAngry: boolean;
 
+  /** 实体是否为幼体 */
+  readonly isBaby: boolean;
+
+  /** 实体是否移动 */
+  readonly isMoving: boolean;
+
   /**
    * ### 传送实体至指定位置
    *
@@ -376,9 +382,27 @@ declare class Entity {
   asPointer(): NativePointer | null;
 
   /**
-   * 缩放实体
+   * ### 缩放实体
+   * 
    * @param scale 新的玩家实体 (整数)
-   * @returns boolean 是否缩放成功
+   * 
+   * @returns 是否缩放成功
    */
-  setScale(scale:number): boolean
+  setScale(scale:number): boolean;
+
+  /**
+   * ### 熄灭实体
+   * 
+   * @returns 是否熄灭成功
+   */
+  stopFire():boolean;
+
+  /**
+   * ### 获取实体到坐标的距离
+   * 
+   * @param pos 目标位置
+   * 
+   * @returns 到坐标的距离(方块)
+   */
+  distanceToPos(pos: IntPos | FloatPos):number;
 }
