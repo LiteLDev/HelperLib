@@ -21,7 +21,7 @@ export declare class File {
   readonly absolutePath: string;
 
   /**当前文件大小 */
-  readonly size: Integer;
+  readonly size: number;
 
   /**
    * 读入文件的所有内容
@@ -165,7 +165,7 @@ export declare class File {
    * 获取错误码
    * @returns Integer 上一次IO操作产生的错误码
    */
-  errorCode(): Integer;
+  errorCode(): number;
 
   /**
    * 清除错误状态
@@ -231,7 +231,7 @@ export declare class File {
    * @returns Integer 文件的大小（字节）
    * @tips 如果传入的路径位置是一个文件夹，则返回`-1`
    */
-  static getFileSize(path:string):Integer;
+  static getFileSize(path:string):number;
 
   /**
    * 判断指定路径是否是文件夹

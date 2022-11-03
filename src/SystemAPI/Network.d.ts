@@ -9,7 +9,7 @@ declare class network {
    */
   httpGet(
     url: string,
-    callback: (status: Integer, result: string) => void
+    callback: (status: number, result: string) => void
   ): boolean;
 
   /**
@@ -22,7 +22,7 @@ declare class network {
   httpGet(
     url: string,
     header: Object,
-    callback: (status: Integer, result: string) => void
+    callback: (status: number, result: string) => void
   ): boolean;
 
   /**
@@ -37,7 +37,7 @@ declare class network {
     url: string,
     data: string,
     type: string,
-    callback: (status: Integer, result: string) => void
+    callback: (status: number, result: string) => void
   ): boolean;
 
   /**
@@ -54,11 +54,11 @@ declare class network {
     header: Object,
     data: string,
     type: string,
-    callback: (status: Integer, result: string) => void
+    callback: (status: number, result: string) => void
   ): boolean;
 }
 
-declare type WSClientType = Integer;
+declare type WSClientType = number;
 declare class WSClient {
   /**处于正常连接中   */
   Open: WSClientType;
@@ -127,7 +127,7 @@ declare class WSClient {
    * @param callback 注册的监听函数
    * @returns boolean 是否成功监听事件
    */
-  listen(event: "onLostConnection", callback: (code: Integer) => void): boolean;
+  listen(event: "onLostConnection", callback: (code: number) => void): boolean;
 
   /**
    * 关闭连接
@@ -146,7 +146,7 @@ declare class WSClient {
    * 获取错误码
    * @returns Integer 上一次错误产生的错误码
    */
-  errorCode(): Integer;
+  errorCode(): number;
 }
 
 declare class HttpRequest {

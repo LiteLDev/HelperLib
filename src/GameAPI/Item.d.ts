@@ -12,8 +12,60 @@ declare class Item {
 
   /**这个物品对象堆叠的个数 */
   readonly count: number;
+
   /**物品附加值（如羊毛颜色） */
   readonly aux: number;
+
+  /**Item Lore */
+  readonly lore: Array<string>
+
+  /**	物品是否为箭 */
+  readonly isArmorItem: boolean
+
+  /** 物品是否为方块 */
+  readonly isBlock: boolean
+
+  /** 物品是否可被破坏 */
+  readonly isDamageableItem: boolean
+
+  /** 物品耐久是否被消耗 */
+  readonly isDamaged: boolean
+
+  /** 物品是否已被附魔 */
+  readonly isEnchanted: boolean
+
+  /** 物品是否为附魔书 */
+  readonly isEnchantingBook: boolean
+  
+  /** 物品是否防火 */
+  readonly isFireResistant: boolean
+  
+  /** 物品是否已堆叠到最大堆叠数 */
+  readonly isFullStack: boolean
+  
+  /** 物品是否闪烁 */
+  readonly isGlint: boolean
+  
+  /** 物品是否为马铠 */
+  readonly isHorseArmorItem: boolean
+  
+  /** Whether the item is liquid clip */
+  readonly isLiquidClipItem: boolean
+  
+  /** 物品是否为唱片 */
+  readonly isMusicDiscItem: boolean
+  
+  /** 物品是否可设置到副手 */
+  readonly isOffhandItem: boolean
+  
+  /** 物品是否为药水 */
+  readonly isPotionItem: boolean
+  
+  /** 物品是否可堆叠 */
+  readonly isStackable: boolean
+  
+  /** 物品是否可穿戴 */
+  readonly isWearableItem	: boolean
 
   /**
    * 从现有的物品对象克隆

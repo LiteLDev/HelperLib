@@ -398,11 +398,41 @@ declare class Entity {
   stopFire():boolean;
 
   /**
+   * @deprecated
    * ### 获取实体到坐标的距离
    * 
    * @param pos 目标位置
    * 
    * @returns 到坐标的距离(方块)
+   * 
    */
-  distanceToPos(pos: IntPos | FloatPos):number;
+  distanceToPos(pos:Entity | Player | IntPos | FloatPos):number;
+
+  /**
+   * 
+   * ### 获取实体到坐标的距离
+   * 
+   * @param pos 目标位置
+   * 
+   * @returns 到坐标的距离(方块)
+   * 
+   */
+  distanceToSqr(pos:Entity | Player | IntPos | FloatPos):number;
+
+  /**
+   * 
+   * ### 获取实体到坐标的距离
+   * 
+   * @param pos 目标位置
+   * 
+   * @returns 到坐标的距离(方块)
+   * 
+   */
+  distanceTo(pos:Entity | Player | IntPos | FloatPos):number;
+
+  /** 设置生命值 */
+  setHealth(health:number):boolean
+
+  /** 设置生命值上限 */
+  setMaxHealth(health:number):boolean
 }

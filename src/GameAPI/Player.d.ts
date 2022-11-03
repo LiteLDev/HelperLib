@@ -8,9 +8,10 @@ declare enum sendTextType {
 }
 
 /**玩家 */
-declare class Player extends Entity {
+declare class Player{
   /**玩家名 */
   readonly name: string;
+  
   /**玩家所在坐标   */
   readonly pos: FloatPos;
 

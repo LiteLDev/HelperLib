@@ -47,3 +47,4 @@
 /// <reference path="NativeAPI/NativePatch.d.ts" />
 
 // 个体文件
+/// <reference path="Other.d.ts" />

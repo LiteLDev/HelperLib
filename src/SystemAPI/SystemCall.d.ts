@@ -2,25 +2,25 @@
 
 declare class time{
 	/**年份数值（4位） */
-	Y:Integer;
+	Y:number;
 
 	/**月份数值 */
-	M:Integer;
+	M:number;
 
 	/**天数数值 */
-	D:Integer;
+	D:number;
 
 	/**小时数值（24小时制） */
-	h:Integer;
+	h:number;
 
 	/**分钟数值 */
-	m:Integer;
+	m:number;
 
 	/**秒数值 */
-	s:Integer;
+	s:number;
 
 	/**毫秒数值 */
-	ms:Integer;
+	ms:number;
 }
 
 declare namespace system {
@@ -33,8 +33,8 @@ declare namespace system {
    */
   function cmd(
     cmd: string,
-    callback: (exitcode: Integer, output: string) => void,
-    timeLimit?: Integer
+    callback: (exitcode: number, output: string) => void,
+    timeLimit?: number
   ): boolean;
 
   /**
@@ -46,8 +46,8 @@ declare namespace system {
    */
   function newProcess(
     process: string,
-    callback: (exitcode: Integer, output: String) => void,
-    timeLimit?: Integer
+    callback: (exitcode: number, output: String) => void,
+    timeLimit?: number
   ): boolean;
 
 	/**
