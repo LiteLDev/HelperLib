@@ -80,10 +80,10 @@ declare class CustomForm {
    */
   addSlider(
     title: string,
-    min: Integer,
-    max: Integer,
-    step?: Integer,
-    _default?: Integer
+    min: number,
+    max: number,
+    step?: number,
+    _default?: number
   ): CustomForm;
 
   /**
@@ -95,7 +95,7 @@ declare class CustomForm {
   addStepSlider(
     title: string,
     items: Array<string>,
-    _default?: Integer
+    _default?: number
   ): CustomForm;
 }
 

@@ -25,7 +25,7 @@ declare class nbt {
    * 将NBT对象转换为Json字符串
    * @param space （可选参数）如果要格式化输出的字符串，则传入此参数  
    */
-  static toString(space?:Integer):string;
+  static toString(space?:number):string;
 
   /**
    * 从 SNBT  字符串生成 NBT 标签对象
@@ -45,5 +45,5 @@ declare class nbt {
    * 将 NBT 标签对象 序列化为SNBT
    * @param space （可选参数）缩进空格
    */
-  static toSNBT(space?:Integer):string;
+  static toSNBT(space?:number):string;
 }

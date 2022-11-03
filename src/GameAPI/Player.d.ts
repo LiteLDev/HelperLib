@@ -483,8 +483,8 @@ declare class Player{
    */
   sendForm(
     fm: SimpleForm,
-    callback: (player: Player, id: Integer) => void
-  ): Integer | null;
+    callback: (player: Player, id: number) => void
+  ): number | null;
 
   /**
    * 发送CustomForm表单
@@ -494,7 +494,7 @@ declare class Player{
   sendForm(
     fm: CustomForm,
     callback: (player: Player, data: Array<any>) => void
-  ): Integer | null;
+  ): number | null;
 
   /**
    * 函数已弃用
