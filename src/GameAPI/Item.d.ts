@@ -124,7 +124,14 @@ declare class Item {
    * @param name 新物品名称
    * @returns 是否成功
    */
-  setDisplayName(name:string): boolean
+  setDisplayName(name: string): boolean
+
+  /**
+   * 判断是否为同类物品
+   * @param item 被判断的物品
+   * @returns 是否为同类物品
+   */
+  match(item: Item): boolean
 }
 
 declare namespace mc {
