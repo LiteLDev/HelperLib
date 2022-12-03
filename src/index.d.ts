@@ -6,21 +6,10 @@
 /// <reference path="DataAPI/Economy.d.ts" />
 /// <reference path="DataAPI/ConfigFile.d.ts" />
 /// <reference path="DataAPI/DataBase.d.ts" />
+/// <reference path="DataAPI/PermAPI.d.ts" />
 
 // GameAPI文件
-/// <reference path="GameAPI/Basic/index.d.ts" />
-/// <reference path="GameAPI/Block/index.d.ts" />
-/// <reference path="GameAPI/BlockEntity/index.d.ts" />
-/// <reference path="GameAPI/Container.d.ts" />
-/// <reference path="GameAPI/Command/index.d.ts" />
-/// <reference path="GameAPI/Device.d.ts" />
-/// <reference path="GameAPI/Entity.d.ts" />
-/// <reference path="GameAPI/GameUtils.d.ts" />
-/// <reference path="GameAPI/Player.d.ts" />
-/// <reference path="GameAPI/Item.d.ts" />
-/// <reference path="GameAPI/Packet.d.ts" />
-/// <reference path="GameAPI/ScoreBoard.d.ts" />
-/// <reference path="GameAPI/Server.d.ts" />
+/// <reference path="GameAPI/index.d.ts" />
 
 // EventAPI 文件
 /// <reference path="EventAPI/BlockEvents.d.ts" />
@@ -39,6 +28,7 @@
 /// <reference path="ScriptAPI/Li.d.ts" />
 /// <reference path="ScriptAPI/Logger.d.ts" />
 /// <reference path="ScriptAPI/ScriptHelper.d.ts" />
+/// <reference path="ScriptAPI/i18n.d.ts" />
 
 // NbtAPI 文件
 /// <reference path="NbtAPI/NBT.d.ts" />
@@ -57,3 +47,4 @@
 /// <reference path="NativeAPI/NativePatch.d.ts" />
 
 // 个体文件
+/// <reference path="Other.d.ts" />

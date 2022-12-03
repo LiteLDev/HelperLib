@@ -8,6 +8,12 @@
 
 ## 🔧 Use
 
+### ⭐ Use with VSCode plugin [`LiteLoaderSE-Aids`](https://github.com/LiteLScript-Dev/LiteLoaderSE-Aids) (recommended) ⭐
+
+1. Download [`LiteLoaderSE-Aids`](https://marketplace.visualstudio.com/items?itemName=moxicat.LLScriptHelper) from `Visual Studio Code`'s marketplace.
+2. Follow the guide to download the `completion library`.
+3. Type `lls` then press `<Enter>` before you start writing the plugin to add the complement library introduction
+
 ### Standalone use (not recommended)
 1. Download this repository and unzip it to a convenient place
 2. Add a comment line at the top of the plugin file you write
@@ -15,14 +21,10 @@
 ```js
 /// <reference path="[root path of this repository]/src/index.d.ts" />
 ```
-### ⭐ Use with VSCode plugin `LLScriptHelper2.0` (recommended) ⭐
-
-1. Download `LLScriptHelper2.0` from `Visual Studio Code`.
-2. Follow the guide to download the `completion library`.
-3. Type `.lls` before you start writing the plugin to add the complement library introduction
 
 ## 🏆 Contribution
 
 - Thanks to [HuoHuas001](https://github.com/HuoHuas001) for the main conversion from documentation
 - Thanks to [moxidev](https://github.com/moxidev) for help
-- Thanks to [lgc2333](https://github.com/lgc2333) for their contribution
+- Thanks to [lgc2333](https://github.com/lgc2333) for their contributions
+- Thanks to [harry-xi](https://github.com/harry-xi) for their contributions

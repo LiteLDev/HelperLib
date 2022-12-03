@@ -2,13 +2,13 @@
 
 declare class version{
     // 主版本号（如 **2**.1.0 里的 **2**）
-    major:Integer;
+    major:number;
 
     // 次版本号（如 2.**1**.0 里的 **1**）
-    minor:Integer;
+    minor:number;
 
     // 修订版本号（如 2.1.**0** 里的 **0**）
-    revision: Integer;
+    revision: number;
 
     // 当前版本是否为测试版
     isBeta:boolean;
@@ -31,7 +31,7 @@ declare namespace ll{
      * 检查LiteLoader加载器版本
      * @returns boolean 检查结果
      */
-    function requireVersion(major:Integer,minor?:Integer,revision?:Integer):boolean;
+    function requireVersion(major:number,minor?:number,revision?:number):boolean;
 
     /**
      * 列出所有已加载的插件

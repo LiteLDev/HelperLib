@@ -12,8 +12,60 @@ declare class Item {
 
   /**这个物品对象堆叠的个数 */
   readonly count: number;
+
   /**物品附加值（如羊毛颜色） */
   readonly aux: number;
+
+  /**Item Lore */
+  readonly lore: Array<string>
+
+  /**	物品是否为箭 */
+  readonly isArmorItem: boolean
+
+  /** 物品是否为方块 */
+  readonly isBlock: boolean
+
+  /** 物品是否可被破坏 */
+  readonly isDamageableItem: boolean
+
+  /** 物品耐久是否被消耗 */
+  readonly isDamaged: boolean
+
+  /** 物品是否已被附魔 */
+  readonly isEnchanted: boolean
+
+  /** 物品是否为附魔书 */
+  readonly isEnchantingBook: boolean
+  
+  /** 物品是否防火 */
+  readonly isFireResistant: boolean
+  
+  /** 物品是否已堆叠到最大堆叠数 */
+  readonly isFullStack: boolean
+  
+  /** 物品是否闪烁 */
+  readonly isGlint: boolean
+  
+  /** 物品是否为马铠 */
+  readonly isHorseArmorItem: boolean
+  
+  /** Whether the item is liquid clip */
+  readonly isLiquidClipItem: boolean
+  
+  /** 物品是否为唱片 */
+  readonly isMusicDiscItem: boolean
+  
+  /** 物品是否可设置到副手 */
+  readonly isOffhandItem: boolean
+  
+  /** 物品是否为药水 */
+  readonly isPotionItem: boolean
+  
+  /** 物品是否可堆叠 */
+  readonly isStackable: boolean
+  
+  /** 物品是否可穿戴 */
+  readonly isWearableItem	: boolean
 
   /**
    * 从现有的物品对象克隆
@@ -66,6 +118,20 @@ declare class Item {
    * @returns boolean 是否设置成功
    */
   setLore(names: Array<string>): boolean;
+
+  /**
+   * 设置自定义物品名称
+   * @param name 新物品名称
+   * @returns 是否成功
+   */
+  setDisplayName(name: string): boolean
+
+  /**
+   * 判断是否为同类物品
+   * @param item 被判断的物品
+   * @returns 是否为同类物品
+   */
+  match(item: Item): boolean
 }
 
 declare namespace mc {
@@ -83,7 +149,7 @@ declare namespace mc {
    * @param x x坐标
    * @param y y坐标
    * @param z z坐标
-   * @param dimid 维度Id
+   * @param dimId 维度Id
    * @returns Entity|null 生成的掉落物实体对象
    */
   function spawnItem(
@@ -91,7 +157,7 @@ declare namespace mc {
     x: number,
     y: number,
     z: number,
-    dimid: 0 | 1 | 2
+    dimId: 0 | 1 | 2
   ): Entity | null;
 
   /**

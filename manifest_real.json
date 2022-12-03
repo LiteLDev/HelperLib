@@ -1,0 +1,14 @@
+{
+	"name": "Github上的官方补全库",
+	"source": "https://github.com/LiteLScript-Dev/HelperLib",
+	"library": [
+		{
+			"type": "dts",
+			"name": "JS/TS补全库",
+			"version": "1.0.2",
+			"index": ".*/src/index.d.ts",
+			"language": "zh-hant",
+			"download_url": "https://github.com/LiteLScript-Dev/HelperLib/archive/refs/heads/master.zip"
+		}
+	]
+}
