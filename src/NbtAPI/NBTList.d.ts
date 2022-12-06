@@ -1,6 +1,6 @@
 /// <reference path="../index.d.ts" />
 
-declare class NbtList {
+declare class NbtList extends nbt{
   constructor(data?: Array<NbtType>);
 
   /**
