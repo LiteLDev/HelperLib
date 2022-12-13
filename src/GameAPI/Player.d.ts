@@ -583,6 +583,23 @@ declare namespace mc {
    * @returns Array<Player> 玩家对象的数组
    */
   function getOnlinePlayers():Array<Player>;
+
+  /**
+   * 获取玩家对应的NBT对象
+   * @param uuid 玩家的UUID
+   * @returns 玩家的UUID
+   * **可获取离线玩家的nbt**
+   */
+  function getPlayerNbt(uuid: string): NbtCompound
+
+  /**
+   * 写入玩家对应的NBT对象
+   * @param uuid 玩家的UUID
+   * @param nbt NBT对象
+   * @returns 是否成功写入
+   * **可操作离线玩家的nbt**
+   */
+  function setPlayerNbt(uuid: string, nbt: NbtCompound): boolean
 }
 
 declare enum sidebar {
