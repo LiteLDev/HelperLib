@@ -5,7 +5,7 @@ declare enum file {
   AppendMode,
 }
 
-export declare class File {
+declare class File {
   /**
    *
    * @param path 想要打开的文件路径

@@ -1,13 +1,13 @@
 /// <reference path="../index.d.ts" />
 
-declare class network {
+declare namespace network {
   /**
    * 发送一个异步HTTP(s) Get请求
    * @param url 请求的目标地址（包括 Get 请求附带的参数）
    * @param callback 当请求返回时执行的回调函数，用于回传HTTP(s)响应结果。
    * @returns boolean 是否成功发送请求
    */
-  httpGet(
+  function httpGet(
     url: string,
     callback: (status: number, result: string) => void
   ): boolean;
@@ -19,7 +19,7 @@ declare class network {
    * @param callback 当请求返回时执行的回调函数，用于回传HTTP(s)响应结果。
    * @returns boolean 是否成功发送请求
    */
-  httpGet(
+  function httpGet(
     url: string,
     header: Object,
     callback: (status: number, result: string) => void
@@ -33,7 +33,7 @@ declare class network {
    * @param callback 当请求返回时执行的回调函数，用于回传HTTP(s)响应结果。
    * @returns boolean 是否成功发送请求
    */
-  httpPost(
+  function httpPost(
     url: string,
     data: string,
     type: string,
@@ -49,7 +49,7 @@ declare class network {
    * @param callback 当请求返回时执行的回调函数，用于回传HTTP(s)响应结果。
    * @returns boolean 是否成功发送请求
    */
-  httpPost(
+  function httpPost(
     url: string,
     header: Object,
     data: string,

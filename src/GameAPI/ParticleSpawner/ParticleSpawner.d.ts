@@ -91,7 +91,7 @@ declare class ParticleSpawner{
      * @param pos2 可以是浮点坐标或者整数坐标, 整数坐标会取方块角落顶端位置, 会画出从最小角落 pos 到最大角落 pos2 的立方体
      * @param color 应当使用 ParticleColor 枚举填充 默认值 `ParticleColor.White`
      */
-    drawCuboid(pos,pos2?, color?:ParticleColor):boolean
+    drawCuboid(pos: FloatPos | IntPos ,pos2?: FloatPos | IntPos, color?:ParticleColor):boolean
 
 
 }

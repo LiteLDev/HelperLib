@@ -77,8 +77,8 @@ declare namespace mc {
       player: Player,
       item: Item,
       block: Block,
-      side: Number,
-      pos: number
+      side: number,
+      pos: FloatPos
     ) => boolean | void
   ): boolean;
 
@@ -94,7 +94,7 @@ declare namespace mc {
     listener: (player: Player, item: Item) => boolean | void
   ): boolean;
 
-  /**玩家食用食物*/
+  /**玩家正在吃食物*/
   function listen(
     event: "onEat",
     listener: (player: Player) => boolean | void
@@ -109,7 +109,7 @@ declare namespace mc {
   /**玩家获得效果*/
   function listen(
     event: "onEffectAdded",
-    listener: (player: Player, effectName: string) => boolean | void
+    listener: (player: Player, effectName: string, amplifier: number, duration: number) => boolean | void
   ): boolean;
 
   /**玩家开始连接服务器*/
@@ -127,7 +127,7 @@ declare namespace mc {
   /**玩家刷新效果*/
   function listen(
     event: "onEffectUpdated",
-    listener: (player: Player, effectName: string) => boolean | void
+    listener: (player: Player, effectName: string, amplifier: number, duration: number) => boolean | void
   ): boolean;
 
   /**玩家开始破坏方块/点击左键*/
@@ -217,5 +217,12 @@ declare namespace mc {
   function listen(
     event: "onUseBucketPlace",
     listener: (player: Player,item: Item,block: Block | Item,side: 1 | 2 | 3 | 4 | 5 | 6 ,pos: FloatPos) => boolean | void
-    ): boolean;
+  ): boolean;
+
+  /**玩家吃下食物 */
+  function listen(
+    event: "onAte",
+    listener: (player: Player, item:Item) => void
+  ): boolean
+
 }
