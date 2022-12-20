@@ -8,10 +8,10 @@ declare enum sendTextType {
 }
 
 /**玩家 */
-declare class Player{
+declare class Player {
   /**玩家名 */
   readonly name: string;
-  
+
   /**玩家所在坐标   */
   readonly pos: FloatPos;
 
@@ -36,6 +36,30 @@ declare class Player{
   /**玩家的游戏模式（0 - 3） */
   readonly gameMode: number;
 
+  /**玩家是否可以飞行 */
+  readonly canFly: boolean;
+
+  /**玩家是否可以睡觉 */
+  readonly canSleep: boolean;
+
+  /**玩家是否可以在地图上看到 */
+  readonly canBeSeenOnMap: boolean;
+
+  /**玩家是否可以冻结 */
+  readonly canFreeze: boolean;
+
+  /**玩家是否能看到日光 */
+  readonly canSeeDaylight: boolean;
+
+  /**玩家是否可以显示姓名标签 */
+  readonly canShowNameTag: boolean;
+
+  /**玩家是否可以开始在床上睡觉 */
+  readonly canStartSleepInBed: boolean;
+
+  /**玩家是否可以拾取物品 */
+  readonly canPickupItems: boolean;
+
   /**玩家最大生命值 */
   readonly maxHealth: number;
 
@@ -47,6 +71,27 @@ declare class Player{
 
   /**玩家当前是否在水中 */
   readonly inWater: boolean;
+
+  /**玩家是否在熔岩中 */
+  readonly inLava: boolean;
+
+  /**玩家是否下雨 */
+  readonly inRain: boolean;
+
+  /**玩家是否在雪中 */
+  readonly inSnow: boolean;
+
+  /**玩家是否在墙上 */
+  readonly inWall: boolean;
+
+  /**玩家是否在水中或雨中 */
+  readonly inWaterOrRain: boolean;
+
+  /**玩家是否在世界 */
+  readonly inWorld: boolean;
+
+  /**玩家是否在云端 */
+  readonly inClouds: boolean;
 
   /**玩家当前是否正在潜行 */
   readonly sneaking: boolean;
@@ -66,8 +111,68 @@ declare class Player{
   /**玩家是否正在加载   */
   readonly isLoading: boolean;
 
+  /**玩家是否隐身中 */
+  readonly isInvisible: boolean;
+
+  /**玩家在传送门中 */
+  readonly isInsidePortal: boolean;
+
+  /**玩家是否受伤 */
+  readonly isHurt: boolean;
+
+  /**未知 */
+  readonly isTrusting: boolean;
+
+  /**玩家是否在能造成伤害的方块上 */
+  readonly isTouchingDamageBlock: boolean;
+
+  /**玩家是否饿了 */
+  readonly isHungry: boolean;
+
+  /**玩家是否着火 */
+  readonly isOnFire: boolean;
+
+  /**玩家是否在地上 */
+  readonly isOnGround: boolean;
+
+  /**玩家是否在高温方块上（岩浆等） */
+  readonly isOnHotBlock: boolean;
+
+  /**玩家在交易 */
+  readonly isTrading: boolean;
+
+  /**玩家是否是冒险模式 */
+  readonly isAdventure: boolean;
+
+  /**玩家在滑行 */
+  readonly isGliding: boolean;
+
+  /**玩家是否是生存模式 */
+  readonly isSurvival: boolean;
+
+  /**玩家是否是观众模式 */
+  readonly isSpectator: boolean;
+
+  /**玩家是否在骑行 */
+  readonly isRiding: boolean;
+
+  /**玩家在跳舞？ */
+  readonly isDancing: boolean;
+
+  /**玩家是否是创造模式 */
+  readonly isCreative: boolean;
+
+  /**玩家是否在飞行 */
+  readonly isFlying: boolean;
+
+  /**玩家是否正在睡觉 */
+  readonly isSleeping: boolean;
+
   /** 玩家是否移动 */
   readonly isMoving: boolean;
+
+  /**玩家设备IP地址 */
+  readonly ip: string;
 
   /**
    * 判断玩家是否为OP
@@ -128,11 +233,108 @@ declare class Player{
   talkAs(text: string): boolean;
 
   /**
+   * ### 获取实体到坐标的距离
+   * @param pos 目标位置
+   * @returns 到坐标的距离(方块)
+   */
+  distanceToSqr(pos:Entity | Player | IntPos | FloatPos):number;
+
+  /**
+    * ### 获取实体到坐标的距离
+    * @param pos 目标位置
+    * @returns 到坐标的距离(方块)
+    */
+  distanceTo(pos:Entity | Player | IntPos | FloatPos):number;
+  
+  /**
+   * 以某个玩家身份向某玩家说话
+   * @param target 模拟说话对象
+   * @param text 模拟说话内容
+   * @returns boolean 是否执行成功
+   */
+  talkAs(target: Player, text: string): boolean;
+
+  /**
+   * 传送玩家至指定位置
+   * @param pos 目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）
+   * @returns boolean 是否成功传送
+   */
+  teleport(pos: IntPos | FloatPos): boolean;
+
+  /**
+   * 传送玩家至指定位置
+   * @param pos 目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）
+   * @returns boolean 是否成功传送
+   */
+  teleport(x: number, y: number, z: number, dimid: 0 | 1 | 2): boolean;
+
+  /**
+   * 杀死玩家
+   * @returns 是否成功执行
+   */
+  kill(): boolean;
+
+  /**
+   * 对玩家造成伤害
+   * @param damage 对玩家造成的伤害数值
+   * @returns boolean 是否造成伤害
+   */
+  hurt(damage: number): boolean;
+
+  /**
+   * 治疗玩家
+   * @param health 治疗的心数
+   * @returns boolean 治疗是否成功
+   */
+  heal(health: number): boolean;
+
+  /**
+   * 设置玩家的生命值
+   * @param health 生命值数
+   * @returns boolean 是否成功
+   */
+  setHealth(health: number): boolean;
+
+  /**
+   * 设置玩家最大生命值
+   * @param health 生命值数
+   * @returns boolean 是否成功
+   */
+  setMaxHealth(health: number): boolean;
+
+  /**
+   * 设置玩家饥饿值
+   * @param hunger 饥饿值数
+   * @returns boolean 是否成功
+   */
+  setHungry(hunger: number): boolean;
+
+  /**
+   * 使指定玩家着火
+   * @param time 着火时长，单位秒
+   * @param isEffect 会不会有火的效果
+   * @returns boolean 是否成功
+   */
+  setFire(time: number, isEffect: boolean): boolean;
+
+  /**
+   * 熄灭玩家
+   * @returns boolean 是否已被熄灭
+   */
+  stopFire(): boolean;
+
+  /**
    * 重命名玩家
    * @param newName 玩家新名字
    * @returns boolean 是否重命名成功
    */
   rename(newName: string): boolean;
+
+  /**
+   * 获取玩家当前站立所在的方块
+   * @returns Block 当前站立在的方块对象
+   */
+  getBlockStandingOn(): Block
 
   /**
    * 获取玩家对应的设备信息对象
@@ -161,6 +363,12 @@ declare class Player{
   getInventory(): Container;
 
   /**
+   * 获取玩家盔甲栏的容器对象
+   * @returns Container 玩家盔甲栏对应的容器对象
+   */
+  getArmor(): Container;
+
+  /**
    * 获取玩家末影箱的容器对象
    * @returns Container 玩家末影箱对应的容器对象
    */
@@ -185,6 +393,12 @@ declare class Player{
    * @returns number 清除的物品个数
    */
   clearItem(type: string): number;
+
+  /**
+   * 刷新玩家物品栏、盔甲栏
+   * @returns boolean 是否成功刷新
+   */
+  refreshItems(): boolean;
 
   /**
    * 刷新玩家加载的所有区块
@@ -337,6 +551,46 @@ declare class Player{
   removeBossBar(uid: number): boolean;
 
   /**
+   * 获取在线玩家对应的NBT对象
+   * @returns NbtCompound 玩家的NBT对象
+   */
+  getNbt(): NbtCompound;
+
+  /**
+   * 写入在线玩家对应的NBT对象
+   * @param nbt NBT对象
+   * @returns boolean 是否成功写入
+   */
+  setNbt(nbt: NbtCompound): boolean;
+
+  /**
+   * 为玩家增加一个Tag
+   * @param tag 要增加的tag字符串
+   * @returns boolean 是否设置成功 
+   */
+  addTag(tag: string): boolean;
+
+  /**
+   * 为玩家移除一个Tag
+   * @param tag 要移除的tag字符串
+   * @returns boolean 是否移除成功
+   */
+  removeTag(tag: string): boolean;
+
+  /**
+   * 检查玩家是否拥有某个Tag
+   * @param tag 要检查的tag字符串
+   * @returns boolean 是否拥有这个Tag
+   */
+  hasTag(tag: string): boolean;
+
+  /**
+   * 玩家所有的 tag 字符串列表
+   * @returns Array<String> 玩家所有的 tag 字符串列表
+   */
+  getAllTags(): Array<String>
+
+  /**
    * 获取玩家的Abilities能力列表（来自玩家NBT）
    * @returns object<String,any>  玩家所有能力信息的键 - 值对列表对象
    */
@@ -362,10 +616,47 @@ declare class Player{
   setSprinting(sprinting: boolean): boolean;
 
   /**
+   * 获取视线方向实体
+   * @param maxDistance 查找最大距离
+   * @returns Entity|null 视线方向实体，如果获取失败，返回 Null
+   */
+  getEntityFromViewVector(maxDistance?: number): Entity | null;
+
+  /**
+   * 获取视线方向方块
+   * @param includeLiquid 是否包含液态方块
+   * @param solidOnly 是否仅允许 Solid 类型的方块
+   * @param maxDistance 查找最大距离
+   * @param fullOnly 是否仅允许完整方块
+   * @returns Block|null 视线方向方块，如果获取失败，返回 Null
+   */
+  getBlockFromViewVector(includeLiquid?: boolean, solidOnly?: boolean, maxDistance?: number, fullOnly?: boolean): Block | null;
+
+  /**
    * 向玩家发送数据包
    * @param packet 数据包
    */
   sendPacket(packet: Packet): boolean | null;
+
+  /**
+   * 获取玩家所在群系ID
+   * @returns number 群系ID
+   */
+  getBiomeId(): number;
+
+  /**
+   * 获取玩家所在群系名称
+   * @returns string 群系名称
+   */
+  getBiomeName(): string;
+
+  /**
+   * 设置玩家Ability属性
+   * @param AbilityID Ability的ID
+   * @param value 是否开启
+   * @returns boolean 无作用
+   */
+  setAbility(AbilityID: number, value: boolean): boolean;
 
   /**
    * 判断是否为模拟玩家
@@ -500,14 +791,14 @@ declare class Player{
    * 函数已弃用
    * @deprecated 函数已弃用 请使用 getInventory()
    */
-  getContainer():Container;
+  getContainer(): Container;
 
   /**
    * 缩放玩家
    * @param scale 新的玩家体积 (整数)
    * @returns boolean 是否缩放成功
    */
-  setScale(scale:number): boolean;
+  setScale(scale: number): boolean;
 
   /**
    * 设置玩家显示标题
@@ -518,12 +809,12 @@ declare class Player{
    * @param fadeOutTime 淡出时间，单位为 Tick，默认为20
    * @returns 是否成功发送
    */
-  setTitle(content:string,type?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 ,fadeInTime?:number,stayTime?:number,fadeOutTime?:number):boolean;
+  setTitle(content: string, type?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8, fadeInTime?: number, stayTime?: number, fadeOutTime?: number): boolean;
 
   /**
    * 熄灭玩家
    */
-  stopFire():boolean;
+  stopFire(): boolean;
 
   /**
    * ### 获取玩家到坐标的距离
@@ -532,7 +823,7 @@ declare class Player{
    * 
    * @returns 到坐标的距离(方块)
    */
-  distanceToPos(pos: IntPos | FloatPos):number;
+  distanceToPos(pos: IntPos | FloatPos): number;
 }
 
 declare namespace mc {
@@ -543,6 +834,20 @@ declare namespace mc {
    * @returns boolean 是否成功发送
    */
   function broadcast(msg: string, type?: sendTextType | number): boolean;
+
+  /**
+   * 修改玩家的重生坐标
+   * @param pos 重生坐标（或者使用x, y, z, dimid来确定重生位置）
+   * @returns boolean 是否成功修改
+   */
+  function setRespawnPosition(pos: IntPos): boolean;
+
+  /**
+   * 修改玩家的重生坐标
+   * @param pos 重生坐标（或者使用x, y, z, dimid来确定重生位置）
+   * @returns boolean 是否成功修改
+   */
+  function setRespawnPosition(x: number, y: number, z: number, dimId: 0 | 1 | 2): boolean;
 
   /**
    * 创建一个模拟玩家
@@ -576,13 +881,13 @@ declare namespace mc {
    * @param info 玩家的名字或者Xuid
    * @returns Player 生成的玩家对象
    */
-  function getPlayer(info:string):Player;
+  function getPlayer(info: string): Player;
 
   /**
    * 获取所有在线玩家
    * @returns Array<Player> 玩家对象的数组
    */
-  function getOnlinePlayers():Array<Player>;
+  function getOnlinePlayers(): Array<Player>;
 
   /**
    * 获取玩家对应的NBT对象
@@ -600,6 +905,22 @@ declare namespace mc {
    * **可操作离线玩家的nbt**
    */
   function setPlayerNbt(uuid: string, nbt: NbtCompound): boolean
+
+  /**
+   * 覆盖玩家对应的NBT对象的特定NbtTag
+   * @param uuid 玩家的UUID
+   * @param nbt NBT对象
+   * @param tags 需要覆盖的NbtTag (String)
+   * @returns boolean 是否成功覆盖对应的Tag
+   */
+  function setPlayerNbtTags(uuid: string, nbt: NbtCompound, tags: Array<string>): boolean;
+
+  /**
+   * 从存档中删除玩家对应的NBT对象的全部内容
+   * @param uuid 玩家的UUID
+   * @returns boolean 是否删除成功
+   */
+  function deletePlayerNbt(uuid: string): boolean;
 }
 
 declare enum sidebar {
