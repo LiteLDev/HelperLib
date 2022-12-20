@@ -1,6 +1,6 @@
 /// <reference path="../index.d.ts" />
 
-declare class NbtCompound {
+declare class NbtCompound extends nbt{
   constructor(data?: Object);
 
   /**

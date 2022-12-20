@@ -19,7 +19,7 @@ declare class nbt {
    * 获取NBT对象储存的数据类型
    * @returns NBT.enum 此NBT对象储存的数据类型
    */
-  static getType(): NBT;
+  static getType(): NBT | null;
   
   /**
    * 将NBT对象转换为Json字符串
