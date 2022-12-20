@@ -233,6 +233,28 @@ declare class Player {
   talkAs(text: string): boolean;
 
   /**
+   * ### 获取实体到坐标的距离
+   * @param pos 目标位置
+   * @returns 到坐标的距离(方块)
+   */
+  distanceToSqr(pos:Entity | Player | IntPos | FloatPos):number;
+
+  /**
+    * ### 获取实体到坐标的距离
+    * @param pos 目标位置
+    * @returns 到坐标的距离(方块)
+    */
+  distanceTo(pos:Entity | Player | IntPos | FloatPos):number;
+  
+  /**
+   * 以某个玩家身份向某玩家说话
+   * @param target 模拟说话对象
+   * @param text 模拟说话内容
+   * @returns boolean 是否执行成功
+   */
+  talkAs(target: Player, text: string): boolean;
+
+  /**
    * 传送玩家至指定位置
    * @param pos 目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）
    * @returns boolean 是否成功传送

@@ -15,6 +15,39 @@ declare class version{
 }
 
 declare namespace ll{
+    //LiteLoaderBDS使用的语言。(例如zh_Hans、en和ru_RU)
+    const     language: String;
+
+    //主版本号（如 2.1.0 里的 2）
+    const major: number;
+
+    //次版本号（如 2.1.0 里的 1）
+    const minor: number;
+
+    //修订版本号（如 2.1.0 里的 0）
+    const revision: number;
+
+    //版本状态 (0为Dev, 1为Beta, 2为Release)
+    const status: number;
+
+    //LiteLoaderBDS Script Engine版本
+    const scriptEngineVersion: String;
+
+    //是否处于Wine环境下
+    const isWine: Boolean;
+
+    //是否处于debug模式
+    const isDebugMode: Boolean;
+
+    //当前版本是否为测试版
+    const isBeta: Boolean;
+
+    //当前版本是否为开发版
+    const isDev: Boolean;
+
+    //当前版本是否为发布版本
+    const isRelease: Boolean;
+
     /**
      * 获取LiteLoader加载器版本
      * @returns version 加载器版本对象
