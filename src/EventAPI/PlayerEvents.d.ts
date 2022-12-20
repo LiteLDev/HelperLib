@@ -77,8 +77,8 @@ declare namespace mc {
       player: Player,
       item: Item,
       block: Block,
-      side: Number,
-      pos: number
+      side: number,
+      pos: FloatPos
     ) => boolean | void
   ): boolean;
 
