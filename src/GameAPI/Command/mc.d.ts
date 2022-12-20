@@ -29,6 +29,15 @@ declare namespace mc {
   };
 
   /**
+   * ### 模拟产生一个控制台命令输出
+   *
+   * @param output
+   *
+   * @returns 是否成功执行
+   */
+  function sendCmdOutput(output: string): boolean;
+
+  /**
    * ### 注册一条顶层命令
    *
    * 这里提供了注册自定义命令的接口。
