@@ -743,7 +743,7 @@ declare class Player {
     content: string,
     confirmButton: string,
     cancelButton: string,
-    callback: (player: Player, result: boolean) => void
+    callback: (player: Player, result: boolean | null) => void
   ): number | null;
 
   /**
@@ -759,7 +759,7 @@ declare class Player {
     content: string,
     buttons: Array<string>,
     images: Array<string>,
-    callback: (player: Player, id: number) => void
+    callback: (player: Player, id: number | null) => void
   ): number | null;
 
   /**
@@ -769,7 +769,7 @@ declare class Player {
    */
   sendCustomForm(
     json: string,
-    callback: (player: Player, data: Array<any>) => void
+    callback: (player: Player, data: Array<any> | null) => void
   ): number | null;
 
   /**
@@ -779,7 +779,7 @@ declare class Player {
    */
   sendForm(
     fm: SimpleForm,
-    callback: (player: Player, id: number) => void
+    callback: (player: Player, id: number | null) => void
   ): number | null;
 
   /**
@@ -789,7 +789,7 @@ declare class Player {
    */
   sendForm(
     fm: CustomForm,
-    callback: (player: Player, data: Array<any>) => void
+    callback: (player: Player, data: Array<any> | null) => void
   ): number | null;
 
   /**
