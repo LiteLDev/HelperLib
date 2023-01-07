@@ -436,3 +436,5 @@ declare class Entity {
   /** 设置生命值上限 */
   setMaxHealth(health:number):boolean
 }
+
+declare class LLSE_Entity extends Entity{}

@@ -174,3 +174,5 @@ declare namespace mc {
    */
   function newItem(name: string, count: number): Item | null;
 }
+
+declare class LLSE_Item extends Item{}

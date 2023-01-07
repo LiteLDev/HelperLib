@@ -107,3 +107,5 @@ declare namespace mc {
     slot: "sidebar" | "belowname" | "list"
   ): boolean;
 }
+
+declare class LLSE_Objective extends Objective{}
