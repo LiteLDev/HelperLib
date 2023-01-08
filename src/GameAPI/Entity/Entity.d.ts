@@ -501,3 +501,5 @@ declare class Entity {
 
 
 }
+
+declare class LLSE_Entity extends Entity{}

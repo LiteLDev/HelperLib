@@ -150,3 +150,5 @@ declare namespace mc {
 
 
 }
+
+declare class LLSE_Objective extends Objective{}
