@@ -435,4 +435,69 @@ declare class Entity {
 
   /** 设置生命值上限 */
   setMaxHealth(health:number):boolean
+
+  /**
+   * 设置伤害吸收属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setAbsorption(value:number):boolean
+
+  /**
+   * 设置攻击伤害属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setAttackDamage(value:number):boolean
+  
+  /**
+   * 最大攻击伤害属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setMaxAttackDamage(value:number):boolean
+
+  /**
+   * 设置跟随范围
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setFollowRange(value:number):boolean
+
+  /**
+   * 设置击退抵抗属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setKnockbackResistance(value:0 | 1):boolean
+
+  /**
+   * 设置幸运属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setLuck(value:number):boolean
+
+  /**
+   * 设置移动速度属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setMovementSpeed(value:number):boolean
+
+  /**
+   * 置水下移动速度属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setUnderwaterMovementSpeed(value:number):boolean
+
+  /**
+   * 设置岩浆上移动速度属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setLavaMovementSpeed(value:number):boolean
+
+
 }

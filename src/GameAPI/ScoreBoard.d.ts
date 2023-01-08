@@ -106,4 +106,47 @@ declare namespace mc {
   function clearDisplayObjective(
     slot: "sidebar" | "belowname" | "list"
   ): boolean;
+
+  /**
+   * 获取玩家计分项的分数
+   * （可查询离线玩家计分板）
+   * 
+   * @param uuid 玩家的UUID
+   * @param name 计分项名称
+   * @returns 计分板上的数值
+   */
+  function getPlayerScore(uuid:string, name:string):number
+
+  /**
+   * 设置玩家计分项的分数
+   * （可修改离线玩家计分板）
+   * @param uuid 玩家的UUID 
+   * @param name 计分项名称  
+   * @param value 要设置的值
+   * @returns 是否设置成功
+   */
+  function setPlayerScore(uuid:string, name:string, value:number):boolean
+
+  /**
+   * 增加玩家计分项的分数
+   * （可修改离线玩家计分板）
+   * @param uuid 玩家的UUID 
+   * @param name 计分项名称  
+   * @param value 要增加的值
+   * @returns 是增加置成功
+   */
+  function addPlayerScore(uuid:string, name:string, value:number):boolean
+
+  /**
+   * 减少玩家计分项的分数
+   * （可修改离线玩家计分板）
+   * @param uuid 玩家的UUID 
+   * @param name 计分项名称  
+   * @param value 要减少的值
+   * @returns 是否减少成功
+   */
+  function reducePlayerScore(uuid:string, name:string, value:number):boolean
+
+
+
 }
