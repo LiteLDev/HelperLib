@@ -237,15 +237,15 @@ declare class Player {
    * @param pos 目标位置
    * @returns 到坐标的距离(方块)
    */
-  distanceToSqr(pos:Entity | Player | IntPos | FloatPos):number;
+  distanceToSqr(pos: Entity | Player | IntPos | FloatPos): number;
 
   /**
-    * ### 获取实体到坐标的距离
-    * @param pos 目标位置
-    * @returns 到坐标的距离(方块)
-    */
-  distanceTo(pos:Entity | Player | IntPos | FloatPos):number;
-  
+   * ### 获取实体到坐标的距离
+   * @param pos 目标位置
+   * @returns 到坐标的距离(方块)
+   */
+  distanceTo(pos: Entity | Player | IntPos | FloatPos): number;
+
   /**
    * 以某个玩家身份向某玩家说话
    * @param target 模拟说话对象
@@ -334,7 +334,7 @@ declare class Player {
    * 获取玩家当前站立所在的方块
    * @returns Block 当前站立在的方块对象
    */
-  getBlockStandingOn(): Block
+  getBlockStandingOn(): Block;
 
   /**
    * 获取玩家对应的设备信息对象
@@ -566,7 +566,7 @@ declare class Player {
   /**
    * 为玩家增加一个Tag
    * @param tag 要增加的tag字符串
-   * @returns boolean 是否设置成功 
+   * @returns boolean 是否设置成功
    */
   addTag(tag: string): boolean;
 
@@ -588,7 +588,7 @@ declare class Player {
    * 玩家所有的 tag 字符串列表
    * @returns Array<String> 玩家所有的 tag 字符串列表
    */
-  getAllTags(): Array<String>
+  getAllTags(): Array<String>;
 
   /**
    * 获取玩家的Abilities能力列表（来自玩家NBT）
@@ -601,6 +601,69 @@ declare class Player {
    * @returns Array<Object> 玩家所有属性对象的数组
    */
   getAttributes(): Array<Object>;
+
+  /**
+   * 设置伤害吸收属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setAbsorption(value:number):boolean
+
+  /**
+   * 设置攻击伤害属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setAttackDamage(value:number):boolean
+  
+  /**
+   * 最大攻击伤害属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setMaxAttackDamage(value:number):boolean
+
+  /**
+   * 设置跟随范围
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setFollowRange(value:number):boolean
+
+  /**
+   * 设置击退抵抗属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setKnockbackResistance(value:0 | 1):boolean
+
+  /**
+   * 设置幸运属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setLuck(value:number):boolean
+
+  /**
+   * 设置移动速度属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setMovementSpeed(value:number):boolean
+
+  /**
+   * 置水下移动速度属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setUnderwaterMovementSpeed(value:number):boolean
+
+  /**
+   * 设置岩浆上移动速度属性
+   * @param value 新的值
+   * @returns 是否成功
+   */
+  setLavaMovementSpeed(value:number):boolean
 
   /**
    * 获取玩家疾跑状态
@@ -630,7 +693,12 @@ declare class Player {
    * @param fullOnly 是否仅允许完整方块
    * @returns Block|null 视线方向方块，如果获取失败，返回 Null
    */
-  getBlockFromViewVector(includeLiquid?: boolean, solidOnly?: boolean, maxDistance?: number, fullOnly?: boolean): Block | null;
+  getBlockFromViewVector(
+    includeLiquid?: boolean,
+    solidOnly?: boolean,
+    maxDistance?: number,
+    fullOnly?: boolean
+  ): Block | null;
 
   /**
    * 向玩家发送数据包
@@ -687,7 +755,7 @@ declare class Player {
   delExtraData(name: string): boolean;
 
   /**
-   * 获取玩家计分项的分数（方便函数）
+   * 获取在线玩家计分项的分数（方便函数）
    * @param name 计分项名称
    * @returns number 计分板上的数值
    */
@@ -738,7 +806,7 @@ declare class Player {
     content: string,
     confirmButton: string,
     cancelButton: string,
-    callback: (player: Player, result: boolean) => void
+    callback: (player: Player, result: boolean | null) => void
   ): number | null;
 
   /**
@@ -754,7 +822,7 @@ declare class Player {
     content: string,
     buttons: Array<string>,
     images: Array<string>,
-    callback: (player: Player, id: number) => void
+    callback: (player: Player, id: number | null) => void
   ): number | null;
 
   /**
@@ -764,7 +832,7 @@ declare class Player {
    */
   sendCustomForm(
     json: string,
-    callback: (player: Player, data: Array<any>) => void
+    callback: (player: Player, data: Array<any> | null) => void
   ): number | null;
 
   /**
@@ -774,7 +842,7 @@ declare class Player {
    */
   sendForm(
     fm: SimpleForm,
-    callback: (player: Player, id: number) => void
+    callback: (player: Player, id: number | null) => void
   ): number | null;
 
   /**
@@ -784,7 +852,7 @@ declare class Player {
    */
   sendForm(
     fm: CustomForm,
-    callback: (player: Player, data: Array<any>) => void
+    callback: (player: Player, data: Array<any> | null) => void
   ): number | null;
 
   /**
@@ -809,7 +877,13 @@ declare class Player {
    * @param fadeOutTime 淡出时间，单位为 Tick，默认为20
    * @returns 是否成功发送
    */
-  setTitle(content: string, type?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8, fadeInTime?: number, stayTime?: number, fadeOutTime?: number): boolean;
+  setTitle(
+    content: string,
+    type?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8,
+    fadeInTime?: number,
+    stayTime?: number,
+    fadeOutTime?: number
+  ): boolean;
 
   /**
    * 熄灭玩家
@@ -818,9 +892,9 @@ declare class Player {
 
   /**
    * ### 获取玩家到坐标的距离
-   * 
+   *
    * @param pos 目标位置
-   * 
+   *
    * @returns 到坐标的距离(方块)
    */
   distanceToPos(pos: IntPos | FloatPos): number;
@@ -847,7 +921,12 @@ declare namespace mc {
    * @param pos 重生坐标（或者使用x, y, z, dimid来确定重生位置）
    * @returns boolean 是否成功修改
    */
-  function setRespawnPosition(x: number, y: number, z: number, dimId: 0 | 1 | 2): boolean;
+  function setRespawnPosition(
+    x: number,
+    y: number,
+    z: number,
+    dimId: 0 | 1 | 2
+  ): boolean;
 
   /**
    * 创建一个模拟玩家
@@ -895,7 +974,7 @@ declare namespace mc {
    * @returns 玩家的UUID
    * **可获取离线玩家的nbt**
    */
-  function getPlayerNbt(uuid: string): NbtCompound
+  function getPlayerNbt(uuid: string): NbtCompound;
 
   /**
    * 写入玩家对应的NBT对象
@@ -904,7 +983,7 @@ declare namespace mc {
    * @returns 是否成功写入
    * **可操作离线玩家的nbt**
    */
-  function setPlayerNbt(uuid: string, nbt: NbtCompound): boolean
+  function setPlayerNbt(uuid: string, nbt: NbtCompound): boolean;
 
   /**
    * 覆盖玩家对应的NBT对象的特定NbtTag
@@ -913,7 +992,11 @@ declare namespace mc {
    * @param tags 需要覆盖的NbtTag (String)
    * @returns boolean 是否成功覆盖对应的Tag
    */
-  function setPlayerNbtTags(uuid: string, nbt: NbtCompound, tags: Array<string>): boolean;
+  function setPlayerNbtTags(
+    uuid: string,
+    nbt: NbtCompound,
+    tags: Array<string>
+  ): boolean;
 
   /**
    * 从存档中删除玩家对应的NBT对象的全部内容
@@ -930,13 +1013,20 @@ declare enum sidebar {
   Ascending = 0,
 }
 
+declare class LLSE_Player extends Player{}
+
+/**
+ * 模拟玩家
+ * @see [🏃‍♂️ 玩家对象](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Player?id=%e6%a8%a1%e6%8b%9f%e7%8e%a9%e5%ae%b6%ef%bc%88%e7%94%b1%e4%ba%8e%e4%b8%8e%e7%8e%a9%e5%ae%b6api%e9%87%8d%e5%90%88%e8%bf%87%e5%a4%9a%ef%bc%8c%e6%9c%aa%e7%94%9f%e6%88%90%e6%96%b0%e7%9a%84%e6%a8%a1%e6%8b%9f%e7%8e%a9%e5%ae%b6%e7%b1%bb%ef%bc%89)
+ * @see [mojang-gametest docs](https://docs.microsoft.com/zh-cn/minecraft/creator/scriptapi/mojang-gametest/simulatedplayer)
+ */
 declare class SimulatedPlayer extends Player {
   /**
    * 模拟攻击
    * @param target （可选参数）攻击目标，默认为视线方向上的实体
    * @returns boolean 是否成功模拟操作
    */
-  simulateAttack(target: Entity): boolean;
+  simulateAttack(target?: Entity): boolean;
 
   /**
    * 模拟破坏
@@ -945,4 +1035,122 @@ declare class SimulatedPlayer extends Player {
    * @returns boolean 是否成功模拟操作
    */
   simulateDestroy(target: IntPos | Block, face: number): boolean;
+
+  /**
+   * 模拟断开连接
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateDisconnect(): boolean;
+
+  /**
+   * 模拟交互
+   * @param target （可选参数）模拟交互目标，默认为视线方向上的方块或实体
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateInteract(target?: Entity):boolean;
+
+  /**
+   * 模拟交互
+   * @param target （可选参数）模拟交互目标，默认为视线方向上的方块或实体
+   * @param face （可选参数）模拟交互目标方块的面
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateInteract(target?: IntPos|Block,face?:Number):boolean;
+
+  /**
+   * 模拟跳跃
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateJump():boolean;
+
+  /**
+   * 模拟看向某方块或实体
+   * @param target 要看向的目标(实体|坐标|方块)
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateLookAt(target:Entity|IntPos|FloatPos|Block):boolean;
+
+  /**
+   * 模拟设置身体角度
+   * @param rot 要设置的角度
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateSetBodyRotation(rot:Number):boolean;
+
+  /**
+   * 相对玩家坐标系移动
+   * @param pos 移动方向
+   * @param speed （可选参数）移动速度，默认为1
+   * @returns boolean 是否请求移动成功
+   */
+  simulateLocalMove(pos:IntPos|FloatPos,speed?:Number):boolean;
+
+  /**
+   * 相对世界坐标系移动
+   * @param pos 移动方向
+   * @param speed （可选参数）移动速度，默认为1
+   * @returns boolean 是否请求移动成功
+   */
+  simulateWorldMove(pos:IntPos|FloatPos,speed?:Number):boolean;
+
+  /**
+   * 直线移动到坐标
+   * @param pos 移动方向
+   * @param speed （可选参数）移动速度，默认为1
+   * @returns boolean 是否请求移动成功
+   * **注：如需自动寻路，请考虑使用 模拟导航移动{@linkcode simulateNavigateTo}**
+   */
+  simulateMoveTo(pos:IntPos|FloatPos,speed?:Number):boolean;
+
+  /**
+   * 模拟导航移动
+   * @param target 导航目标
+   * @param speed （可选参数）移动速度，默认为1
+   * @returns Object 是否能到达指定位置以及导航路径
+   */
+  simulateNavigateTo(target:Entity|IntPos|FloatPos,speed?:Number):{
+    isFullPath: boolean,
+    path: Array<Array<Number>>
+  }
+
+  /**
+   * 模拟导航移动（多目标）
+   * @param target 导航目标
+   * @param speed （可选参数）移动速度，默认为1
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateNavigateTo(target:Array<IntPos>|Array<FloatPos>,speed?:Number):boolean;
+
+  /**
+   * 模拟使用物品
+   * @param target （可选参数）要使用的物品(或物品所在的槽)，默认为选中物品
+   * @param pos （可选参数）目标坐标，默认为朝向方块坐标
+   * @param face （可选参数）目标方块的面，默认为0
+   * @param relative （可选参数）相对方块偏移坐标，默认为{0.5,0.5,0.5}
+   */
+  simulateUseItem(target?:Item|Number,pos?:IntPos,face?:Number,relative?:FloatPos):boolean;
+
+  /**
+   * 模拟停止破坏方块
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateStopDestroyingBlock():boolean;
+
+  /**
+   * 模拟停止交互
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateStopInteracting():boolean;
+
+  /**
+   * 模拟停止移动
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateStopMoving():boolean;
+
+  /**
+   * 模拟停止使用物品
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateStopUsingItem():boolean;
 }

@@ -79,3 +79,5 @@ declare class Device {
   /** 玩家的游玩模式 */
   readonly playMode: number
 }
+
+declare class LLSE_Device extends Device{}

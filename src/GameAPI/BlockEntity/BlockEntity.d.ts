@@ -49,3 +49,5 @@ declare class BlockEntity {
 
   asPointer(): NativePointer;
 }
+
+declare class LLSE_BlockEntity extends BlockEntity{}
