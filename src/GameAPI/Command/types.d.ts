@@ -47,7 +47,7 @@ declare enum ParamType {
   /** {@linkcode Entity} - 实体目标选择器参数 */
   Actor,
 
-  /** [`Player`](../Player.d.ts) - 玩家目标选择器参数 */
+  /** {@linkcode Player} - 玩家目标选择器参数 */
   Player,
 
   /** {@linkcode IntPos} - 整数坐标参数 */

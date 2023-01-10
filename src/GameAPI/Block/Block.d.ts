@@ -183,3 +183,6 @@ declare class Block {
 
   asPointer(): NativePointer;
 }
+
+
+declare class LLSE_Block extends Block{}

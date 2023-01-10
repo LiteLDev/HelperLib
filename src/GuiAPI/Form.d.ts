@@ -112,3 +112,5 @@ declare namespace mc {
    */
   function newCustomForm(): CustomForm;
 }
+declare class LLSE_SimpleForm extends SimpleForm{}
+declare class LLSE_CustomForm extends CustomForm{}

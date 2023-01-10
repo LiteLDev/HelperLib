@@ -32,7 +32,7 @@ declare class IntPos {
    * 下界 - `Nether`\
    * 末地 - `TheEnd`
    */
-  readonly dim: string;
+  readonly dim: "主世界"|"下界"|"末地";
 
   /**
    * ### 维度ID

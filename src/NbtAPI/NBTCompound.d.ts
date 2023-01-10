@@ -1,7 +1,17 @@
 /// <reference path="../index.d.ts" />
 
-declare class NbtCompound extends nbt{
+declare class NbtCompound{
   constructor(data?: Object);
+  /**
+   * 获取NBT对象储存的数据类型
+   * @returns NBT.enum 此NBT对象储存的数据类型
+   */
+  getType():10
+  /**
+   * 将NBT对象转换为Json字符串
+   * @param space （可选参数）如果要格式化输出的字符串，则传入此参数  
+   */
+  toString(space?: number): string;
 
   /**
    * 获取所有的键
@@ -127,6 +137,12 @@ declare class NbtCompound extends nbt{
    * @returns ByteBuffer 对应的二进制NBT数据
    */
   toBinaryNBT(): ByteBuffer;
+
+  /**
+   * 将NBT对象转换为SNBT字符串
+   * @param space （可选参数）如果要格式化输出的字符串，则传入此参数  
+   */
+  toSNBT(space?:number):string
 
   /**
    * 销毁此 NBT 标签对象

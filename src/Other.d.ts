@@ -1,2 +1,2 @@
 /// <reference path="index.d.ts" />
-declare class ByteBuffer{}
+declare class ByteBuffer extends ArrayBuffer{}

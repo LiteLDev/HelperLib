@@ -20,27 +20,35 @@ declare class CommandOutput {
    * 
    * @param msg 要输出的信息
    * 
+   * @param param 要替换的参数
+   * 
    * @returns 是否成功输出
    */
-  success(msg: string): boolean;
+  success(msg?: string, param?: any[]): boolean;
 
   /**
    * ### 输出一条错误信息
    * 
    * @param msg 要输出的信息
    * 
+   * @param param 要替换的参数
+   * 
    * @returns 是否成功输出
    */
-  error(msg: string): boolean;
+  error(msg: string, param?: any[]): boolean;
 
   /**
    * ### 输出一条普通信息
    * 
    * @param msg 要输出的信息
    * 
+   * @param param 要替换的参数
+   * 
+   * @param arg3 整数 作用未知
+   * 
    * @returns 是否成功输出
    */
-  addMessage(msg: string): boolean;
+  addMessage(msg: string, param?: any[], arg3?:number): boolean;
 
   toString(): string;
 }

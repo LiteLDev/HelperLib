@@ -1,8 +1,20 @@
 /// <reference path="../index.d.ts" />
 
-declare class NbtList extends nbt{
+declare class NbtList{
   constructor(data?: Array<NbtType>);
 
+  /**
+   * 获取NBT对象储存的数据类型
+   * @returns NBT.enum 此NBT对象储存的数据类型
+   */
+  getType():9
+
+  /**
+   * 将NBT对象转换为Json字符串
+   * @param space （可选参数）如果要格式化输出的字符串，则传入此参数  
+   */
+  toString(space?: number): string;
+    
   /**
    * 获取列表长度
    * @returns Integer 此列表的长度
