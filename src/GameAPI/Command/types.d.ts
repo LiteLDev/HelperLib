@@ -68,7 +68,7 @@ declare enum ParamType {
   /** [`Item`](../Item.d.ts) - 物品类型参数 */
   Item,
 
-  /** [`Block`](../Block/Block.d.ts) - 方块类型参数(在1.19.50被移除) */
+  /** @deprecated [`Block`](../Block/Block.d.ts) - 方块类型参数(在1.19.50被移除) */
   Block,
 
   /** `string`  - 效果类型参数 */
