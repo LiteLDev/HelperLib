@@ -257,16 +257,20 @@ declare class Player {
   /**
    * 传送玩家至指定位置
    * @param pos 目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）
+   * @param rot 送后玩家的朝向，若缺省则与传送前朝向相同
+   * 
    * @returns boolean 是否成功传送
    */
-  teleport(pos: IntPos | FloatPos): boolean;
+  teleport(pos: IntPos | FloatPos, rot?:DirectionAngle): boolean;
 
   /**
    * 传送玩家至指定位置
    * @param pos 目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）
+   * @param rot 送后玩家的朝向，若缺省则与传送前朝向相同
+   * 
    * @returns boolean 是否成功传送
    */
-  teleport(x: number, y: number, z: number, dimid: 0 | 1 | 2): boolean;
+  teleport(x: number, y: number, z: number, dimid: 0 | 1 | 2, rot?:DirectionAngle): boolean;
 
   /**
    * 杀死玩家

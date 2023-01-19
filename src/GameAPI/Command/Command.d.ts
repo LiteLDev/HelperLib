@@ -119,7 +119,7 @@ declare class Command {
       cmd: Command,
       origin: CommandOrigin,
       output: CommandOutput,
-      result: { [key: string]: any }
+      result: any
     ) => void
   ): boolean;
 

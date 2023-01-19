@@ -132,10 +132,11 @@ declare class Entity {
    * ### 传送实体至指定位置
    *
    * @param pos 目标位置坐标
+   * @param rot 传送后实体的朝向，若缺省则与传送前朝向相同
    *
    * @returns 是否成功传送
    */
-  teleport(pos: IntPos | FloatPos): boolean;
+  teleport(pos: IntPos | FloatPos, rot?: DirectionAngle): boolean;
 
   /**
    * ### 传送实体至指定位置
@@ -144,10 +145,11 @@ declare class Entity {
    * @param y y坐标
    * @param z z坐标
    * @param dimId 维度Id
+   * @param rot 传送后实体的朝向，若缺省则与传送前朝向相同
    *
    * @returns 是否成功传送
    */
-  teleport(x: number, y: number, z: number, dimId: 0 | 1 | 2 | 3): boolean;
+  teleport(x: number, y: number, z: number, dimId: 0 | 1 | 2 | 3, rot?: DirectionAngle): boolean;
 
   /**
    * ### 杀死指定实体
@@ -388,14 +390,14 @@ declare class Entity {
    * 
    * @returns 是否缩放成功
    */
-  setScale(scale:number): boolean;
+  setScale(scale: number): boolean;
 
   /**
    * ### 熄灭实体
    * 
    * @returns 是否熄灭成功
    */
-  stopFire():boolean;
+  stopFire(): boolean;
 
   /**
    * @deprecated
@@ -406,7 +408,7 @@ declare class Entity {
    * @returns 到坐标的距离(方块)
    * 
    */
-  distanceToPos(pos:Entity | Player | IntPos | FloatPos):number;
+  distanceToPos(pos: Entity | Player | IntPos | FloatPos): number;
 
   /**
    * 
@@ -417,7 +419,7 @@ declare class Entity {
    * @returns 到坐标的距离(方块)
    * 
    */
-  distanceToSqr(pos:Entity | Player | IntPos | FloatPos):number;
+  distanceToSqr(pos: Entity | Player | IntPos | FloatPos): number;
 
   /**
    * 
@@ -428,78 +430,89 @@ declare class Entity {
    * @returns 到坐标的距离(方块)
    * 
    */
-  distanceTo(pos:Entity | Player | IntPos | FloatPos):number;
+  distanceTo(pos: Entity | Player | IntPos | FloatPos): number;
 
   /** 设置生命值 */
-  setHealth(health:number):boolean
+  setHealth(health: number): boolean
 
   /** 设置生命值上限 */
-  setMaxHealth(health:number):boolean
+  setMaxHealth(health: number): boolean
 
   /**
    * 设置伤害吸收属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setAbsorption(value:number):boolean
+  setAbsorption(value: number): boolean
 
   /**
    * 设置攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setAttackDamage(value:number):boolean
-  
+  setAttackDamage(value: number): boolean
+
   /**
    * 最大攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMaxAttackDamage(value:number):boolean
+  setMaxAttackDamage(value: number): boolean
 
   /**
    * 设置跟随范围
    * @param value 新的值
    * @returns 是否成功
    */
-  setFollowRange(value:number):boolean
+  setFollowRange(value: number): boolean
 
   /**
    * 设置击退抵抗属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setKnockbackResistance(value:0 | 1):boolean
+  setKnockbackResistance(value: 0 | 1): boolean
 
   /**
    * 设置幸运属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLuck(value:number):boolean
+  setLuck(value: number): boolean
 
   /**
    * 设置移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMovementSpeed(value:number):boolean
+  setMovementSpeed(value: number): boolean
 
   /**
    * 置水下移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setUnderwaterMovementSpeed(value:number):boolean
+  setUnderwaterMovementSpeed(value: number): boolean
 
   /**
    * 设置岩浆上移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLavaMovementSpeed(value:number):boolean
+  setLavaMovementSpeed(value: number): boolean
 
+  /**
+   * 使指定实体刷新消失  
+   * @returns 是否成功执行
+   */
+  despawn(): boolean
+
+  /**
+   * 移除指定实体  
+   * @returns 是否成功执行
+   */
+  remove(): boolean
 
 }
 
-declare class LLSE_Entity extends Entity{}
+declare class LLSE_Entity extends Entity { }

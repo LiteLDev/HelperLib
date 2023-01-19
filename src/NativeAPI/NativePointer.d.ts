@@ -57,6 +57,11 @@ declare class NativePointer{
     double:any;
     string:string;
     bool:boolean;
+
+    asEntity():LLSE_Entity
+    asItem():LLSE_Item
+    asPlayer():LLSE_Player
+    asContainer():LLSE_Container
 }
 
 
