@@ -1,5 +1,11 @@
 /// <reference path="../index.d.ts" />
 
+declare enum VersionStatus{
+    Release,
+    Beta,
+    Dev
+}
+
 declare namespace ll{
     /**
      * 注册插件
@@ -8,7 +14,7 @@ declare namespace ll{
      * @param version 插件的版本信息[2,0,1]
      * @param otherInformation 其他你愿意提供的的附加信息（如许可证、开源地址等）
      */
-    function registerPlugin(name:string, introduction:string, version:Array<number>, otherInformation:Object):void;
+    function registerPlugin(name:string, introduction:string, version:[number,number,number,VersionStatus?], otherInformation:Object):void;
 }
 
 /**

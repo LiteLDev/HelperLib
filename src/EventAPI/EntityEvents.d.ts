@@ -129,11 +129,37 @@ declare namespace mc {
     ) => boolean | void
   ): boolean;
 
-  /**发生于实体生成*/
+  /**发生于实体生成
+   * @deprecated 请使用 onMobTrySpawn 和 onMobSpawned 事件作为替代
+   */
   function listen(
     event: "onMobSpawn",
     listener: (typeName: string, pos: FloatPos) => boolean | void
   ): boolean;
+
+  /**
+   * 发生于实体尝试自然生成
+   * 
+   * 在回调函数中:
+   * * `typeName`: 生成实体名称
+   * * `pos`: 生成的坐标
+   */
+  function listen(
+    event: "onMobTrySpawn",
+    listener: (typeName: string, pos: FloatPos) => boolean | void
+  )
+
+  /**
+   * 发生于实体自然生成完成
+   * 
+   * 在回调函数中:
+   * * `entity`: 生成的实体对象
+   * * `pos`: 生成的坐标
+   */
+  function listen(
+    event: "onMobSpawned",
+    listener: (entity: Entity, pos: FloatPos) => void
+  )
 
   /**实体被弹射物击中*/
   function listen(
@@ -146,6 +172,18 @@ declare namespace mc {
     event: "onWitherBossDestroy",
     listener: (witherBoss: Entity, AAbb: IntPos, aaBB: IntPos) => boolean | void
   ): boolean;
+
+  /**
+   * 末影龙破坏方块
+   * 
+   * 在回调函数中:
+   * * `EnderDragon`: 末影龙的实体对象
+   * * `block`: 末影龙破坏的方块对象
+   */
+  function listen(
+    event: "onEnderDragonDestroy",
+    listener: (EnderDragon: Entity, block: Block) => boolean | void
+  )
 
   /**生物骑乘*/
   function listen(
