@@ -22,6 +22,9 @@
 /// <reference path="[本仓库根目录路径]/src/index.d.ts" />
 ```
 
+## ❓有疑问或者建议？
+- 请前往[Issues](https://github.com/LiteLScript-Dev/HelperLib/issues)提出
+
 ## 🏆 贡献
 
 - 感谢[HuoHuas001](https://github.com/HuoHuas001)的主要从文档转换

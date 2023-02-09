@@ -22,6 +22,9 @@
 /// <reference path="[root path of this repository]/src/index.d.ts" />
 ```
 
+## ❓ Have a question or suggestion?
+- Please go to [Issues](https://github.com/LiteLScript-Dev/HelperLib/issues) to ask
+
 ## 🏆 Contribution
 
 - Thanks to [HuoHuas001](https://github.com/HuoHuas001) for the main conversion from documentation
