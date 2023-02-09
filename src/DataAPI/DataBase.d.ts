@@ -54,9 +54,18 @@ declare class DataBase_Params{
 
 /**打开一个SQL数据库会话 */
 declare class DBSession{
+    /**
+     * 打开一个SQL数据库会话
+     * @param type 数据库的类型，目前仅支持
+     * @param params DataBase_Params 连接参数
+     */
     constructor(type:"sqlite3",params:DataBase_Params);
-    type: "sqlite3";
-    params: DataBase_Params;
+
+    /**
+     * 打开一个SQL数据库会话
+     * @param str 形如file:///mydb.db?k=v, mysql://root:password@localhost:3306/db的连接字符串
+     */
+    constructor(str:string);
 
     /**
      * 执行SQL并获取结果集
@@ -99,6 +108,8 @@ declare class DBSession{
      */
     prepare(sql:string):DBStmt
 }
+
+
 
 /**SQL预准备语句 */
 declare class DBStmt{
