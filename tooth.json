@@ -1,0 +1,17 @@
+{
+    "format_version": 1,
+    "tooth": "github.com/LiteLScript-Dev/HelperLib",
+    "version": "2.9.3",
+    "dependencies": {},
+    "information": {
+        "name": "HelperLib",
+        "description": "TypeScript.d.ts file with auto-completion and code hints for LiteLScript developers",
+        "homepage": "https://github.com/LiteLScript-Dev/HelperLib"
+    },
+    "placement": [
+        {
+            "source": "src/*",
+            "destination": "declaration/llse/*"
+        }
+    ]
+}
