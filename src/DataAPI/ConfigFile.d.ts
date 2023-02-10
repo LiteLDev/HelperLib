@@ -67,9 +67,10 @@ declare class JsonConfigFile {
 
   /**
    * 写入整个配置文件的内容
+   * @param content 内容
    * @returns boolean 是否写入成功
    */
-  write(): boolean;
+  write(content:string): boolean;
 }
 
 /**创建或打开一个 Ini 配置文件 */
@@ -187,7 +188,8 @@ declare class IniConfigFile {
 
   /**
    * 写入整个配置文件的内容
+   * @param content 内容
    * @returns boolean 是否写入成功
    */
-  write(): boolean;
+  write(content:string): boolean;
 }
