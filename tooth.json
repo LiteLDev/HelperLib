@@ -1,7 +1,7 @@
 {
     "format_version": 1,
     "tooth": "github.com/LiteLScript-Dev/HelperLib",
-    "version": "2.9.3",
+    "version": "2.10.0",
     "dependencies": {},
     "information": {
         "name": "HelperLib",
