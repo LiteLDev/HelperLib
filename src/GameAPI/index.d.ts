@@ -12,3 +12,4 @@
 /// <reference path="ScoreBoard.d.ts" />
 /// <reference path="Server.d.ts" />
 /// <reference path="ParticleSpawner/index.d.ts"/>
+/// <reference path="mc.d.ts"/>

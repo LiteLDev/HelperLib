@@ -18,6 +18,9 @@ declare class Player {
   /**玩家所在的方块坐标 */
   readonly blockPos: IntPos;
 
+  /**玩家腿部所在坐标 */
+  readonly feetPos: FloatPos;
+
   /**玩家上次死亡的坐标 */
   readonly lastDeathPos: IntPos;
 
