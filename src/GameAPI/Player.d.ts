@@ -264,7 +264,7 @@ declare class Player {
    * 
    * @returns boolean 是否成功传送
    */
-  teleport(pos: IntPos | FloatPos, rot?:DirectionAngle): boolean;
+  teleport(pos: IntPos | FloatPos, rot?: DirectionAngle): boolean;
 
   /**
    * 传送玩家至指定位置
@@ -273,7 +273,7 @@ declare class Player {
    * 
    * @returns boolean 是否成功传送
    */
-  teleport(x: number, y: number, z: number, dimid: 0 | 1 | 2, rot?:DirectionAngle): boolean;
+  teleport(x: number, y: number, z: number, dimid: 0 | 1 | 2, rot?: DirectionAngle): boolean;
 
   /**
    * 杀死玩家
@@ -614,63 +614,63 @@ declare class Player {
    * @param value 新的值
    * @returns 是否成功
    */
-  setAbsorption(value:number):boolean
+  setAbsorption(value: number): boolean
 
   /**
    * 设置攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setAttackDamage(value:number):boolean
-  
+  setAttackDamage(value: number): boolean
+
   /**
    * 最大攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMaxAttackDamage(value:number):boolean
+  setMaxAttackDamage(value: number): boolean
 
   /**
    * 设置跟随范围
    * @param value 新的值
    * @returns 是否成功
    */
-  setFollowRange(value:number):boolean
+  setFollowRange(value: number): boolean
 
   /**
    * 设置击退抵抗属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setKnockbackResistance(value:0 | 1):boolean
+  setKnockbackResistance(value: 0 | 1): boolean
 
   /**
    * 设置幸运属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLuck(value:number):boolean
+  setLuck(value: number): boolean
 
   /**
    * 设置移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMovementSpeed(value:number):boolean
+  setMovementSpeed(value: number): boolean
 
   /**
    * 置水下移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setUnderwaterMovementSpeed(value:number):boolean
+  setUnderwaterMovementSpeed(value: number): boolean
 
   /**
    * 设置岩浆上移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLavaMovementSpeed(value:number):boolean
+  setLavaMovementSpeed(value: number): boolean
 
   /**
    * 获取玩家疾跑状态
@@ -863,6 +863,16 @@ declare class Player {
   ): number | null;
 
   /**
+   * 发送表单
+   * @param fm 配置好的表单对象
+   * @param callback 玩家与表单元素互动之后被调用的回调函数。
+   */
+  sendForm(
+    fm: CustomForm | SimpleForm,
+    callback: (player: Player, data: number | Array<any> | null) => void
+  ): number | null;
+
+  /**
    * 函数已弃用
    * @deprecated 函数已弃用 请使用 getInventory()
    */
@@ -1020,7 +1030,7 @@ declare enum sidebar {
   Ascending = 0,
 }
 
-declare class LLSE_Player extends Player{}
+declare class LLSE_Player extends Player { }
 
 /**
  * 模拟玩家
@@ -1054,7 +1064,7 @@ declare class SimulatedPlayer extends Player {
    * @param target （可选参数）模拟交互目标，默认为视线方向上的方块或实体
    * @returns boolean 是否成功模拟操作
    */
-  simulateInteract(target?: Entity):boolean;
+  simulateInteract(target?: Entity): boolean;
 
   /**
    * 模拟交互
@@ -1062,27 +1072,27 @@ declare class SimulatedPlayer extends Player {
    * @param face （可选参数）模拟交互目标方块的面
    * @returns boolean 是否成功模拟操作
    */
-  simulateInteract(target?: IntPos|Block,face?:Number):boolean;
+  simulateInteract(target?: IntPos | Block, face?: Number): boolean;
 
   /**
    * 模拟跳跃
    * @returns boolean 是否成功模拟操作
    */
-  simulateJump():boolean;
+  simulateJump(): boolean;
 
   /**
    * 模拟看向某方块或实体
    * @param target 要看向的目标(实体|坐标|方块)
    * @returns boolean 是否成功模拟操作
    */
-  simulateLookAt(target:Entity|IntPos|FloatPos|Block):boolean;
+  simulateLookAt(target: Entity | IntPos | FloatPos | Block): boolean;
 
   /**
    * 模拟设置身体角度
    * @param rot 要设置的角度
    * @returns boolean 是否成功模拟操作
    */
-  simulateSetBodyRotation(rot:Number):boolean;
+  simulateSetBodyRotation(rot: Number): boolean;
 
   /**
    * 相对玩家坐标系移动
@@ -1090,7 +1100,7 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns boolean 是否请求移动成功
    */
-  simulateLocalMove(pos:IntPos|FloatPos,speed?:Number):boolean;
+  simulateLocalMove(pos: IntPos | FloatPos, speed?: Number): boolean;
 
   /**
    * 相对世界坐标系移动
@@ -1098,7 +1108,7 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns boolean 是否请求移动成功
    */
-  simulateWorldMove(pos:IntPos|FloatPos,speed?:Number):boolean;
+  simulateWorldMove(pos: IntPos | FloatPos, speed?: Number): boolean;
 
   /**
    * 直线移动到坐标
@@ -1107,7 +1117,7 @@ declare class SimulatedPlayer extends Player {
    * @returns boolean 是否请求移动成功
    * **注：如需自动寻路，请考虑使用 模拟导航移动{@linkcode simulateNavigateTo}**
    */
-  simulateMoveTo(pos:IntPos|FloatPos,speed?:Number):boolean;
+  simulateMoveTo(pos: IntPos | FloatPos, speed?: Number): boolean;
 
   /**
    * 模拟导航移动
@@ -1115,7 +1125,7 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns Object 是否能到达指定位置以及导航路径
    */
-  simulateNavigateTo(target:Entity|IntPos|FloatPos,speed?:Number):{
+  simulateNavigateTo(target: Entity | IntPos | FloatPos, speed?: Number): {
     isFullPath: boolean,
     path: Array<Array<Number>>
   }
@@ -1126,7 +1136,7 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns boolean 是否成功模拟操作
    */
-  simulateNavigateTo(target:Array<IntPos>|Array<FloatPos>,speed?:Number):boolean;
+  simulateNavigateTo(target: Array<IntPos> | Array<FloatPos>, speed?: Number): boolean;
 
   /**
    * 模拟使用物品
@@ -1135,29 +1145,29 @@ declare class SimulatedPlayer extends Player {
    * @param face （可选参数）目标方块的面，默认为0
    * @param relative （可选参数）相对方块偏移坐标，默认为{0.5,0.5,0.5}
    */
-  simulateUseItem(target?:Item|Number,pos?:IntPos,face?:Number,relative?:FloatPos):boolean;
+  simulateUseItem(target?: Item | Number, pos?: IntPos, face?: Number, relative?: FloatPos): boolean;
 
   /**
    * 模拟停止破坏方块
    * @returns boolean 是否成功模拟操作
    */
-  simulateStopDestroyingBlock():boolean;
+  simulateStopDestroyingBlock(): boolean;
 
   /**
    * 模拟停止交互
    * @returns boolean 是否成功模拟操作
    */
-  simulateStopInteracting():boolean;
+  simulateStopInteracting(): boolean;
 
   /**
    * 模拟停止移动
    * @returns boolean 是否成功模拟操作
    */
-  simulateStopMoving():boolean;
+  simulateStopMoving(): boolean;
 
   /**
    * 模拟停止使用物品
    * @returns boolean 是否成功模拟操作
    */
-  simulateStopUsingItem():boolean;
+  simulateStopUsingItem(): boolean;
 }
