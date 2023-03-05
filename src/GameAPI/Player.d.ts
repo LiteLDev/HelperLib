@@ -97,6 +97,9 @@ declare class Player {
   readonly inClouds: boolean;
 
   /**玩家当前是否正在潜行 */
+  readonly isSneaking: boolean;
+
+  /** @deprecated 玩家当前是否正在潜行*/
   readonly sneaking: boolean;
 
   /**玩家当前速度 */
@@ -174,7 +177,7 @@ declare class Player {
   /** 玩家是否移动 */
   readonly isMoving: boolean;
 
-  /**玩家设备IP地址 */
+  /** @deprecated 玩家设备IP地址 */
   readonly ip: string;
 
   /**
@@ -913,8 +916,16 @@ declare class Player {
    * @param pos 目标位置
    *
    * @returns 到坐标的距离(方块)
+   * 
+   * @deprecated
    */
   distanceToPos(pos: IntPos | FloatPos): number;
+
+  getAllEffects():number[]
+
+  addEffect(arg1:number,arg2:number,arg3:number,arg4:boolean):boolean
+
+  removeEffect(arg1:number):boolean
 }
 
 declare namespace mc {

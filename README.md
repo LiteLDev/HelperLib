@@ -24,6 +24,9 @@
 
 ## ❓有疑问或者建议？
 - 请前往[Issues](https://github.com/LiteLScript-Dev/HelperLib/issues)提出
+  
+## ❗ 注意
+- 本存储库所包含的声明文件并非100%准确无误，请以LLSE的源码和文档为准。本存储库的更新历史亦不对应LLSE项目的有关更改发生情况，不可作为此类参考。
 
 ## 🏆 贡献
 
