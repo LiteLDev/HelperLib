@@ -14,6 +14,10 @@
  * 因此，如果有长期操作某个方块实体的需要，请通过{@linkcode Block.getBlockEntity()}获取实时的方块实体对象
  */
 declare class BlockEntity {
+
+  /** 方块实体的名称 */
+  readonly name: string 
+
   /** 方块实体对应方块所在的坐标 */
   readonly pos: IntPos;
 

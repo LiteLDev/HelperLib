@@ -131,6 +131,8 @@ declare class Entity {
   /** 实体是否移动 */
   readonly isMoving: boolean;
 
+  readonly posDelta: FloatPos;
+
   /**
    * ### 传送实体至指定位置
    *
@@ -515,6 +517,10 @@ declare class Entity {
    * @returns 是否成功执行
    */
   remove(): boolean
+
+  setPosDelta(arg1:FloatPos): boolean
+  
+  setPosDelta(arg1:number,arg2:number,arg3:number): boolean
 
 }
 
