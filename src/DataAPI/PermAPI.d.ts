@@ -9,15 +9,19 @@ declare class Role{
      */
     constructor(name:string,displayName?:string)
 
-    /**身份组名称 */
+    /** 身份组名称 */
     name:string
-    /**身份组显示名称 */
+
+    /** 身份组显示名称 */
     displayName:string
-    /**身份组优先级，越大越优先 */
+
+    /** 身份组优先级，越大越优先 */
     priority:number
-    /**身份组拥有的权限 */
+
+    /** 身份组拥有的权限 */
     permissions:Array<{name:string,enabled:boolean,extra:object}>
-    /**身份组成员的Xuid */
+
+    /** 身份组成员的Xuid */
     members:Array<string>
 
     /**

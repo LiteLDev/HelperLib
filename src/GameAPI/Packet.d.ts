@@ -26,7 +26,7 @@ declare class BinaryStream{
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeBool(value:Boolean):boolean;
+    writeBool(value:boolean):boolean;
 
     /**
      * 写入二进制流
@@ -40,7 +40,7 @@ declare class BinaryStream{
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeDouble(value:Number):boolean;
+    writeDouble(value:number):boolean;
 
     /**
      * 写入二进制流
@@ -54,21 +54,21 @@ declare class BinaryStream{
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeSignedBigEndianInt(value:Number):boolean;
+    writeSignedBigEndianInt(value:number):boolean;
 
     /**
      * 写入二进制流
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeSignedInt(value:Number):boolean;
+    writeSignedInt(value:number):boolean;
 
     /**
      * 写入二进制流
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeSignedInt64(value:Number):boolean;
+    writeSignedInt64(value:number):boolean;
 
     /**
      * 写入二进制流
@@ -82,7 +82,7 @@ declare class BinaryStream{
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeString(value:String):boolean;
+    writeString(value:string):boolean;
 
     /**
      * 写入二进制流
@@ -96,14 +96,14 @@ declare class BinaryStream{
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeUnsignedInt(value:Number):boolean;
+    writeUnsignedInt(value:number):boolean;
 
     /**
      * 写入二进制流
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeUnsignedInt64(value:Number):boolean;
+    writeUnsignedInt64(value:number):boolean;
 
     /**
      * 写入二进制流
@@ -117,28 +117,28 @@ declare class BinaryStream{
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeUnsignedVarInt(value:Number):boolean;
+    writeUnsignedVarInt(value:number):boolean;
 
     /**
      * 写入二进制流
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeUnsignedVarInt64(value:Number):boolean;
+    writeUnsignedVarInt64(value:number):boolean;
 
     /**
      * 写入二进制流
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeVarInt(value:Number):boolean;
+    writeVarInt(value:number):boolean;
 
     /**
      * 写入二进制流
      * @param value 参数
      * @returns boolean 是否成功
      */
-    writeVarInt64(value:Number):boolean;
+    writeVarInt64(value:number):boolean;
 
     /**
      * 写入二进制流

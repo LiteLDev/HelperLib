@@ -8,11 +8,13 @@
  * @see [✨ ParticleSpawner 对象](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Particle)
  */
 declare class ParticleSpawner{
-    /**粒子显示半径*/
+    /** 粒子显示半径 */
     displayRadius:number
-    /**需要高细节线条*/
+
+    /** 需要高细节线条 */
     highDetial:boolean
-    /**需要双面粒子*/
+
+    /** 需要双面粒子 */
     doubleSide:boolean
 
 

@@ -1,19 +1,23 @@
 /* eslint-disable @typescript-eslint/triple-slash-reference */
 
 declare class record {
-  /**此项交易的发起者玩家Xuid */
+  /** 此项交易的发起者玩家Xuid */
   from: string;
-  /**此项交易的接收者玩家Xuid */
+
+  /** 此项交易的接收者玩家Xuid */
   to: string;
-  /**此项交易的金额 */
+
+  /** 此项交易的金额 */
   money: number;
-  /**此项交易发生时的时间字符串 */
+
+  /** 此项交易发生时的时间字符串 */
   time: string;
-  /**此交易的附加说明信息 */
+
+  /** 此交易的附加说明信息 */
   note: string;
 }
 
-/**经济系统 API */
+/** 经济系统 API */
 declare namespace money {
   /**
    * 设置玩家的存款金额

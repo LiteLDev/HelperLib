@@ -53,6 +53,7 @@ declare class Command {
     enumName?: string,
     enumOptions?: number
   ): boolean;
+
   mandatory(
     name: string,
     type: ParamType,

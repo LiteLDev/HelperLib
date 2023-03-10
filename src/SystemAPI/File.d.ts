@@ -14,13 +14,13 @@ declare class File {
    */
   constructor(path: string, mode: file, isBinary: boolean);
 
-  /**当前文件路径 */
+  /** 当前文件路径 */
   readonly path: string;
 
-  /**当前文件的绝对路径 */
+  /** 当前文件的绝对路径 */
   readonly absolutePath: string;
 
-  /**当前文件大小 */
+  /** 当前文件大小 */
   readonly size: number;
 
   /**

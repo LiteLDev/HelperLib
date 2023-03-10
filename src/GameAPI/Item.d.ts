@@ -1,22 +1,22 @@
 /// <reference path="../index.d.ts" />
 
 declare class Item {
-  /**游戏内显示的物品名称 */
+  /** 游戏内显示的物品名称 */
   readonly name: string;
 
-  /**物品标准类型名 */
+  /** 物品标准类型名 */
   readonly type: string;
 
-  /**物品的游戏内id */
+  /** 物品的游戏内id */
   readonly id: number;
 
-  /**这个物品对象堆叠的个数 */
+  /** 这个物品对象堆叠的个数 */
   readonly count: number;
 
-  /**物品附加值（如羊毛颜色） */
+  /** 物品附加值（如羊毛颜色） */
   readonly aux: number;
 
-  /**Item Lore */
+  /** Item Lore */
   readonly lore: Array<string>
 
   /**	物品是否为箭 */

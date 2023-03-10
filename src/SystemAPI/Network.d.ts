@@ -21,7 +21,7 @@ declare namespace network {
    */
   function httpGet(
     url: string,
-    header: Object,
+    header: any,
     callback: (status: number, result: string) => void
   ): boolean;
 
@@ -51,7 +51,7 @@ declare namespace network {
    */
   function httpPost(
     url: string,
-    header: Object,
+    header: any,
     data: string,
     type: string,
     callback: (status: number, result: string) => void
@@ -60,16 +60,16 @@ declare namespace network {
 
 declare type WSClientType = number;
 declare class WSClient {
-  /**处于正常连接中   */
+  /** 处于正常连接中   */
   Open: WSClientType;
 
-  /**正在断开连接 */
+  /** 正在断开连接 */
   Closing: WSClientType;
 
-  /**未连接 */
+  /** 未连接 */
   Closed: WSClientType;
 
-  /**当前的连接状态 */
+  /** 当前的连接状态 */
   readonly status: WSClientType;
 
   /**
@@ -150,34 +150,34 @@ declare class WSClient {
 }
 
 declare class HttpRequest {
-  /**请求方法 */
+  /** 请求方法 */
   readonly method: string;
 
-  /**请求路径 */
+  /** 请求路径 */
   readonly path: string;
 
-  /**请求查询参数 */
-  readonly query: Object;
+  /** 请求查询参数 */
+  readonly query: any;
 
-  /**请求查询参数(同上) */
-  readonly params: Object;
+  /** 请求查询参数(同上) */
+  readonly params: any;
 
-  /**请求头 */
-  readonly headers: Object;
+  /** 请求头 */
+  readonly headers: any;
 
-  /**请求内容 */
+  /** 请求内容 */
   readonly body: string;
 
-  /**请求源地址 */
+  /** 请求源地址 */
   readonly remoteAddr: string;
 
-  /**请求源端口 */
+  /** 请求源端口 */
   readonly remotePort: number;
 
-  /**请求版本 */
+  /** 请求版本 */
   readonly version: string;
 
-  /**请求路径正则匹配结果 */
+  /** 请求路径正则匹配结果 */
   readonly matches: Array<any>;
 
   /**
@@ -189,19 +189,19 @@ declare class HttpRequest {
 }
 
 declare class HttpResponse {
-  /**响应状态码 */
+  /** 响应状态码 */
   status: number;
 
-  /**响应头 */
-  header: Object;
+  /** 响应头 */
+  header: any;
 
-  /**响应内容 */
+  /** 响应内容 */
   body: string;
 
-  /**响应版本 */
+  /** 响应版本 */
   version: string;
 
-  /**错误原因 */
+  /** 错误原因 */
   reason: string;
 
   /**

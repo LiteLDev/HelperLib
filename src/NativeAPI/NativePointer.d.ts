@@ -35,32 +35,49 @@ declare class NativePointer{
      */
     fromAddress(address:string|number):NativePointer;
 
-    /**指针地址 */
+    /** 指针地址 */
     asRawAddress:number;
 
-    /**指针地址描述 */
+    /** 指针地址描述 */
     asHexAddress:string;
 
-    /**指针内存Type */
+    /** 指针内存Type */
     byte:any;
+
     int8:any;
+
     uint8:any;
+
     int16:any;
+
     uint16:any;
+
     int32:any;
+
     uint32:any;
+
     long:any;
+
     ulong:any;
+
     int64:any;
+
     uint64:any;
+
     float:any;
+
     double:any;
+
     string:string;
+
     bool:boolean;
 
     asEntity():LLSE_Entity
+
     asItem():LLSE_Item
+
     asPlayer():LLSE_Player
+
     asContainer():LLSE_Container
 }
 

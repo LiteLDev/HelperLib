@@ -3,15 +3,25 @@
 declare class NBT {
   // enum
   static readonly End = 0
+
   static readonly Byte = 1
+
   static readonly Short = 2
+
   static readonly Int = 3
+
   static readonly Long = 4
+
   static readonly Float = 5
+
   static readonly Double = 6
+
   static readonly ByteArray = 7
+
   static readonly String = 8
+
   static readonly List = 9
+
   static readonly Compound = 10
 
   /**
@@ -30,6 +40,7 @@ declare class NBT {
 
   /** @deprecated */
   static newTag(arg:NbtEnum):NbtType
+
   /** @deprecated */
   static createTag(arg:NbtEnum):NbtType
 }

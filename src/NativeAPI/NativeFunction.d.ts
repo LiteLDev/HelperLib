@@ -26,7 +26,7 @@ declare class NativeHook{
 	 */
 	call(...params:any[]):any;
 
-	/**函数指针的指针值*/
+	/** 函数指针的指针值 */
 	address:NativePointer|number;
 
 }

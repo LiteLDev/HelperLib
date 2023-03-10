@@ -1,12 +1,14 @@
 /// <reference path="../index.d.ts" />
 
 declare class NbtCompound{
-  constructor(data?: Object);
+  constructor(data?: object);
+
   /**
    * 获取NBT对象储存的数据类型
    * @returns NBT.enum 此NBT对象储存的数据类型
    */
   getType():10
+
   /**
    * 将NBT对象转换为Json字符串
    * @param space （可选参数）如果要格式化输出的字符串，则传入此参数  
@@ -130,7 +132,7 @@ declare class NbtCompound{
    * 将 NBT 标签对象 转换为Object
    * @returns Object 对应的对象/表
    */
-  toObject(): Object;
+  toObject(): any;
 
   /**
    * 将 NBT 标签对象 序列化为二进制NBT

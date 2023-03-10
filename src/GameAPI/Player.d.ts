@@ -7,171 +7,171 @@ declare enum sendTextType {
   json = 9,
 }
 
-/**玩家 */
+/** 玩家 */
 declare class Player {
-  /**玩家名 */
+  /** 玩家名 */
   readonly name: string;
 
-  /**玩家所在坐标   */
+  /** 玩家所在坐标   */
   readonly pos: FloatPos;
 
-  /**玩家所在的方块坐标 */
+  /** 玩家所在的方块坐标 */
   readonly blockPos: IntPos;
 
-  /**玩家腿部所在坐标 */
+  /** 玩家腿部所在坐标 */
   readonly feetPos: FloatPos;
 
-  /**玩家上次死亡的坐标 */
+  /** 玩家上次死亡的坐标 */
   readonly lastDeathPos: IntPos;
 
-  /**玩家的真实名字 */
+  /** 玩家的真实名字 */
   readonly realName: string;
 
-  /**玩家Xuid字符串 */
+  /** 玩家Xuid字符串 */
   readonly xuid: string;
 
-  /**玩家Uuid字符串 */
+  /** 玩家Uuid字符串 */
   readonly uuid: string;
 
-  /**玩家的操作权限等级（0 - 4） */
+  /** 玩家的操作权限等级（0 - 4） */
   readonly permLevel: number;
 
-  /**玩家的游戏模式（0 - 3） */
+  /** 玩家的游戏模式（0 - 3） */
   readonly gameMode: number;
 
-  /**玩家是否可以飞行 */
+  /** 玩家是否可以飞行 */
   readonly canFly: boolean;
 
-  /**玩家是否可以睡觉 */
+  /** 玩家是否可以睡觉 */
   readonly canSleep: boolean;
 
-  /**玩家是否可以在地图上看到 */
+  /** 玩家是否可以在地图上看到 */
   readonly canBeSeenOnMap: boolean;
 
-  /**玩家是否可以冻结 */
+  /** 玩家是否可以冻结 */
   readonly canFreeze: boolean;
 
-  /**玩家是否能看到日光 */
+  /** 玩家是否能看到日光 */
   readonly canSeeDaylight: boolean;
 
-  /**玩家是否可以显示姓名标签 */
+  /** 玩家是否可以显示姓名标签 */
   readonly canShowNameTag: boolean;
 
-  /**玩家是否可以开始在床上睡觉 */
+  /** 玩家是否可以开始在床上睡觉 */
   readonly canStartSleepInBed: boolean;
 
-  /**玩家是否可以拾取物品 */
+  /** 玩家是否可以拾取物品 */
   readonly canPickupItems: boolean;
 
-  /**玩家最大生命值 */
+  /** 玩家最大生命值 */
   readonly maxHealth: number;
 
-  /**玩家当前生命值 */
+  /** 玩家当前生命值 */
   readonly health: number;
 
-  /**玩家当前是否悬空 */
+  /** 玩家当前是否悬空 */
   readonly inAir: boolean;
 
-  /**玩家当前是否在水中 */
+  /** 玩家当前是否在水中 */
   readonly inWater: boolean;
 
-  /**玩家是否在熔岩中 */
+  /** 玩家是否在熔岩中 */
   readonly inLava: boolean;
 
-  /**玩家是否下雨 */
+  /** 玩家是否下雨 */
   readonly inRain: boolean;
 
-  /**玩家是否在雪中 */
+  /** 玩家是否在雪中 */
   readonly inSnow: boolean;
 
-  /**玩家是否在墙上 */
+  /** 玩家是否在墙上 */
   readonly inWall: boolean;
 
-  /**玩家是否在水中或雨中 */
+  /** 玩家是否在水中或雨中 */
   readonly inWaterOrRain: boolean;
 
-  /**玩家是否在世界 */
+  /** 玩家是否在世界 */
   readonly inWorld: boolean;
 
-  /**玩家是否在云端 */
+  /** 玩家是否在云端 */
   readonly inClouds: boolean;
 
-  /**玩家当前是否正在潜行 */
+  /** 玩家当前是否正在潜行 */
   readonly isSneaking: boolean;
 
-  /** @deprecated 玩家当前是否正在潜行*/
+  /** @deprecated 玩家当前是否正在潜行 */
   readonly sneaking: boolean;
 
-  /**玩家当前速度 */
+  /** 玩家当前速度 */
   readonly speed: number;
 
-  /**玩家当前朝向 */
+  /** 玩家当前朝向 */
   readonly direction: DirectionAngle;
 
-  /**玩家（实体的）唯一标识符 */
+  /** 玩家（实体的）唯一标识符 */
   readonly uniqueId: string;
 
-  /**玩家设置的语言的标识符(形如zh_CN)  */
+  /** 玩家设置的语言的标识符(形如zh_CN)  */
   readonly langCode: string;
 
-  /**玩家是否正在加载   */
+  /** 玩家是否正在加载   */
   readonly isLoading: boolean;
 
-  /**玩家是否隐身中 */
+  /** 玩家是否隐身中 */
   readonly isInvisible: boolean;
 
-  /**玩家在传送门中 */
+  /** 玩家在传送门中 */
   readonly isInsidePortal: boolean;
 
-  /**玩家是否受伤 */
+  /** 玩家是否受伤 */
   readonly isHurt: boolean;
 
-  /**未知 */
+  /** 未知 */
   readonly isTrusting: boolean;
 
-  /**玩家是否在能造成伤害的方块上 */
+  /** 玩家是否在能造成伤害的方块上 */
   readonly isTouchingDamageBlock: boolean;
 
-  /**玩家是否饿了 */
+  /** 玩家是否饿了 */
   readonly isHungry: boolean;
 
-  /**玩家是否着火 */
+  /** 玩家是否着火 */
   readonly isOnFire: boolean;
 
-  /**玩家是否在地上 */
+  /** 玩家是否在地上 */
   readonly isOnGround: boolean;
 
-  /**玩家是否在高温方块上（岩浆等） */
+  /** 玩家是否在高温方块上（岩浆等） */
   readonly isOnHotBlock: boolean;
 
-  /**玩家在交易 */
+  /** 玩家在交易 */
   readonly isTrading: boolean;
 
-  /**玩家是否是冒险模式 */
+  /** 玩家是否是冒险模式 */
   readonly isAdventure: boolean;
 
-  /**玩家在滑行 */
+  /** 玩家在滑行 */
   readonly isGliding: boolean;
 
-  /**玩家是否是生存模式 */
+  /** 玩家是否是生存模式 */
   readonly isSurvival: boolean;
 
-  /**玩家是否是观众模式 */
+  /** 玩家是否是观众模式 */
   readonly isSpectator: boolean;
 
-  /**玩家是否在骑行 */
+  /** 玩家是否在骑行 */
   readonly isRiding: boolean;
 
-  /**玩家在跳舞？ */
+  /** 玩家在跳舞？ */
   readonly isDancing: boolean;
 
-  /**玩家是否是创造模式 */
+  /** 玩家是否是创造模式 */
   readonly isCreative: boolean;
 
-  /**玩家是否在飞行 */
+  /** 玩家是否在飞行 */
   readonly isFlying: boolean;
 
-  /**玩家是否正在睡觉 */
+  /** 玩家是否正在睡觉 */
   readonly isSleeping: boolean;
 
   /** 玩家是否移动 */
@@ -239,6 +239,15 @@ declare class Player {
   talkAs(text: string): boolean;
 
   /**
+   * 以某个玩家身份向某玩家说话
+   * @param target 模拟说话对象
+   * @param text 模拟说话内容
+   * @returns boolean 是否执行成功
+   */
+  talkAs(target: Player, text: string): boolean;
+
+
+  /**
    * ### 获取实体到坐标的距离
    * @param pos 目标位置
    * @returns 到坐标的距离(方块)
@@ -251,14 +260,6 @@ declare class Player {
    * @returns 到坐标的距离(方块)
    */
   distanceTo(pos: Entity | Player | IntPos | FloatPos): number;
-
-  /**
-   * 以某个玩家身份向某玩家说话
-   * @param target 模拟说话对象
-   * @param text 模拟说话内容
-   * @returns boolean 是否执行成功
-   */
-  talkAs(target: Player, text: string): boolean;
 
   /**
    * 传送玩家至指定位置
@@ -530,7 +531,7 @@ declare class Player {
    * @param sortOrder （可选参数）侧边栏内容的排序顺序。`0`为按分数升序，`1`为按分数降序。默认值为`1`
    * @returns boolean 是否成功设置
    */
-  setSidebar(title: string, data: Object, sortOrder?: sidebar | 0 | 1): boolean;
+  setSidebar(title: string, data: Record<string,number>, sortOrder?: sidebar | 0 | 1): boolean;
 
   /**
    * 移除玩家自定义侧边栏
@@ -598,19 +599,19 @@ declare class Player {
    * 玩家所有的 tag 字符串列表
    * @returns Array<String> 玩家所有的 tag 字符串列表
    */
-  getAllTags(): Array<String>;
+  getAllTags(): Array<string>;
 
   /**
    * 获取玩家的Abilities能力列表（来自玩家NBT）
    * @returns object<String,any>  玩家所有能力信息的键 - 值对列表对象
    */
-  getAbilities(): Object;
+  getAbilities(): any;
 
   /**
    * 获取玩家的Attributes属性列表（来自玩家NBT）
    * @returns Array<Object> 玩家所有属性对象的数组
    */
-  getAttributes(): Array<Object>;
+  getAttributes(): Array<any>;
 
   /**
    * 设置伤害吸收属性
@@ -906,11 +907,6 @@ declare class Player {
   ): boolean;
 
   /**
-   * 熄灭玩家
-   */
-  stopFire(): boolean;
-
-  /**
    * ### 获取玩家到坐标的距离
    *
    * @param pos 目标位置
@@ -1035,9 +1031,9 @@ declare namespace mc {
 }
 
 declare enum sidebar {
-  /**降序 */
+  /** 降序 */
   Descending = 1,
-  /**升序 */
+  /** 升序 */
   Ascending = 0,
 }
 
@@ -1083,7 +1079,7 @@ declare class SimulatedPlayer extends Player {
    * @param face （可选参数）模拟交互目标方块的面
    * @returns boolean 是否成功模拟操作
    */
-  simulateInteract(target?: IntPos | Block, face?: Number): boolean;
+  simulateInteract(target?: IntPos | Block, face?: number): boolean;
 
   /**
    * 模拟跳跃
@@ -1103,7 +1099,7 @@ declare class SimulatedPlayer extends Player {
    * @param rot 要设置的角度
    * @returns boolean 是否成功模拟操作
    */
-  simulateSetBodyRotation(rot: Number): boolean;
+  simulateSetBodyRotation(rot: number): boolean;
 
   /**
    * 相对玩家坐标系移动
@@ -1111,7 +1107,7 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns boolean 是否请求移动成功
    */
-  simulateLocalMove(pos: IntPos | FloatPos, speed?: Number): boolean;
+  simulateLocalMove(pos: IntPos | FloatPos, speed?: number): boolean;
 
   /**
    * 相对世界坐标系移动
@@ -1119,7 +1115,7 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns boolean 是否请求移动成功
    */
-  simulateWorldMove(pos: IntPos | FloatPos, speed?: Number): boolean;
+  simulateWorldMove(pos: IntPos | FloatPos, speed?: number): boolean;
 
   /**
    * 直线移动到坐标
@@ -1128,7 +1124,7 @@ declare class SimulatedPlayer extends Player {
    * @returns boolean 是否请求移动成功
    * **注：如需自动寻路，请考虑使用 模拟导航移动{@linkcode simulateNavigateTo}**
    */
-  simulateMoveTo(pos: IntPos | FloatPos, speed?: Number): boolean;
+  simulateMoveTo(pos: IntPos | FloatPos, speed?: number): boolean;
 
   /**
    * 模拟导航移动
@@ -1136,9 +1132,9 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns Object 是否能到达指定位置以及导航路径
    */
-  simulateNavigateTo(target: Entity | IntPos | FloatPos, speed?: Number): {
+  simulateNavigateTo(target: Entity | IntPos | FloatPos, speed?: number): {
     isFullPath: boolean,
-    path: Array<Array<Number>>
+    path: Array<Array<number>>
   }
 
   /**
@@ -1147,7 +1143,7 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns boolean 是否成功模拟操作
    */
-  simulateNavigateTo(target: Array<IntPos> | Array<FloatPos>, speed?: Number): boolean;
+  simulateNavigateTo(target: Array<IntPos> | Array<FloatPos>, speed?: number): boolean;
 
   /**
    * 模拟使用物品
@@ -1156,7 +1152,7 @@ declare class SimulatedPlayer extends Player {
    * @param face （可选参数）目标方块的面，默认为0
    * @param relative （可选参数）相对方块偏移坐标，默认为{0.5,0.5,0.5}
    */
-  simulateUseItem(target?: Item | Number, pos?: IntPos, face?: Number, relative?: FloatPos): boolean;
+  simulateUseItem(target?: Item | number, pos?: IntPos, face?: number, relative?: FloatPos): boolean;
 
   /**
    * 模拟停止破坏方块

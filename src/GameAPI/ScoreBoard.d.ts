@@ -1,10 +1,10 @@
 /// <reference path="../index.d.ts" />
 
 declare class Objective {
-  /**计分项名称 */
+  /** 计分项名称 */
   readonly name: string;
 
-  /**计分项显示名称 */
+  /** 计分项显示名称 */
   readonly displayName: string;
 
   /**

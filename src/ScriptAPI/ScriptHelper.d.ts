@@ -14,7 +14,7 @@ declare namespace ll{
      * @param version 插件的版本信息[2,0,1]
      * @param otherInformation 其他你愿意提供的的附加信息（如许可证、开源地址等）
      */
-    function registerPlugin(name:string, introduction:string, version:[number,number,number,Version?], otherInformation:Object):void;
+    function registerPlugin(name:string, introduction:string, version:[number,number,number,Version?], otherInformation:Record<string,string>):void;
 }
 
 /**
@@ -42,7 +42,7 @@ declare function fastLog(...data:any[]):void;
  * @param msec 推迟执行的时间（毫秒）
  * @returns Integer|null 此任务ID
  */
-declare function setTimeout(func:Function|string,msec:number):number|null;
+declare function setTimeout(func:()=>void|string,msec:number):number|null;
 
 /**
  * 设置周期执行代码
@@ -50,7 +50,7 @@ declare function setTimeout(func:Function|string,msec:number):number|null;
  * @param msec 执行间隔周期（毫秒）
  * @returns Integer|null 此任务ID
  */
-declare function setInterval(func:Function|string,msec:number):number|null;
+declare function setInterval(func:()=>void|string,msec:number):number|null;
 
 /**
  * 取消延时 / 周期执行项

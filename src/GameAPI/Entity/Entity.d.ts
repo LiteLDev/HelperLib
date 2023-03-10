@@ -35,7 +35,7 @@ declare class Entity {
   /** 实体所在的方块坐标 */
   readonly blockPos: IntPos;
 
-  /**实体腿部所在坐标 */
+  /** 实体腿部所在坐标 */
   readonly feetPos: FloatPos;
 
   /** 实体最大生命值 */

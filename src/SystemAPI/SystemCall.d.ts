@@ -1,25 +1,25 @@
 /// <reference path="../index.d.ts" />
 
 declare class time{
-	/**年份数值（4位） */
+	/** 年份数值（4位） */
 	Y:number;
 
-	/**月份数值 */
+	/** 月份数值 */
 	M:number;
 
-	/**天数数值 */
+	/** 天数数值 */
 	D:number;
 
-	/**小时数值（24小时制） */
+	/** 小时数值（24小时制） */
 	h:number;
 
-	/**分钟数值 */
+	/** 分钟数值 */
 	m:number;
 
-	/**秒数值 */
+	/** 秒数值 */
 	s:number;
 
-	/**毫秒数值 */
+	/** 毫秒数值 */
 	ms:number;
 }
 
@@ -46,7 +46,7 @@ declare namespace system {
    */
   function newProcess(
     process: string,
-    callback: (exitcode: number, output: String) => void,
+    callback: (exitcode: number, output: string) => void,
     timeLimit?: number
   ): boolean;
 

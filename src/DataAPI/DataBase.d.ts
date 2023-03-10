@@ -1,7 +1,8 @@
-/**创建 / 打开一个键值对数据库 */
+/** 创建 / 打开一个键值对数据库 */
 declare class KVDatabase{
     constructor(dir:string);
-    /**数据库的储存目录路径，以BDS根目录为基准 */
+
+    /** 数据库的储存目录路径，以BDS根目录为基准 */
     dir: string
 
     /**
@@ -39,20 +40,20 @@ declare class KVDatabase{
 }
 
 declare class DataBase_Params{
-    /**指定数据库所在路径 */
+    /** 指定数据库所在路径 */
     path:string;
 
-    /**数据库不存在是否自动创建 */
+    /** 数据库不存在是否自动创建 */
     create:boolean;
 
-    /**以只读模式打开 */
+    /** 以只读模式打开 */
     readonly:boolean;
 
-    /**以读写模式打开 */
+    /** 以读写模式打开 */
     readwrite:boolean;
 }
 
-/**打开一个SQL数据库会话 */
+/** 打开一个SQL数据库会话 */
 declare class DBSession{
     /**
      * 打开一个SQL数据库会话
@@ -111,7 +112,7 @@ declare class DBSession{
 
 
 
-/**SQL预准备语句 */
+/** SQL预准备语句 */
 declare class DBStmt{
     /**
      * 绑定参数到一个SQL语句
@@ -126,7 +127,7 @@ declare class DBStmt{
      * @tips 要绑定的对象，等同于遍历此对象并执行
      * @tips 对于Object:bind(val, key) 对于Array:bind(val)
      */
-    bind(val:Object|Array<any>): void;
+    bind(val:any|Array<any>): void;
 
     /**
      * 绑定参数到一个SQL语句
@@ -158,7 +159,7 @@ declare class DBStmt{
      * 获取当前结果行
      * @returns Object 当前结果行，形如`{col1: "value", col2: 2333}`
      */
-    fetch(): Object;
+    fetch(): {[key:string]:any};
 
     /**
      * 获取所有结果行

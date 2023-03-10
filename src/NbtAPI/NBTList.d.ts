@@ -102,7 +102,7 @@ declare class NbtList{
    * @param data 要写入的具体数据
    * @returns NbtList 写入完毕的NBT列表（便于连锁进行其他操作）
    */
-  setFloat(index: number, data: Number): NbtList;
+  setFloat(index: number, data: number): NbtList;
 
   /**
    * 设置某个下标位置的具体数据
