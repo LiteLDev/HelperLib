@@ -1,9 +1,4 @@
 /// <reference path="../index.d.ts" />
-declare enum file {
-  ReadMode,
-  WriteMode,
-  AppendMode,
-}
 
 declare class File {
   /**
@@ -22,6 +17,15 @@ declare class File {
 
   /** 当前文件大小 */
   readonly size: number;
+  
+  /** 文件打开模式枚举 - 只读 */
+  readonly ReadMode: number;
+
+  /** 文件打开模式枚举 - 写入 */
+  readonly WriteMode: number;
+
+  /** 文件打开模式枚举 - 追加 */
+  readonly AppendMode: number;
 
   /**
    * 读入文件的所有内容
@@ -247,3 +251,5 @@ declare class File {
    */
   static getFilesList(dir:string):Array<string>;
 }
+
+declare class file extends File {}
