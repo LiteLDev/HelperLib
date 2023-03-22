@@ -77,11 +77,30 @@ declare namespace ll {
     function listPlugins(): Array<string>
 
     /**
-     * 导出函数(注意：由于TypeScript的保留字，请删除`_`使用ll._export=>ll.export)
+     * 导出函数
      * @param func 要导出的函数
      * @param namespace 函数的命名空间名，只是方便用于区分不同插件导出的API
      * @param name 函数的导出名称。其他插件根据导出名称来调用这个函数
      * @returns boolean 是否成功导出
+     */
+    function exports(
+        func: (...arg) => any,
+        namespace: string,
+        name: string
+    ): boolean
+
+    /**
+     * 导入函数
+     * @param namespace 要导入的函数使用的命名空间名称
+     * @param name 要导入的函数使用的导出名称
+     * @returns Function 导入的函数
+     */
+    function imports(namespace: string, name: string): (...arg) => any
+
+    /**
+     * 导出函数(注意：由于TypeScript的保留字，请删除`_`使用ll._export=>ll.export)
+     * @description 已弃用，应使用{@link ll.exports}
+     * @see {@link ll.exports}
      */
     function _export(
         func: (...arg) => any,
@@ -91,9 +110,8 @@ declare namespace ll {
 
     /**
      * 导入函数(注意：由于TypeScript的保留字，请删除`_`使用ll._export=>ll.export)
-     * @param namespace 要导入的函数使用的命名空间名称
-     * @param name 要导入的函数使用的导出名称
-     * @returns Function 导入的函数
+     * @description 已弃用，应使用{@link ll.imports}
+     * @see {@link ll.exports}
      */
     function _import(namespace: string, name: string): (...arg) => any
 
