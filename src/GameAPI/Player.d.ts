@@ -398,10 +398,14 @@ declare class Player {
 
   /**
    * 给予玩家一个物品
+   *
+   * 如果玩家物品栏已满，将抛出多余物品
+   *
    * @param item 给予的物品对象
+   * @param amount 给予物品对象的数量，物品对象自身的 `Count` 属性将被忽略
    * @returns boolean 是否成功给予
    */
-  giveItem(item: Item): boolean;
+  giveItem(item: Item, amount?: number): boolean;
 
   /**
    * 清除玩家背包中所有指定类型的物品
