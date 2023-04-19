@@ -1,6 +1,6 @@
 /// <reference path="../index.d.ts" />
 
-declare class LLSE_File {
+declare class file {
   /**
    *
    * @param path 想要打开的文件路径
@@ -252,6 +252,4 @@ declare class LLSE_File {
   static getFilesList(dir: string): Array<string>;
 }
 
-declare class File extends LLSE_File {}
-
-declare class file extends LLSE_File {}
+declare class File extends file {}
