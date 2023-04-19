@@ -1,6 +1,6 @@
 /// <reference path="../index.d.ts" />
 
-declare class File {
+declare class LLSE_File {
   /**
    *
    * @param path 想要打开的文件路径
@@ -17,7 +17,7 @@ declare class File {
 
   /** 当前文件大小 */
   readonly size: number;
-  
+
   /** 文件打开模式枚举 - 只读 */
   readonly ReadMode: number;
 
@@ -178,56 +178,56 @@ declare class File {
   clear(): boolean;
 
   /**
-   * 创建文件夹  
-   * @param dir 目标文件夹的路径 
+   * 创建文件夹
+   * @param dir 目标文件夹的路径
    * @returns boolean 是否成功创建
    */
-  static createDir(dir:string):boolean;
+  static createDir(dir: string): boolean;
 
   /**
-   * 创建文件夹  
-   * @param dir 目标文件夹的路径 
+   * 创建文件夹
+   * @param dir 目标文件夹的路径
    * @returns boolean 是否成功创建
    */
-  static mkdir(dir:string):boolean;
+  static mkdir(dir: string): boolean;
 
   /**
-   * 删除文件 / 文件夹  
+   * 删除文件 / 文件夹
    * @param path 目标文件 / 文件夹的路径
    * @returns boolean 是否成功删除
    */
-  static delete(path:string):boolean;
+  static delete(path: string): boolean;
 
   /**
-   * 判断文件 / 文件夹是否存在  
+   * 判断文件 / 文件夹是否存在
    * @param path 目标文件 / 文件夹的路径
    * @returns boolean 目标是否存在
    */
-  static exists(path:string):boolean;
+  static exists(path: string): boolean;
 
   /**
-   * 复制文件 / 文件夹到指定位置 
+   * 复制文件 / 文件夹到指定位置
    * @param from 源文件 / 文件夹的路径
    * @param to 目标文件 / 文件夹的位置
    * @returns boolean 是否复制成功
    */
-  static copy(from:string,to:string):boolean;
+  static copy(from: string, to: string): boolean;
 
   /**
-   * 移动文件 / 文件夹到指定位置  
+   * 移动文件 / 文件夹到指定位置
    * @param from 源文件 / 文件夹的路径
    * @param to 目标文件 / 文件夹的位置
    * @returns boolean 是否复制成功
    */
-  static move(from:string,to:string):boolean;
+  static move(from: string, to: string): boolean;
 
   /**
-   * 重命名指定文件 / 文件夹  
+   * 重命名指定文件 / 文件夹
    * @param from 文件 / 文件夹的旧名字
    * @param to 新名字
    * @returns boolean 是否复制成功
    */
-  static rename(from:string,to:string):boolean;
+  static rename(from: string, to: string): boolean;
 
   /**
    * 获取指定文件的大小
@@ -235,21 +235,23 @@ declare class File {
    * @returns Integer 文件的大小（字节）
    * @tips 如果传入的路径位置是一个文件夹，则返回`-1`
    */
-  static getFileSize(path:string):number;
+  static getFileSize(path: string): number;
 
   /**
    * 判断指定路径是否是文件夹
    * @param path 所判断的路径
    * @returns boolean 目标路径是否是文件夹
    */
-  static checkIsDir(path:string):boolean;
+  static checkIsDir(path: string): boolean;
 
   /**
    * 列出指定文件夹下的所有文件 / 文件夹
    * @param dir 文件夹路径
    * @returns Array<string> 文件夹名数组
    */
-  static getFilesList(dir:string):Array<string>;
+  static getFilesList(dir: string): Array<string>;
 }
 
-declare class file extends File {}
+declare class File extends LLSE_File {}
+
+declare class file extends LLSE_File {}
