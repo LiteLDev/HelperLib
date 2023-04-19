@@ -1,0 +1,24 @@
+{
+	"name": "Codeberg上的官方镜像补全库",
+	"source": "https://github.com/LiteLScript-Dev/HelperLib",
+	"wiki":"https://github.com/LiteLDev/LiteLoaderSE-Aids/wiki",
+	"library": [
+		{
+			"type": "dts",
+			"name": "JS/TS补全库",
+			"version": "2.12.3",
+			"index": ".*/src/index.d.ts",
+			"language": "zh-hant",
+			"download_url": "https://codeberg.org/moixsuki/HelperLib/archive/master.zip"
+		},
+		{
+				"type": "py",
+				"name": "PYTHON补全库",
+				"version": "1.0.2",
+				"index": "llpy-helper-lib",
+				"language": "zh-hant",
+				"cmd": "{python} -m pip install llpy-helper-lib -U",
+				"tip":"使用pip安装"
+		}
+	]
+}
