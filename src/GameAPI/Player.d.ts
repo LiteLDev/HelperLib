@@ -246,7 +246,6 @@ declare class Player {
    */
   talkAs(target: Player, text: string): boolean;
 
-
   /**
    * ### 获取实体到坐标的距离
    * @param pos 目标位置
@@ -265,7 +264,7 @@ declare class Player {
    * 传送玩家至指定位置
    * @param pos 目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）
    * @param rot 送后玩家的朝向，若缺省则与传送前朝向相同
-   * 
+   *
    * @returns boolean 是否成功传送
    */
   teleport(pos: IntPos | FloatPos, rot?: DirectionAngle): boolean;
@@ -274,10 +273,16 @@ declare class Player {
    * 传送玩家至指定位置
    * @param pos 目标位置坐标 （或者使用x, y, z, dimid来确定玩家位置）
    * @param rot 送后玩家的朝向，若缺省则与传送前朝向相同
-   * 
+   *
    * @returns boolean 是否成功传送
    */
-  teleport(x: number, y: number, z: number, dimid: 0 | 1 | 2, rot?: DirectionAngle): boolean;
+  teleport(
+    x: number,
+    y: number,
+    z: number,
+    dimid: 0 | 1 | 2,
+    rot?: DirectionAngle
+  ): boolean;
 
   /**
    * 杀死玩家
@@ -393,10 +398,14 @@ declare class Player {
 
   /**
    * 给予玩家一个物品
+   *
+   * 如果玩家物品栏已满，将抛出多余物品
+   *
    * @param item 给予的物品对象
+   * @param amount 给予物品对象的数量，物品对象自身的 `Count` 属性将被忽略
    * @returns boolean 是否成功给予
    */
-  giveItem(item: Item): boolean;
+  giveItem(item: Item, amount?: number): boolean;
 
   /**
    * 清除玩家背包中所有指定类型的物品
@@ -404,6 +413,14 @@ declare class Player {
    * @returns number 清除的物品个数
    */
   clearItem(type: string): number;
+
+  /**
+   * 清除玩家背包中所有指定类型的物品
+   * @param type 要清除的物品对象类型名
+   * @param amount 清除的物品个数
+   * @returns number 清除的物品个数
+   */
+  clearItem(type: string, amount: number): number;
 
   /**
    * 刷新玩家物品栏、盔甲栏
@@ -531,7 +548,11 @@ declare class Player {
    * @param sortOrder （可选参数）侧边栏内容的排序顺序。`0`为按分数升序，`1`为按分数降序。默认值为`1`
    * @returns boolean 是否成功设置
    */
-  setSidebar(title: string, data: Record<string,number>, sortOrder?: sidebar | 0 | 1): boolean;
+  setSidebar(
+    title: string,
+    data: Record<string, number>,
+    sortOrder?: sidebar | 0 | 1
+  ): boolean;
 
   /**
    * 移除玩家自定义侧边栏
@@ -618,63 +639,63 @@ declare class Player {
    * @param value 新的值
    * @returns 是否成功
    */
-  setAbsorption(value: number): boolean
+  setAbsorption(value: number): boolean;
 
   /**
    * 设置攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setAttackDamage(value: number): boolean
+  setAttackDamage(value: number): boolean;
 
   /**
    * 最大攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMaxAttackDamage(value: number): boolean
+  setMaxAttackDamage(value: number): boolean;
 
   /**
    * 设置跟随范围
    * @param value 新的值
    * @returns 是否成功
    */
-  setFollowRange(value: number): boolean
+  setFollowRange(value: number): boolean;
 
   /**
    * 设置击退抵抗属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setKnockbackResistance(value: 0 | 1): boolean
+  setKnockbackResistance(value: 0 | 1): boolean;
 
   /**
    * 设置幸运属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLuck(value: number): boolean
+  setLuck(value: number): boolean;
 
   /**
    * 设置移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMovementSpeed(value: number): boolean
+  setMovementSpeed(value: number): boolean;
 
   /**
    * 置水下移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setUnderwaterMovementSpeed(value: number): boolean
+  setUnderwaterMovementSpeed(value: number): boolean;
 
   /**
    * 设置岩浆上移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLavaMovementSpeed(value: number): boolean
+  setLavaMovementSpeed(value: number): boolean;
 
   /**
    * 获取玩家疾跑状态
@@ -912,16 +933,16 @@ declare class Player {
    * @param pos 目标位置
    *
    * @returns 到坐标的距离(方块)
-   * 
+   *
    * @deprecated
    */
   distanceToPos(pos: IntPos | FloatPos): number;
 
-  getAllEffects():number[]
+  getAllEffects(): number[];
 
-  addEffect(arg1:number,arg2:number,arg3:number,arg4:boolean):boolean
+  addEffect(arg1: number, arg2: number, arg3: number, arg4: boolean): boolean;
 
-  removeEffect(arg1:number):boolean
+  removeEffect(arg1: number): boolean;
 }
 
 declare namespace mc {
@@ -1037,7 +1058,7 @@ declare enum sidebar {
   Ascending = 0,
 }
 
-declare class LLSE_Player extends Player { }
+declare class LLSE_Player extends Player {}
 
 /**
  * 模拟玩家
@@ -1132,10 +1153,13 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns Object 是否能到达指定位置以及导航路径
    */
-  simulateNavigateTo(target: Entity | IntPos | FloatPos, speed?: number): {
-    isFullPath: boolean,
-    path: Array<Array<number>>
-  }
+  simulateNavigateTo(
+    target: Entity | IntPos | FloatPos,
+    speed?: number
+  ): {
+    isFullPath: boolean;
+    path: Array<Array<number>>;
+  };
 
   /**
    * 模拟导航移动（多目标）
@@ -1143,7 +1167,10 @@ declare class SimulatedPlayer extends Player {
    * @param speed （可选参数）移动速度，默认为1
    * @returns boolean 是否成功模拟操作
    */
-  simulateNavigateTo(target: Array<IntPos> | Array<FloatPos>, speed?: number): boolean;
+  simulateNavigateTo(
+    target: Array<IntPos> | Array<FloatPos>,
+    speed?: number
+  ): boolean;
 
   /**
    * 模拟使用物品
@@ -1152,7 +1179,12 @@ declare class SimulatedPlayer extends Player {
    * @param face （可选参数）目标方块的面，默认为0
    * @param relative （可选参数）相对方块偏移坐标，默认为{0.5,0.5,0.5}
    */
-  simulateUseItem(target?: Item | number, pos?: IntPos, face?: number, relative?: FloatPos): boolean;
+  simulateUseItem(
+    target?: Item | number,
+    pos?: IntPos,
+    face?: number,
+    relative?: FloatPos
+  ): boolean;
 
   /**
    * 模拟停止破坏方块
