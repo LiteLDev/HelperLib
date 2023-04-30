@@ -938,6 +938,13 @@ declare class Player {
    */
   distanceToPos(pos: IntPos | FloatPos): number;
 
+  /**
+   * 增加玩家的存款
+   * @param value 要增加的金额
+   * @returns 是否设置成功
+   */
+  addMoney(value: number): boolean;
+
   getAllEffects(): number[];
 
   addEffect(arg1: number, arg2: number, arg3: number, arg4: boolean): boolean;
