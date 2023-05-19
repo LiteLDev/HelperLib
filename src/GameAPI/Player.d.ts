@@ -938,11 +938,35 @@ declare class Player {
    */
   distanceToPos(pos: IntPos | FloatPos): number;
 
+  /**
+   * 增加玩家的存款
+   * @param value 要增加的金额
+   * @returns 是否设置成功
+   */
+  addMoney(value: number): boolean;
+
+  /**
+   * 获取玩家全部药水效果
+   * @returns 玩家所有的药水效果id
+   */
   getAllEffects(): number[];
+  
+  /**
+   * 为玩家添加一个药水效果
+   * @param id 药水效果的id
+   * @param tick 持续时间
+   * @param level 等级
+   * @param showParticles 是否显示粒子
+   * @returns 是否成功
+   */
+  addEffect(id: number, tick: number, level: number, showParticles: boolean): boolean;
 
-  addEffect(arg1: number, arg2: number, arg3: number, arg4: boolean): boolean;
-
-  removeEffect(arg1: number): boolean;
+  /**
+   * 为玩家移除一个药水效果
+   * @param id 药水效果的id
+   * @returns 是否成功
+   */
+  removeEffect(id: number): boolean;
 }
 
 declare namespace mc {
