@@ -7,7 +7,7 @@ declare class file {
    * @param mode 文件的打开模式
    * @param isBinary （可选参数）是否以二进制模式打开文件，默认为`false`
    */
-  constructor(path: string, mode: file, isBinary: boolean);
+  constructor(path: string, mode: number, isBinary?: boolean);
 
   /** 当前文件路径 */
   readonly path: string;
@@ -19,13 +19,13 @@ declare class file {
   readonly size: number;
 
   /** 文件打开模式枚举 - 只读 */
-  readonly ReadMode: number;
+  static readonly ReadMode: number;
 
   /** 文件打开模式枚举 - 写入 */
-  readonly WriteMode: number;
+  static readonly WriteMode: number;
 
   /** 文件打开模式枚举 - 追加 */
-  readonly AppendMode: number;
+  static readonly AppendMode: number;
 
   /**
    * 读入文件的所有内容
