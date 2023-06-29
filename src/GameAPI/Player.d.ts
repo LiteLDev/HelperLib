@@ -1040,7 +1040,7 @@ declare namespace mc {
   /**
    * 获取玩家对应的NBT对象
    * @param uuid 玩家的UUID
-   * @returns 玩家的UUID
+   * @returns 玩家的NBT对象
    * **可获取离线玩家的nbt**
    */
   function getPlayerNbt(uuid: string): NbtCompound;
