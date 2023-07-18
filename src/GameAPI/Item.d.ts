@@ -16,6 +16,15 @@ declare class Item {
   /** 物品附加值（如羊毛颜色） */
   readonly aux: number;
 
+  /**	物品当前耐久 */
+  readonly damage: number;
+
+  /** 物品攻击伤害 */
+  readonly attackDamage: number;
+
+  /** 物品最大耐久 */
+  readonly maxDamage: number;
+
   /** Item Lore */
   readonly lore: Array<string>
 

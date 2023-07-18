@@ -154,7 +154,13 @@ declare class Entity {
    *
    * @returns 是否成功传送
    */
-  teleport(x: number, y: number, z: number, dimId: 0 | 1 | 2 | 3, rot?: DirectionAngle): boolean;
+  teleport(
+    x: number,
+    y: number,
+    z: number,
+    dimId: 0 | 1 | 2 | 3,
+    rot?: DirectionAngle
+  ): boolean;
 
   /**
    * ### 杀死指定实体
@@ -390,16 +396,16 @@ declare class Entity {
 
   /**
    * ### 缩放实体
-   * 
+   *
    * @param scale 新的玩家实体 (整数)
-   * 
+   *
    * @returns 是否缩放成功
    */
   setScale(scale: number): boolean;
 
   /**
    * ### 熄灭实体
-   * 
+   *
    * @returns 是否熄灭成功
    */
   stopFire(): boolean;
@@ -407,121 +413,148 @@ declare class Entity {
   /**
    * @deprecated
    * ### 获取实体到坐标的距离
-   * 
+   *
    * @param pos 目标位置
-   * 
+   *
    * @returns 到坐标的距离(方块)
-   * 
+   *
    */
   distanceToPos(pos: Entity | Player | IntPos | FloatPos): number;
 
   /**
-   * 
+   *
    * ### 获取实体到坐标的距离
-   * 
+   *
    * @param pos 目标位置
-   * 
+   *
    * @returns 到坐标的距离(方块)
-   * 
+   *
    */
   distanceToSqr(pos: Entity | Player | IntPos | FloatPos): number;
 
   /**
-   * 
+   *
    * ### 获取实体到坐标的距离
-   * 
+   *
    * @param pos 目标位置
-   * 
+   *
    * @returns 到坐标的距离(方块)
-   * 
+   *
    */
   distanceTo(pos: Entity | Player | IntPos | FloatPos): number;
 
   /** 设置生命值 */
-  setHealth(health: number): boolean
+  setHealth(health: number): boolean;
 
   /** 设置生命值上限 */
-  setMaxHealth(health: number): boolean
+  setMaxHealth(health: number): boolean;
 
   /**
    * 设置伤害吸收属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setAbsorption(value: number): boolean
+  setAbsorption(value: number): boolean;
 
   /**
    * 设置攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setAttackDamage(value: number): boolean
+  setAttackDamage(value: number): boolean;
 
   /**
    * 最大攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMaxAttackDamage(value: number): boolean
+  setMaxAttackDamage(value: number): boolean;
 
   /**
    * 设置跟随范围
    * @param value 新的值
    * @returns 是否成功
    */
-  setFollowRange(value: number): boolean
+  setFollowRange(value: number): boolean;
 
   /**
    * 设置击退抵抗属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setKnockbackResistance(value: 0 | 1): boolean
+  setKnockbackResistance(value: 0 | 1): boolean;
 
   /**
    * 设置幸运属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLuck(value: number): boolean
+  setLuck(value: number): boolean;
 
   /**
    * 设置移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMovementSpeed(value: number): boolean
+  setMovementSpeed(value: number): boolean;
 
   /**
    * 置水下移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setUnderwaterMovementSpeed(value: number): boolean
+  setUnderwaterMovementSpeed(value: number): boolean;
 
   /**
    * 设置岩浆上移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLavaMovementSpeed(value: number): boolean
+  setLavaMovementSpeed(value: number): boolean;
 
   /**
-   * 使指定实体刷新消失  
+   * 使指定实体刷新消失
    * @returns 是否成功执行
    */
-  despawn(): boolean
+  despawn(): boolean;
 
   /**
-   * 移除指定实体  
+   * 移除指定实体
    * @returns 是否成功执行
    */
-  remove(): boolean
+  remove(): boolean;
 
-  setPosDelta(arg1:FloatPos): boolean
-  
-  setPosDelta(arg1:number,arg2:number,arg3:number): boolean
+  setPosDelta(arg1: FloatPos): boolean;
 
+  setPosDelta(arg1: number, arg2: number, arg3: number): boolean;
+
+  /**
+   * 获取实体全部药水效果
+   * @returns 实体所有的药水效果id
+   */
+  getAllEffects(): number[];
+
+  /**
+   * 为实体添加一个药水效果
+   * @param id 药水效果的id
+   * @param tick 持续时间
+   * @param level 等级
+   * @param showParticles 是否显示粒子
+   * @returns 是否成功
+   */
+  addEffect(
+    id: number,
+    tick: number,
+    level: number,
+    showParticles: boolean
+  ): boolean;
+
+  /**
+   * 为实体移除一个药水效果
+   * @param id 药水效果的id
+   * @returns 是否成功
+   */
+  removeEffect(id: number): boolean;
 }
 
-declare class LLSE_Entity extends Entity { }
+declare class LLSE_Entity extends Entity {}
