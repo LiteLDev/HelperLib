@@ -66,7 +66,7 @@ declare class CustomForm {
   addDropdown(
     title: string,
     items: Array<string>,
-    _default: number
+    _default?: number
   ): CustomForm;
 
   /**
@@ -112,5 +112,5 @@ declare namespace mc {
    */
   function newCustomForm(): CustomForm;
 }
-declare class LLSE_SimpleForm extends SimpleForm{}
-declare class LLSE_CustomForm extends CustomForm{}
+declare class LLSE_SimpleForm extends SimpleForm {}
+declare class LLSE_CustomForm extends CustomForm {}
