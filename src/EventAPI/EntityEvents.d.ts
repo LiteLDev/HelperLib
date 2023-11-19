@@ -147,7 +147,7 @@ declare namespace mc {
   function listen(
     event: "onMobTrySpawn",
     listener: (typeName: string, pos: FloatPos) => boolean | void
-  )
+  ): boolean;
 
   /**
    * 发生于实体自然生成完成
@@ -159,7 +159,7 @@ declare namespace mc {
   function listen(
     event: "onMobSpawned",
     listener: (entity: Entity, pos: FloatPos) => void
-  )
+  ): boolean;
 
   /** 实体被弹射物击中 */
   function listen(
@@ -183,7 +183,7 @@ declare namespace mc {
   function listen(
     event: "onEnderDragonDestroy",
     listener: (EnderDragon: Entity, block: Block) => boolean | void
-  )
+  ): boolean;
 
   /** 生物骑乘 */
   function listen(
