@@ -134,4 +134,4 @@ declare class Container {
   asPointer(): NativePointer;
 }
 
-declare class LLSE_Container extends Container{}
+declare class LLSE_Container extends Container {}
