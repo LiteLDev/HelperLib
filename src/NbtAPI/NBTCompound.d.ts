@@ -150,5 +150,5 @@ declare class NbtCompound{
    * 销毁此 NBT 标签对象
    * @returns boolean 是否成功清理
    */
-  destory(): boolean;
+  destroy(): boolean;
 }
