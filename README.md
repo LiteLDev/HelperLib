@@ -29,6 +29,10 @@
 - 本存储库所包含的声明文件并非100%准确无误，请以LLSE的源码和文档为准。本存储库的更新历史亦不对应LLSE项目的有关更改发生情况，不可作为此类参考。
 - 本存储库会定期被[codeberg](https://codeberg.org/moixsuki/HelperLib)上的同名仓库拉取以作镜像
 
+## 关于LegacyScriptEngine
+
+- 我们将其对应的类型声明存储在lse分支下
+
 ## 🏆 贡献
 
 - 感谢[HuoHuas001](https://github.com/HuoHuas001)的主要从文档转换
