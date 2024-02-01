@@ -1,10 +1,12 @@
 /// <reference path="../index.d.ts" />
 
+
+
 declare class version {
-  /** 主版本号（如 **2**.1.0 里的 **2**）*/
+  /** 主版本号（如 **2**.1.0 里的 **2**） */
   major: number;
 
-  /** 次版本号（如 2.**1**.0 里的 **1**）*/
+  /** 次版本号（如 2.**1**.0 里的 **1**） */
   minor: number;
 
   /** 修订版本号（如 2.1.**0** 里的 **0**） */
@@ -14,14 +16,29 @@ declare class version {
   isBeta: boolean;
 }
 
+interface Plugin {
+  /** 插件名称 */
+  name: string
+  /** 插件描述 */
+  desc: string
+  /** 插件版本（数组形式） */
+  version: [number, number, number]
+  /** 插件版本 */
+  versionStr: string
+  /** 插件路径 */
+  filePath: string
+  /** 其他信息 */
+  others: object
+}
+
 declare namespace ll {
   /** LiteLoaderBDS 使用的语言。(例如 `zh_Hans`、`en` 和 `ru_RU`) */
   const language: string;
 
-  /** 主版本号（如 **2**.1.0 里的 **2**）*/
+  /** 主版本号（如 **2**.1.0 里的 **2**） */
   const major: number;
 
-  /** 次版本号（如 2.**1**.0 里的 **1**）*/
+  /** 次版本号（如 2.**1**.0 里的 **1**） */
   const minor: number;
 
   /** 修订版本号（如 2.1.**0** 里的 **0**） */
@@ -62,6 +79,9 @@ declare namespace ll {
 
   /**
    * 检查 LiteLoader 加载器版本
+   * @param major 检查当前已安装LiteLoaderBDS的主版本号是否 >= 此值
+   * @param minor (可选参数) 检查当前已安装LiteLoaderBDS的次版本号是否 >= 此值
+   * @param revision (可选参数) 检查当前已安装LiteLoaderBDS的修订版本号是否 >= 此值
    * @returns 检查结果
    */
   function requireVersion(
@@ -71,10 +91,19 @@ declare namespace ll {
   ): boolean;
 
   /**
+   * 获取有关插件的信息
+   * @param name 插件名称
+   */
+  function getPluginInfo(name: string): Plugin
+
+  /**
    * 列出所有已加载的插件
    * @returns 列出所有已加载的插件
    */
   function listPlugins(): string[];
+
+  /** 列出所有加载的插件信息 */
+  function getAllPluginInfo(): Plugin[];
 
   /**
    * 导出函数
