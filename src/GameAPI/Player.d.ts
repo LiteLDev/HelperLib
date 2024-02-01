@@ -1103,7 +1103,7 @@ declare class SimulatedPlayer extends Player {
    * @param face （可选参数）从哪面破坏，
    * @returns boolean 是否成功模拟操作
    */
-  simulateDestroy(target: IntPos | Block, face: number): boolean;
+  simulateDestroy(target?: IntPos | Block, face?: number): boolean;
 
   /**
    * 模拟断开连接
