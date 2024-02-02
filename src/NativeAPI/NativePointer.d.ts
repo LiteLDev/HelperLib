@@ -26,20 +26,29 @@ declare class NativePointer {
      * @param symbol 需要查询的符号
      * @returns 询结果，若查询失败则返回空指针
      */
-    fromSymbol(symbol: string): NativePointer;
+    static fromSymbol(symbol: string): NativePointer;
 
     /**
      * 获得地址实例
      * @param address 地址，以16进制字符串或数字表示
      * @returns 对应地址的指针实例
      */
-    fromAddress(address: string | number): NativePointer;
+    static fromAddress(address: string | number): NativePointer;
 
-    /** 指针地址 */
-    asRawAddress: number;
+    /** 
+     * 指针地址 
+     * @returns 以数字形式表示的指针所指地址
+     */
+    asRawAddress(): number
 
-    /** 指针地址描述 */
-    asHexAddress: string;
+    /** 
+     * 指针地址描述 
+     * @returns 以十六进制形式表示的指针所指地址
+     */
+    asHexAddress(): string
+
+    /** 判断指针是不是空指针 */
+    isNull(): boolean
 
     /** 指针内存Type */
     byte: any;
