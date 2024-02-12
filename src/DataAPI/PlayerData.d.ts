@@ -1,3 +1,11 @@
+interface PlayerInfo {
+  /** 玩家名 */
+  name: string,
+  /** 玩家XUID */
+  xuid: string,
+  /** 玩家UUID */
+  uuid: string
+}
 declare namespace data {
   /**
    * 根据玩家名查询Xuid
@@ -27,6 +35,6 @@ declare namespace data {
    */
   function xuid2uuid(xuid: string): string | null;
 
-  function getAllPlayerInfo(): {name:string,xuid:string,uuid:string}[]
+  function getAllPlayerInfo(): PlayerInfo[]
 
 }
