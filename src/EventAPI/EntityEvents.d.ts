@@ -158,7 +158,7 @@ declare namespace mc {
    */
   function listen(
     event: "onMobSpawned",
-    listener: (entity: Entity, pos: FloatPos) => void
+    listener: (entity: Entity | null, pos: FloatPos) => void
   ): boolean;
 
   /** 实体被弹射物击中 */
