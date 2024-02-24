@@ -1106,6 +1106,12 @@ declare class SimulatedPlayer extends Player {
   simulateDestroy(target?: IntPos | Block, face?: number): boolean;
 
   /**
+   * 模拟重生
+   * @returns boolean 是否成功模拟操作
+   */
+  simulateRespawn(): boolean;
+
+  /**
    * 模拟断开连接
    * @returns boolean 是否成功模拟操作
    */
