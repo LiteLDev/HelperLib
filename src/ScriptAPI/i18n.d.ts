@@ -8,7 +8,7 @@ declare namespace i18n{
      * @param defaultLocaleName 默认的语言名称，形如zh_CN或en，若传入空字符串，则默认跟随系统语言
      * @param defaultLangData 该参数将用于补全或创建翻译文件
      */
-    function load(path:string, defaultLocaleName:string, defaultLangData:object):void
+    function load(path:string, defaultLocaleName:string, defaultLangData?:object):void
 
     /**
      * 获取文本的指定语言翻译
