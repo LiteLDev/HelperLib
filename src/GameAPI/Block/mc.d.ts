@@ -12,7 +12,7 @@ declare namespace mc {
    *
    * @returns 方块对象
    */
-  function getBlock(pos: IntPos): Block | null;
+  function getBlock(pos: IntPos): Block | null
 
   /**
    * ### 通过方块坐标获取Block
@@ -28,12 +28,7 @@ declare namespace mc {
    *
    * @returns 方块对象
    */
-  function getBlock(
-    x: number,
-    y: number,
-    z: number,
-    dimId: 0 | 1 | 2
-  ): Block | null;
+  function getBlock(x: number, y: number, z: number, dimId: 0 | 1 | 2): Block | null
 
   /**
    * ### 设置指定位置的方块
@@ -49,8 +44,8 @@ declare namespace mc {
   function setBlock(
     pos: IntPos,
     block: Block | string | NbtCompound,
-    tileData: number
-  ): boolean;
+    tileData: number,
+  ): boolean
 
   /**
    * ### 设置指定位置的方块
@@ -72,8 +67,8 @@ declare namespace mc {
     z: number,
     dimId: 0 | 1 | 2,
     block: Block | string | NbtCompound,
-    tileData: number
-  ): boolean;
+    tileData: number,
+  ): boolean
 
   /**
    * ### 在指定位置生成粒子效果
@@ -87,7 +82,7 @@ declare namespace mc {
    *
    * @returns 是否生成成功
    */
-  function spawnParticle(pos: IntPos | FloatPos, type: string): boolean;
+  function spawnParticle(pos: IntPos | FloatPos, type: string): boolean
 
   /**
    * ### 在指定位置生成粒子效果
@@ -109,6 +104,6 @@ declare namespace mc {
     y: number,
     z: number,
     dimId: 0 | 1 | 2,
-    type: string
-  ): boolean;
+    type: string,
+  ): boolean
 }

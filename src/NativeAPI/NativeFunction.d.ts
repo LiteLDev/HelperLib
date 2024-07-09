@@ -24,11 +24,10 @@ declare class NativeHook {
    * @param params 对应NativeFunction所描述的函数参数
    * @returns any 对应NativeFunction所描述的返回类型
    */
-  call(...params: any[]): any;
+  call(...params: any[]): any
 
   /** 函数指针的指针值 */
-  address: NativePointer | number;
-
+  address: NativePointer | number
 }
 
 declare class NativeFunction {
@@ -37,7 +36,7 @@ declare class NativeFunction {
    * @param symbol 需要解析的函数
    * @returns 原生函数实例
    */
-  static fromSymbol(symbol: string): NativeFunction;
+  static fromSymbol(symbol: string): NativeFunction
 
   /**
    * Describe获得函数
@@ -47,8 +46,8 @@ declare class NativeFunction {
    */
   static fromDescription(
     ReturnValue: NativeTypes,
-    Params: Array<NativeTypes>
-  ): NativeFunction;
+    Params: NativeTypes[],
+  ): NativeFunction
 
   /**
    * Script获得函数
@@ -59,16 +58,14 @@ declare class NativeFunction {
    */
   static fromScript(
     ReturnValue: NativeTypes,
-    Params: Array<NativeTypes>,
-    Callback: (...Params: NativeTypes[]) => any
-  ): NativeFunction;
+    Params: NativeTypes[],
+    Callback: (...Params: NativeTypes[]) => any,
+  ): NativeFunction
 
   /**
    * Hook函数钩子
    * @param func 回调函数，请注意保持参数类型与NativeFunction描述的一致
    * @returns 原函数
    */
-  hook(func: (...params: any[]) => any): NativeHook;
-
-
+  hook(func: (...params: any[]) => any): NativeHook
 }

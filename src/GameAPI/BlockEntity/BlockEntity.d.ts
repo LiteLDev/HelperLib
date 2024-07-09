@@ -14,15 +14,14 @@
  * 因此，如果有长期操作某个方块实体的需要，请通过{@linkcode Block.getBlockEntity()}获取实时的方块实体对象
  */
 declare class BlockEntity {
-
   /** 方块实体的名称 */
-  readonly name: string 
+  readonly name: string
 
   /** 方块实体对应方块所在的坐标 */
-  readonly pos: IntPos;
+  readonly pos: IntPos
 
   /** 方块实体对象的类型ID */
-  readonly type: number;
+  readonly type: number
 
   /**
    * ### 获取方块实体对应的NBT对象
@@ -31,7 +30,7 @@ declare class BlockEntity {
    *
    * @returns 方块实体的NBT对象
    */
-  getNbt(): NbtCompound;
+  getNbt(): NbtCompound
 
   /**
    * ### 写入方块实体对应的NBT对象
@@ -42,16 +41,16 @@ declare class BlockEntity {
    *
    * @returns 是否成功写入
    */
-  setNbt(nbt: NbtCompound): boolean;
+  setNbt(nbt: NbtCompound): boolean
 
   /**
    * ### 获取方块实体对应的方块对象
    *
    * @returns 方块实体对应的方块对象
    */
-  getBlock(): Block;
+  getBlock(): Block
 
-  asPointer(): NativePointer;
+  asPointer(): NativePointer
 }
 
-declare class LLSE_BlockEntity extends BlockEntity{}
+declare class LLSE_BlockEntity extends BlockEntity {}

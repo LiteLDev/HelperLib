@@ -12,26 +12,26 @@
  */
 declare class CommandOrigin {
   /** 指令执行主体类型 */
-  readonly type: number;
+  readonly type: number
 
-  readonly typeName: string;
+  readonly typeName: string
 
   /** 指令执行主体的名称 */
-  readonly name: string;
+  readonly name: string
 
   /** 指令执行主体的坐标 */
-  readonly pos: FloatPos;
+  readonly pos: FloatPos
 
   /** 指令执行主体的方块坐标 */
-  readonly blockPos: IntPos;
+  readonly blockPos: IntPos
 
   /** 执行指令的实体（可空） */
-  readonly entity?: Entity;
+  readonly entity?: Entity
 
   /** 执行指令的玩家（可空） */
-  readonly player?: Player;
+  readonly player?: Player
 
-  getNbt(): NbtCompound;
+  getNbt(): NbtCompound
 
-  toString(): string;
+  toString(): string
 }

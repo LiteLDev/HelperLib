@@ -1,26 +1,26 @@
 /// <reference path="../index.d.ts" />
 
-declare class time{
-	/** 年份数值（4位） */
-	Y:number;
+declare class time {
+  /** 年份数值（4位） */
+  Y: number
 
-	/** 月份数值 */
-	M:number;
+  /** 月份数值 */
+  M: number
 
-	/** 天数数值 */
-	D:number;
+  /** 天数数值 */
+  D: number
 
-	/** 小时数值（24小时制） */
-	h:number;
+  /** 小时数值（24小时制） */
+  h: number
 
-	/** 分钟数值 */
-	m:number;
+  /** 分钟数值 */
+  m: number
 
-	/** 秒数值 */
-	s:number;
+  /** 秒数值 */
+  s: number
 
-	/** 毫秒数值 */
-	ms:number;
+  /** 毫秒数值 */
+  ms: number
 }
 
 declare namespace system {
@@ -34,8 +34,8 @@ declare namespace system {
   function cmd(
     cmd: string,
     callback: (exitcode: number, output: string) => void,
-    timeLimit?: number
-  ): boolean;
+    timeLimit?: number,
+  ): boolean
 
   /**
    * 运行指定位置程序
@@ -47,24 +47,24 @@ declare namespace system {
   function newProcess(
     process: string,
     callback: (exitcode: number, output: string) => void,
-    timeLimit?: number
-  ): boolean;
+    timeLimit?: number,
+  ): boolean
 
-	/**
-	 * 获取当前时间字符串  
-	 * @returns string 当前的时间字符串，使用当地时区和24小时制。 
-	 */
-	function getTimeStr():string;
+  /**
+   * 获取当前时间字符串
+   * @returns string 当前的时间字符串，使用当地时区和24小时制。
+   */
+  function getTimeStr(): string
 
-	/**
-	 * 获取当前的时间对象
-	 * @returns timeObject 当前的时间对象
-	 */
-	function getTimeObj():time;
+  /**
+   * 获取当前的时间对象
+   * @returns timeObject 当前的时间对象
+   */
+  function getTimeObj(): time
 
-	/**
-	 * 随机生成一个 GUID  字符串
-	 * @returns string 一个随机生成的唯一标识符GUID
-	 */
-	function randomGuid():string;
+  /**
+   * 随机生成一个 GUID  字符串
+   * @returns string 一个随机生成的唯一标识符GUID
+   */
+  function randomGuid(): string
 }

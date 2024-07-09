@@ -13,9 +13,9 @@
  * @see [🎯 命令注册API](https://docs.litebds.com/zh-Hans/#/LLSEPluginDevelopment/GameAPI/Command)
  */
 declare class Command {
-  readonly name: string;
+  readonly name: string
 
-  readonly registered: boolean;
+  readonly registered: boolean
 
   /**
    * ### 设置指令别名
@@ -24,7 +24,7 @@ declare class Command {
    *
    * @returns 是否成功设置
    */
-  setAlias(alias: string): boolean;
+  setAlias(alias: string): boolean
 
   /**
    * ### 新增一个指令枚举选项
@@ -34,7 +34,7 @@ declare class Command {
    *
    * @returns 是否成功设置
    */
-  setEnum(name: string, values: Array<string>): boolean;
+  setEnum(name: string, values: string[]): boolean
 
   /**
    * ### 新增一个必选参数
@@ -51,16 +51,16 @@ declare class Command {
     name: string,
     type: ParamType,
     enumName?: string,
-    enumOptions?: number
-  ): boolean;
+    enumOptions?: number,
+  ): boolean
 
   mandatory(
     name: string,
     type: ParamType,
     enumName?: string,
     identifier?: string,
-    enumOptions?: number
-  ): boolean;
+    enumOptions?: number,
+  ): boolean
 
   /**
    * ### 新增一个可选参数
@@ -78,18 +78,18 @@ declare class Command {
     type: ParamType,
     enumName?: string,
     identifier?: string,
-    enumOptions?: number
-  ): boolean;
+    enumOptions?: number,
+  ): boolean
 
-  setSoftEnum(arg1: string, arg2: Array<string>): string;
+  setSoftEnum(arg1: string, arg2: string[]): string
 
-  addSoftEnumValues(arg1: string, arg2: Array<string>): boolean;
+  addSoftEnumValues(arg1: string, arg2: string[]): boolean
 
-  removeSoftEnumValues(arg1: string, arg2: Array<string>): boolean;
+  removeSoftEnumValues(arg1: string, arg2: string[]): boolean
 
-  getSoftEnumValues(arg1: string): Array<string>;
+  getSoftEnumValues(arg1: string): string[]
 
-  getSoftEnumNames(): Array<string>;
+  getSoftEnumNames(): string[]
 
   /**
    * ### 新增一条指令重载
@@ -106,7 +106,7 @@ declare class Command {
    *
    * @returns  是否成功设置
    */
-  overload(params?: Array<string>): boolean;
+  overload(params?: string[]): boolean
 
   /**
    * ### 设置指令回调
@@ -120,9 +120,9 @@ declare class Command {
       cmd: Command,
       origin: CommandOrigin,
       output: CommandOutput,
-      result: any
-    ) => void
-  ): boolean;
+      result: any,
+    ) => void,
+  ): boolean
 
   /**
    * ### 安装指令
@@ -131,5 +131,5 @@ declare class Command {
    *
    * @returns 是否成功安装
    */
-  setup(): boolean;
+  setup(): boolean
 }

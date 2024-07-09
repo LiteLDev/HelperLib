@@ -6,63 +6,63 @@
  * @see [LiteLoaderBDS/ScriptEngine/API/EntityAPI.cpp](https://github.com/LiteLDev/LiteLoaderBDS/blob/main/ScriptEngine/API/EntityAPI.cpp#L93)
  */
 declare class ActorDamageCause {
-  readonly Override = 0;
+  readonly Override = 0
 
-  readonly Contact = 1;
+  readonly Contact = 1
 
-  readonly EntityAttack = 2;
+  readonly EntityAttack = 2
 
-  readonly Projectile = 3;
+  readonly Projectile = 3
 
-  readonly Suffocation = 4;
+  readonly Suffocation = 4
 
-  readonly Fall = 5;
+  readonly Fall = 5
 
-  readonly Fire = 6;
+  readonly Fire = 6
 
-  readonly FireTick = 7;
+  readonly FireTick = 7
 
-  readonly Lava = 8;
+  readonly Lava = 8
 
-  readonly Drowning = 9;
+  readonly Drowning = 9
 
-  readonly BlockExplosion = 10;
+  readonly BlockExplosion = 10
 
-  readonly EntityExplosion = 11;
+  readonly EntityExplosion = 11
 
-  readonly Void = 12;
+  readonly Void = 12
 
-  readonly Suicide = 13;
+  readonly Suicide = 13
 
-  readonly Magic = 14;
+  readonly Magic = 14
 
-  readonly Wither = 15;
+  readonly Wither = 15
 
-  readonly Starve = 16;
+  readonly Starve = 16
 
-  readonly Anvil = 17;
+  readonly Anvil = 17
 
-  readonly Thorns = 18;
+  readonly Thorns = 18
 
-  readonly FallingBlock = 19;
+  readonly FallingBlock = 19
 
-  readonly Piston = 20;
+  readonly Piston = 20
 
-  readonly FlyIntoWall = 21;
+  readonly FlyIntoWall = 21
 
-  readonly Magma = 22;
+  readonly Magma = 22
 
-  readonly Fireworks = 23;
+  readonly Fireworks = 23
 
-  readonly Lightning = 24;
+  readonly Lightning = 24
 
-  readonly Charging = 25;
+  readonly Charging = 25
 
-  readonly Temperature = 26;
+  readonly Temperature = 26
 
-  readonly Freezing = 27;
+  readonly Freezing = 27
 
-  readonly Stalactite = 28;
+  readonly Stalactite = 28
 
-  readonly Stalagmite = 29;
+  readonly Stalagmite = 29
 }
