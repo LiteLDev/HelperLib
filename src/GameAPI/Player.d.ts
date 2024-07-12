@@ -662,7 +662,7 @@ declare class Player {
    * @param value 新的值
    * @returns 是否成功
    */
-  setKnockbackResistance(value: 0 | 1): boolean
+  setKnockbackResistance(value: number): boolean
 
   /**
    * 设置幸运属性
