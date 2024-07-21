@@ -113,7 +113,7 @@ declare namespace mc {
    *
    * @returns 是否注册成功
    */
-  function regPlayerCmd(
+  function regConsoleCmd(
     cmd: string,
     description: string,
     callback: (args: string[]) => void,
