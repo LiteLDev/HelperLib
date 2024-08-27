@@ -107,11 +107,11 @@ declare class DBSession {
    * @param sql 要准备的SQL语句
    * @returns DBStmt 预准备语句，失败抛出错误
    */
-  prepare(sql: string): DBStmt
+  prepare<T extends Record<string, any>>(sql: string): DBStmt<T>
 }
 
 /** SQL预准备语句 */
-declare class DBStmt {
+declare class DBStmt<T extends Record<string, any> = any> {
   /**
    * 获取该预准备语句执行后影响的行数 (仅对 `INSERT` `UPDATE` `DELETE` `REPLACE` 等语句生效)
    */
@@ -127,7 +127,7 @@ declare class DBStmt {
    * @param val 要绑定的值
    * @tips 本重载将会将值绑定到第一个未绑定的参数上
    */
-  bind(val: any): void
+  bind(val: T[keyof T]): void
 
   /**
    * 绑定参数到一个SQL语句
@@ -135,27 +135,27 @@ declare class DBStmt {
    * @tips 要绑定的对象，等同于遍历此对象并执行
    * @tips 对于Object:bind(val, key) 对于Array:bind(val)
    */
-  bind(val: any | any[]): void
+  bind(val: T | T[keyof T][]): void
 
   /**
    * 绑定参数到一个SQL语句
    * @param val 要绑定的值
    * @param index 要绑定到的参数索引(从`0`开始)
    */
-  bind(val: any, index: number): void
+  bind(val: T[keyof T], index: number): void
 
   /**
    * 绑定参数到一个SQL语句
    * @param val 要绑定的值
    * @param name 要绑定到的参数的参数名
    */
-  bind(val: any, name: string): void
+  bind(val: T[keyof T], name: string): void
 
   /**
    * 执行SQL但不获取结果
    * @returns DBSession 处理完毕的会话对象（便于连锁进行其他操作）
    */
-  execute(): DBStmt
+  execute(): this
 
   /**
    * 步进到下一行结果
@@ -173,32 +173,32 @@ declare class DBStmt {
    * 获取当前结果行
    * @returns Object 当前结果行，形如`{col1: "value", col2: 2333}`
    */
-  fetch(): { [key: string]: any }
+  fetch(): T
 
   /**
    * 获取所有结果行
    * @returns Array<Array>
    * @tips 返回数组的第1行(`result[0]`)为结果集的表头(列名)，剩余行为结果数据
    */
-  fetchAll(): any[][]
+  fetchAll(): [[keyof T], ...T[keyof T]]
 
   /**
    * 重置当前语句状态至“待执行”
    * @returns DBStmt 处理完毕的语句对象（便于连锁进行其他操作）
    * @tips 本函数不会清除已绑定的参数
    */
-  reset(): DBStmt
+  reset(): this
 
   /**
    * 重新执行预准备语句
    * @returns DBStmt 处理完毕的语句对象（便于连锁进行其他操作）
    * @tips 本函数是一个便捷函数，等同于执行`stmt.reset()`和`stmt.execute()`
    */
-  reexec(): DBStmt
+  reexec(): this
 
   /**
    * 清除所有已绑定的参数
    * @returns DBStmt 处理完毕的语句对象（便于连锁进行其他操作）
    */
-  clear(): DBStmt
+  clear(): this
 }
