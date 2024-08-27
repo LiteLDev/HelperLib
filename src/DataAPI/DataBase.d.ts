@@ -180,7 +180,7 @@ declare class DBStmt<T extends Record<string, any> = any, P = any> {
    * @returns Array<Array>
    * @tips 返回数组的第1行(`result[0]`)为结果集的表头(列名)，剩余行为结果数据
    */
-  fetchAll(): [[keyof T], ...T[keyof T][]]
+  fetchAll(): [(keyof T)[], ...T[keyof T][]]
 
   /**
    * 重置当前语句状态至“待执行”
