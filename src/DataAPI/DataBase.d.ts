@@ -39,7 +39,7 @@ declare class KVDatabase {
   close(): boolean
 }
 
-declare class DataBase_Params {
+declare interface DataBaseParams {
   /** 指定数据库所在路径 */
   path: string
 
@@ -58,9 +58,9 @@ declare class DBSession {
   /**
    * 打开一个SQL数据库会话
    * @param type 数据库的类型，目前仅支持
-   * @param params DataBase_Params 连接参数
+   * @param params DataBaseParams 连接参数
    */
-  constructor(type: 'sqlite3', params: DataBase_Params)
+  constructor(type: 'sqlite3', params: DataBaseParams)
 
   /**
    * 打开一个SQL数据库会话
@@ -112,6 +112,16 @@ declare class DBSession {
 
 /** SQL预准备语句 */
 declare class DBStmt {
+  /**
+   * 获取该预准备语句执行后影响的行数 (仅对 `INSERT` `UPDATE` `DELETE` `REPLACE` 等语句生效)
+   */
+  affectedRows: number
+
+  /**
+   * 获取该 `INSERT` / `UPDATE` / `REPLACE` 语句执行后最后一个更改行的行号 (关于行号的解释详见官方文档)
+   */
+  insertId: number
+
   /**
    * 绑定参数到一个SQL语句
    * @param val 要绑定的值
