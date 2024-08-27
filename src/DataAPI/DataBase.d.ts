@@ -107,16 +107,11 @@ declare class DBSession {
    * @param sql 要准备的SQL语句
    * @returns DBStmt 预准备语句，失败抛出错误
    */
-  prepare<T extends Record<string, any>, P extends Record<string, any>>(
-    sql: string,
-  ): DBStmt<T, P>
+  prepare<T extends Record<string, any>, P>(sql: string): DBStmt<T, P>
 }
 
 /** SQL预准备语句 */
-declare class DBStmt<
-  T extends Record<string, any> = any,
-  P extends Record<string, any> = any,
-> {
+declare class DBStmt<T extends Record<string, any> = any, P = any> {
   /**
    * 获取该预准备语句执行后影响的行数 (仅对 `INSERT` `UPDATE` `DELETE` `REPLACE` 等语句生效)
    */
@@ -132,7 +127,7 @@ declare class DBStmt<
    * @param val 要绑定的值
    * @tips 本重载将会将值绑定到第一个未绑定的参数上
    */
-  bind(val: P[keyof P]): void
+  bind(val: P): void
 
   /**
    * 绑定参数到一个SQL语句
@@ -140,21 +135,21 @@ declare class DBStmt<
    * @tips 要绑定的对象，等同于遍历此对象并执行
    * @tips 对于Object:bind(val, key) 对于Array:bind(val)
    */
-  bind(val: P | P[keyof P][]): void
+  bind(val: Record<string, P> | P[]): void
 
   /**
    * 绑定参数到一个SQL语句
    * @param val 要绑定的值
    * @param index 要绑定到的参数索引(从`0`开始)
    */
-  bind(val: P[keyof P], index: number): void
+  bind(val: P, index: number): void
 
   /**
    * 绑定参数到一个SQL语句
    * @param val 要绑定的值
    * @param name 要绑定到的参数的参数名
    */
-  bind(val: P[keyof P], name: string): void
+  bind(val: P, name: string): void
 
   /**
    * 执行SQL但不获取结果
