@@ -1,5 +1,5 @@
 {
-  "name": "helperlib",
+  "name": "@types/levi-lamina-lse",
   "version": "0.1.0",
   "description": "",
   "main": "",
@@ -7,7 +7,6 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LiteLDev/HelperLib"
@@ -23,14 +22,14 @@
   "homepage": "https://github.com/LiteLDev/HelperLib#readme",
   "devDependencies": {
     "@cordisjs/eslint-config": "^1.1.1",
-    "@typescript-eslint/eslint-plugin": "^7.16.0",
-    "@typescript-eslint/parser": "^7.16.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.4.0",
-    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^4.6.2"
   }
 }
