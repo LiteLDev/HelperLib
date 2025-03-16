@@ -27,6 +27,6 @@ You can find the Legacy Script Engine Plugin Development documentation [on the w
 
 Special thanks to the contributors, including but not limited to, people below:
 
-<a href="https://github.com/LiteLDev/HelperLib/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=LiteLDev/HelperLib" alt="Contributors" />
+<a href="https://github.com/LiteLDev/LegacyScriptEngine_API/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=LiteLDev/LegacyScriptEngine_API" alt="Contributors" />
 </a>
