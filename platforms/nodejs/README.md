@@ -7,3 +7,15 @@ Provides Legacy Script Engine plugin API hints for development guidance on Node.
 ## 📚 Documentation
 
 You can find the Legacy Script Engine Plugin Development documentation [on the website](https://lse.levimc.org/).
+
+## 🚧 Coverage
+
+| API    | I18n    | Since  |
+|--------|---------|--------|
+| Data   |         |        |
+| Event  |         |        |
+| Game   |         |        |
+| GUI    | English | v0.1.0 |
+| NBT    |         |        |
+| Script |         |        |
+| System |         |        |
