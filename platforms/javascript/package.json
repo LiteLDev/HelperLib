@@ -1,0 +1,48 @@
+{
+  "name": "@levimc-lse/types",
+  "version": "2.14.1",
+  "description": "TypeScript declaration files for the Legacy Script Engine.",
+  "types": "src/index.d.ts",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "deploy": "yarn publish --access=public"
+  },
+  "keywords": [
+    "levilamina",
+    "minecraft",
+    "bedrock-dedicated-server",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiteLDev/LegacyScriptEngine_API",
+    "directory": "platforms/javascript"
+  },
+  "author": {
+    "name": "LeviMC",
+    "url": "https://github.com/LiteLDev/LegacyScriptEngine_API/graphs/contributors"
+  },
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/LiteLDev/LegacyScriptEngine_API/issues"
+  },
+  "homepage": "https://github.com/LiteLDev/LegacyScriptEngine_API#readme",
+  "devDependencies": {
+    "@cordisjs/eslint-config": "^1.1.1",
+    "@types/node": "^22.10.7",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "dumble": "^0.2.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.6.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

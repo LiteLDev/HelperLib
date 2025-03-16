@@ -1,45 +1,32 @@
-# 🔨LLse Helper
+# Legacy Script Engine API
 
-![LLseHelper](https://socialify.git.ci/LiteLScript-Dev/LLseHelper/image?description=1&descriptionEditable=%E4%B8%BALiteLScript%E5%BC%80%E5%8F%91%E8%80%85%E5%87%86%E5%A4%87%E7%9A%84%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8%E5%92%8C%E4%BB%A3%E7%A0%81%E6%8F%90%E7%A4%BA&forks=1&issues=1&language=1&logo=https%3A%2F%2Favatars.githubusercontent.com%2Fu%2F88499428%3Fs%3D200%26v%3D4&name=1&owner=1&pulls=1&stargazers=1&theme=Light)
-👉[English](README-en.md)👈 👉 简体中文 👈
+Provides plugin API hints for development guidance on various native language platforms supported by the Legacy Script Engine.
 
-## 📄 简介
+## 🚀 Usage
 
-为`LiteLScript`开发者准备的`自动补全`和`代码提示`的`TypeScript.d.ts`文件
+| Platform                      | How                                      |
+|-------------------------------|------------------------------------------|
+| 📒 JavaScript / 📘 TypeScript | [Here](./platforms/javascript/README.md) |
+| 🐍 Python                     | [Here](./platforms/python/README.md)     |
 
-## 🔧 使用
+## 🏗️ Scaffold
 
-### ⭐ 搭配 VSCode 插件 [`LiteLoaderSE-Aids`](https://github.com/LiteLScript-Dev/LiteLoaderSE-Aids) 使用（推荐）⭐
+Here are the scaffolding tools available in the community that assist in the development of Legacy Script Engine plugins.
 
-1. 从`Visual Studio Code`扩展商店下载[`LiteLoaderSE-Aids`](https://marketplace.visualstudio.com/items?itemName=moxicat.LLScriptHelper)
-2. 根据引导提示下载`补全库`
-3. 在开始写插件之前输入`lls`即可添加补全库引入
+| Tool                                                                                               | Description                                                                                                                                     | Last                                                                                                                                                                       |
+|----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [LiteLoaderSE Aids](https://github.com/LiteLDev/LiteLoaderSE-Aids)                                 | Assist in the development of LLScript's plugin (vscode).                                                                                        | ![GitHub last commit](https://img.shields.io/github/last-commit/LiteLDev/LiteLoaderSE-Aids?display_timestamp=author&style=flat&label=%20&color=%23007EC6)                  |
+| [LiteLoaderSE Aids Magic Revision](https://github.com/luoqing510/LiteLoaderSE-Aids-Magic-Revision) |                                                                                                                                                 | ![GitHub last commit](https://img.shields.io/github/last-commit/luoqing510/LiteLoaderSE-Aids-Magic-Revision?display_timestamp=author&style=flat&label=%20&color=%23007EC6) |
+| [Legacy Script Engine Scaffold](https://github.com/leoweyr/LegacyScriptEngine_Scaffold)            | A utility for assisting in the development of Legacy Script Engine plugins, supporting a native development experience on the Node.js platform. | ![GitHub last commit](https://img.shields.io/github/last-commit/leoweyr/LegacyScriptEngine_Scaffold?display_timestamp=author&style=flat&label=%20&color=%23007EC6)         |
 
-### 单独使用（不推荐）
+## 📚 Documentation
 
-1. 下载本仓库并解压到一个方便的地方
-2. 请在你编写的插件文件最顶上添加一行注释
+You can find the Legacy Script Engine Plugin Development documentation [on the website](https://lse.levimc.org/).
 
-```js
-/// <reference path="[本仓库根目录路径]/src/index.d.ts" />
-```
+## 🤝 Contribute
 
-## ❓ 有疑问或者建议？
+Special thanks to the contributors, including but not limited to, people below:
 
-- 请前往[Issues](https://github.com/LiteLScript-Dev/HelperLib/issues)提出
-
-## ❗ 注意
-
-- 本存储库所包含的声明文件并非 100%准确无误，请以 LLSE 的源码和文档为准。本存储库的更新历史亦不对应 LLSE 项目的有关更改发生情况，不可作为此类参考。
-- 本存储库会定期被[codeberg](https://codeberg.org/moixsuki/HelperLib)上的同名仓库拉取以作镜像
-
-## 关于 LegacyScriptEngine
-
-- 我们将其对应的类型声明存储在 lse 分支下
-
-## 🏆 贡献
-
-- 感谢[HuoHuas001](https://github.com/HuoHuas001)的主要从文档转换
-- 感谢[moxisuki](https://github.com/moxisuki)的帮助
-- 感谢[lgc2333](https://github.com/lgc2333)的贡献
-- 感谢[harry-xi](https://github.com/harry-xi)的贡献
+<a href="https://github.com/LiteLDev/HelperLib/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=LiteLDev/HelperLib" alt="Contributors" />
+</a>
