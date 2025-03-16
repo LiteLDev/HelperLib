@@ -1,18 +1,21 @@
-# Legacy Script Engine API
+<!-- markdownlint-disable MD033 -->
+
+# Legacy Script Engine API Helper Lib
 
 Provides plugin API hints for development guidance on various native language platforms supported by the Legacy Script Engine.
 
 ## 🚀 Usage
 
-| Platform | How                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Common   | 1. with Visual Studio Code<br />① Download [LiteLoaderSE-Aids](https://marketplace.visualstudio.com/items?itemName=moxicat.LLScriptHelper) from its marketplace.<br />② Follow the guide to download the completion library.<br />③ Type `lls` then press `<Enter>` before you start writing the plugin to add the complement library introduction.<br /><br />2. standalone<br />① Download this repository and unzip it to a convenient place<br />② Add a comment line at the top of the plugin file you write: <br /><code>/// \<reference path="[root path of this repository]/platforms/common/src/index.d.ts"></code> |
-| Node.js  | Import the package as a development dependency into your TypeScript project, which fully supports type safety:<br />`npm install @levilamina/api --save-dev`                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+Please refer to the following table for the corresponding language reference.
+
+| Platform                      | Reference                                |
+| ----------------------------- | ---------------------------------------- |
+| 📒 JavaScript / 📘 TypeScript | [Here](./platforms/javascript/README.md) |
 
 ## 🤝 Contribute
 
 Special thanks to the contributors, including but not limited to, people below:
 
 <a href="https://github.com/LiteLDev/HelperLib/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=LiteLDev/HelperLib" />
+  <img src="https://contrib.rocks/image?repo=LiteLDev/HelperLib" alt="Contributors" />
 </a>

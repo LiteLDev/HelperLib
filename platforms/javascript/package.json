@@ -4,6 +4,9 @@
   "version": "2.14.1",
   "description": "TypeScript declaration files for LeviLamina LegacyScriptEngine.",
   "types": "src/index.d.ts",
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LiteLDev/HelperLib",
