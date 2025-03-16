@@ -14,16 +14,16 @@ declare class IntPos {
    * @param z z坐标（整数）
    * @param dimId 维度ID
    */
-  constructor(x: number, y: number, z: number, dimId: number);
+  constructor(x: number, y: number, z: number, dimId: number)
 
   /** x坐标（整数） */
-  x: number;
+  x: number
 
   /** y坐标（整数） */
-  y: number;
+  y: number
 
   /** z坐标（整数） */
-  z: number;
+  z: number
 
   /**
    * ### 维度文字名
@@ -32,7 +32,7 @@ declare class IntPos {
    * 下界 - `Nether`\
    * 末地 - `TheEnd`
    */
-  readonly dim: "主世界"|"下界"|"末地";
+  readonly dim: '主世界' | '下界' | '末地'
 
   /**
    * ### 维度ID
@@ -43,7 +43,7 @@ declare class IntPos {
    *
    * 如果某种情况下维度无效，或者无法获取，你会发现`dimid`的值为`-1`
    */
-  dimid: 0 | 1 | 2;
+  dimid: 0 | 1 | 2
 
-  toString(): string;
+  toString(): string
 }

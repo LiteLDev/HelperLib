@@ -8,7 +8,7 @@ declare namespace mc {
    *
    * @returns 是否执行成功
    */
-  function runcmd(cmd: string): boolean;
+  function runcmd(cmd: string): boolean
 
   /**
    * ### 执行一条后台命令（强化版）
@@ -22,11 +22,11 @@ declare namespace mc {
    */
   function runcmdEx(cmd: string): {
     /** 是否执行成功 */
-    success: boolean;
+    success: boolean
 
     /** BDS执行命令后的输出结果 */
-    output: string;
-  };
+    output: string
+  }
 
   /**
    * ### 模拟产生一个控制台命令输出
@@ -35,7 +35,7 @@ declare namespace mc {
    *
    * @returns 是否成功执行
    */
-  function sendCmdOutput(output: string): boolean;
+  function sendCmdOutput(output: string): boolean
 
   /**
    * ### 注册一条顶层命令
@@ -64,8 +64,8 @@ declare namespace mc {
     description: string,
     permission?: PermType,
     flag?: number,
-    alias?: string
-  ): Command;
+    alias?: string,
+  ): Command
 
   /**
    * @deprecated
@@ -90,9 +90,9 @@ declare namespace mc {
   function regPlayerCmd(
     cmd: string,
     description: string,
-    callback: (player: Player, args: Array<string>) => void,
-    level?: number
-  ): boolean;
+    callback: (player: Player, args: string[]) => void,
+    level?: number,
+  ): boolean
 
   /**
    * @deprecated
@@ -113,9 +113,9 @@ declare namespace mc {
    *
    * @returns 是否注册成功
    */
-  function regPlayerCmd(
+  function regConsoleCmd(
     cmd: string,
     description: string,
-    callback: (args: Array<string>) => void
-  ): boolean;
+    callback: (args: string[]) => void,
+  ): boolean
 }

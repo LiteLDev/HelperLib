@@ -21,117 +21,117 @@
  */
 declare class Entity {
   /** 实体名称 */
-  readonly name: string;
+  readonly name: string
 
   /** 实体标准类型名 */
-  readonly type: string;
+  readonly type: string
 
   /** 实体的游戏内id */
-  readonly id: number;
+  readonly id: number
 
   /** 实体所在坐标 */
-  readonly pos: FloatPos;
+  readonly pos: FloatPos
 
   /** 实体所在的方块坐标 */
-  readonly blockPos: IntPos;
+  readonly blockPos: IntPos
 
   /** 实体腿部所在坐标 */
-  readonly feetPos: FloatPos;
+  readonly feetPos: FloatPos
 
   /** 实体最大生命值 */
-  readonly maxHealth: number;
+  readonly maxHealth: number
 
   /** 实体当前生命值 */
-  readonly health: number;
+  readonly health: number
 
   /** 实体是否能飞行 */
-  readonly canFly: boolean;
+  readonly canFly: boolean
 
   /** 实体是否能被冻结 */
-  readonly canFreeze: boolean;
+  readonly canFreeze: boolean
 
   /** 实体是否能看到天空 */
-  readonly canSeeDaylight: boolean;
+  readonly canSeeDaylight: boolean
 
   /** 实体是否能拾取物品 */
-  readonly canPickupItems: boolean;
+  readonly canPickupItems: boolean
 
   /** 实体是否悬空 */
-  readonly inAir: boolean;
+  readonly inAir: boolean
 
   /** 实体是否在水中 */
-  readonly inWater: boolean;
+  readonly inWater: boolean
 
   /** 实体是否在岩浆中 */
-  readonly inLava: boolean;
+  readonly inLava: boolean
 
   /** 实体是否在雨中 */
-  readonly inRain: boolean;
+  readonly inRain: boolean
 
   /** 实体是否在雪中 */
-  readonly inSnow: boolean;
+  readonly inSnow: boolean
 
   /** 实体是否在墙上 */
-  readonly inWall: boolean;
+  readonly inWall: boolean
 
   /** 实体是否在水中或雨中 */
-  readonly inWaterOrRain: boolean;
+  readonly inWaterOrRain: boolean
 
   /** 实体是否在世界中 */
-  readonly inWorld: boolean;
+  readonly inWorld: boolean
 
   /** 实体当前速度 */
-  readonly speed: number;
+  readonly speed: number
 
   /** 实体当前朝向 */
-  readonly direction: DirectionAngle;
+  readonly direction: DirectionAngle
 
   /** 实体唯一标识符 */
-  readonly uniqueId: string;
+  readonly uniqueId: string
 
   /** 实体是否不可见 */
-  readonly isInvisible: boolean;
+  readonly isInvisible: boolean
 
   /** 实体是否在门户内 */
-  readonly isInsidePortal: boolean;
+  readonly isInsidePortal: boolean
 
   /** 实体是否信任 */
-  readonly isTrusting: boolean;
+  readonly isTrusting: boolean
 
   /** 实体是否接触到伤害方块 */
-  readonly isTouchingDamageBlock: boolean;
+  readonly isTouchingDamageBlock: boolean
 
   /** 实体是否着火 */
-  readonly isOnFire: boolean;
+  readonly isOnFire: boolean
 
   /** 实体是否在地面 */
-  readonly isOnGround: boolean;
+  readonly isOnGround: boolean
 
   /** 实体是否在热块上 */
-  readonly isOnHotBlock: boolean;
+  readonly isOnHotBlock: boolean
 
   /** 实体是否在交易 */
-  readonly isTrading: boolean;
+  readonly isTrading: boolean
 
   /** 实体是否正在骑行 */
-  readonly isRiding: boolean;
+  readonly isRiding: boolean
 
   /** 实体是否在跳舞 */
-  readonly isDancing: boolean;
+  readonly isDancing: boolean
 
   /** 实体是否在睡觉 */
-  readonly isSleeping: boolean;
+  readonly isSleeping: boolean
 
   /** 实体是否生气 */
-  readonly isAngry: boolean;
+  readonly isAngry: boolean
 
   /** 实体是否为幼体 */
-  readonly isBaby: boolean;
+  readonly isBaby: boolean
 
   /** 实体是否移动 */
-  readonly isMoving: boolean;
+  readonly isMoving: boolean
 
-  readonly posDelta: FloatPos;
+  readonly posDelta: FloatPos
 
   /**
    * ### 传送实体至指定位置
@@ -141,7 +141,7 @@ declare class Entity {
    *
    * @returns 是否成功传送
    */
-  teleport(pos: IntPos | FloatPos, rot?: DirectionAngle): boolean;
+  teleport(pos: IntPos | FloatPos, rot?: DirectionAngle): boolean
 
   /**
    * ### 传送实体至指定位置
@@ -159,15 +159,15 @@ declare class Entity {
     y: number,
     z: number,
     dimId: 0 | 1 | 2 | 3,
-    rot?: DirectionAngle
-  ): boolean;
+    rot?: DirectionAngle,
+  ): boolean
 
   /**
    * ### 杀死指定实体
    *
    * @returns 是否执行成功
    */
-  kill(): boolean;
+  kill(): boolean
 
   /**
    * ### 对实体造成伤害
@@ -179,7 +179,7 @@ declare class Entity {
    *
    * @returns 是否造成伤害
    */
-  hurt(damage: number, type?: number): boolean;
+  hurt(damage: number, type?: number): boolean
 
   /**
    * ### 治愈实体
@@ -198,7 +198,7 @@ declare class Entity {
    *
    * @returns 是否成功着火
    */
-  setOnFire(time: number): boolean;
+  setOnFire(time: number): boolean
 
   /**
    * ### 设置实体体积
@@ -225,7 +225,7 @@ declare class Entity {
    *
    * @returns 当前实体对象是不是玩家
    */
-  isPlayer(): boolean;
+  isPlayer(): boolean
 
   /**
    * ### 将实体对象转换玩家对象
@@ -235,14 +235,14 @@ declare class Entity {
    *
    * @returns 转换成的玩家对象，失败返回`null`
    */
-  toPlayer(): Player | null;
+  toPlayer(): Player | null
 
   /**
    * ### 判断一个实体对象是不是掉落物实体
    *
    * @returns 当前实体对象是不是掉落物实体
    */
-  isItemEntity(): boolean;
+  isItemEntity(): boolean
 
   /**
    * ### 获取掉落物实体中的物品对象
@@ -252,21 +252,21 @@ declare class Entity {
    *
    * @returns 获取到的物品对象，失败返回`null`
    */
-  toItem(): Item | null;
+  toItem(): Item | null
 
   /**
    * ### 获取实体当前站立所在的方块
    *
    * @returns 当前站立在的方块对象
    */
-  getBlockStandingOn(): Block;
+  getBlockStandingOn(): Block
 
   /**
    * ### 获取生物盔甲栏的容器对象
    *
    * @returns 此实体盔甲栏对应的容器对象
    */
-  getArmor(): Container;
+  getArmor(): Container
 
   /**
    * ### 判断生物是否拥有容器（盔甲栏除外）
@@ -275,14 +275,14 @@ declare class Entity {
    *
    * @returns 这个生物实体是否拥有容器
    */
-  hasContainer(): boolean;
+  hasContainer(): boolean
 
   /**
    * ### 获取生物所拥有的容器对象（盔甲栏除外）
    *
    * @returns 这个生物实体所拥有的容器对象
    */
-  getContainer(): Container;
+  getContainer(): Container
 
   /**
    * ### 刷新生物物品栏、盔甲栏
@@ -291,7 +291,7 @@ declare class Entity {
    *
    * @returns 是否成功刷新
    */
-  refreshItems(): boolean;
+  refreshItems(): boolean
 
   /**
    * ### 为实体增加一个Tag
@@ -300,7 +300,7 @@ declare class Entity {
    *
    * @returns 是否添加成功
    */
-  addTag(tag: string): boolean;
+  addTag(tag: string): boolean
 
   /**
    * ### 为为实体移除一个Tag
@@ -309,7 +309,7 @@ declare class Entity {
    *
    * @returns 是否移除成功
    */
-  removeTag(tag: string): boolean;
+  removeTag(tag: string): boolean
 
   /**
    * ### 检查实体是否拥有某个Tag
@@ -318,21 +318,21 @@ declare class Entity {
    *
    * @returns 是否拥有这个Tag
    */
-  hasTag(tag: string): boolean;
+  hasTag(tag: string): boolean
 
   /**
    * ### 返回实体拥有的所有Tag列表
    *
    * @returns 实体所有的 tag 字符串列表
    */
-  getAllTags(): Array<string>;
+  getAllTags(): string[]
 
   /**
    * ### 获取实体对应的NBT对象
    *
    * @returns 实体的NBT对象
    */
-  getNbt(): NbtCompound;
+  getNbt(): NbtCompound
 
   /**
    * ### 写入实体对应的NBT对象
@@ -341,19 +341,19 @@ declare class Entity {
    *
    * @returns 是否成功写入
    */
-  setNbt(nbt: NbtCompound): boolean;
+  setNbt(nbt: NbtCompound): boolean
 
   /**
    * @deprecated
    * @alias {@linkcode getNbt()}
    */
-  getTag(): NbtCompound;
+  getTag(): NbtCompound
 
   /**
    * @deprecated
    * @alias {@linkcode setNbt()}
    */
-  setTag(nbt: NbtCompound): boolean | null;
+  setTag(nbt: NbtCompound): boolean | null
 
   /**
    * ### 获取视线方向实体
@@ -362,7 +362,7 @@ declare class Entity {
    *
    * @returns 视线方向实体，如果获取失败，返回 `null`
    */
-  getEntityFromViewVector(maxDistance?: number): Entity | null;
+  getEntityFromViewVector(maxDistance?: number): Entity | null
 
   /**
    * ### 获取视线方向方块
@@ -378,8 +378,8 @@ declare class Entity {
     includeLiquid?: boolean,
     solidOnly?: boolean,
     maxDistance?: number,
-    fullOnly?: boolean
-  ): Block | null;
+    fullOnly?: boolean,
+  ): Block | null
 
   /**
    * ### 快速执行Molang表达式
@@ -390,9 +390,9 @@ declare class Entity {
    *
    * @returns 表达式执行结果
    */
-  quickEvalMolangScript(str: string): number;
+  quickEvalMolangScript(str: string): number
 
-  asPointer(): NativePointer | null;
+  asPointer(): NativePointer | null
 
   /**
    * ### 缩放实体
@@ -401,14 +401,14 @@ declare class Entity {
    *
    * @returns 是否缩放成功
    */
-  setScale(scale: number): boolean;
+  setScale(scale: number): boolean
 
   /**
    * ### 熄灭实体
    *
    * @returns 是否熄灭成功
    */
-  stopFire(): boolean;
+  stopFire(): boolean
 
   /**
    * @deprecated
@@ -419,7 +419,7 @@ declare class Entity {
    * @returns 到坐标的距离(方块)
    *
    */
-  distanceToPos(pos: Entity | Player | IntPos | FloatPos): number;
+  distanceToPos(pos: Entity | Player | IntPos | FloatPos): number
 
   /**
    *
@@ -430,7 +430,7 @@ declare class Entity {
    * @returns 到坐标的距离(方块)
    *
    */
-  distanceToSqr(pos: Entity | Player | IntPos | FloatPos): number;
+  distanceToSqr(pos: Entity | Player | IntPos | FloatPos): number
 
   /**
    *
@@ -441,98 +441,98 @@ declare class Entity {
    * @returns 到坐标的距离(方块)
    *
    */
-  distanceTo(pos: Entity | Player | IntPos | FloatPos): number;
+  distanceTo(pos: Entity | Player | IntPos | FloatPos): number
 
   /** 设置生命值 */
-  setHealth(health: number): boolean;
+  setHealth(health: number): boolean
 
   /** 设置生命值上限 */
-  setMaxHealth(health: number): boolean;
+  setMaxHealth(health: number): boolean
 
   /**
    * 设置伤害吸收属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setAbsorption(value: number): boolean;
+  setAbsorption(value: number): boolean
 
   /**
    * 设置攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setAttackDamage(value: number): boolean;
+  setAttackDamage(value: number): boolean
 
   /**
    * 最大攻击伤害属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMaxAttackDamage(value: number): boolean;
+  setMaxAttackDamage(value: number): boolean
 
   /**
    * 设置跟随范围
    * @param value 新的值
    * @returns 是否成功
    */
-  setFollowRange(value: number): boolean;
+  setFollowRange(value: number): boolean
 
   /**
    * 设置击退抵抗属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setKnockbackResistance(value: 0 | 1): boolean;
+  setKnockbackResistance(value: 0 | 1): boolean
 
   /**
    * 设置幸运属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLuck(value: number): boolean;
+  setLuck(value: number): boolean
 
   /**
    * 设置移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setMovementSpeed(value: number): boolean;
+  setMovementSpeed(value: number): boolean
 
   /**
    * 置水下移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setUnderwaterMovementSpeed(value: number): boolean;
+  setUnderwaterMovementSpeed(value: number): boolean
 
   /**
    * 设置岩浆上移动速度属性
    * @param value 新的值
    * @returns 是否成功
    */
-  setLavaMovementSpeed(value: number): boolean;
+  setLavaMovementSpeed(value: number): boolean
 
   /**
    * 使指定实体刷新消失
    * @returns 是否成功执行
    */
-  despawn(): boolean;
+  despawn(): boolean
 
   /**
    * 移除指定实体
    * @returns 是否成功执行
    */
-  remove(): boolean;
+  remove(): boolean
 
-  setPosDelta(arg1: FloatPos): boolean;
+  setPosDelta(arg1: FloatPos): boolean
 
-  setPosDelta(arg1: number, arg2: number, arg3: number): boolean;
+  setPosDelta(arg1: number, arg2: number, arg3: number): boolean
 
   /**
    * 获取实体全部药水效果
    * @returns 实体所有的药水效果id
    */
-  getAllEffects(): number[];
+  getAllEffects(): number[]
 
   /**
    * 为实体添加一个药水效果
@@ -542,19 +542,14 @@ declare class Entity {
    * @param showParticles 是否显示粒子
    * @returns 是否成功
    */
-  addEffect(
-    id: number,
-    tick: number,
-    level: number,
-    showParticles: boolean
-  ): boolean;
+  addEffect(id: number, tick: number, level: number, showParticles: boolean): boolean
 
   /**
    * 为实体移除一个药水效果
    * @param id 药水效果的id
    * @returns 是否成功
    */
-  removeEffect(id: number): boolean;
+  removeEffect(id: number): boolean
 }
 
 declare class LLSE_Entity extends Entity {}

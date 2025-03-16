@@ -15,19 +15,19 @@
  */
 declare class Device {
   /** 玩家设备的IP地址 */
-  readonly ip: string;
+  readonly ip: string
 
   /** 玩家的平均网络延迟时间（ms） */
-  readonly avgPing: number;
+  readonly avgPing: number
 
   /** 玩家的平均网络丢包率（%） */
-  readonly avgPacketLoss: number;
+  readonly avgPacketLoss: number
 
   /** 玩家的网络延迟时间（ms） */
-  readonly lastPing: number;
+  readonly lastPing: number
 
   /** 玩家的网络丢包率（%） */
-  readonly lastPacketLoss: number;
+  readonly lastPacketLoss: number
 
   /**
    * ### 玩家设备的操作系统类型
@@ -65,13 +65,13 @@ declare class Device {
     | `Nintendo`
     | `Xbox`
     | `WindowsPhone`
-    | `Unknown`;
+    | `Unknown`
 
   /** 玩家连接的地址 */
-  readonly serverAddress: string;
+  readonly serverAddress: string
 
   /** 玩家客户端的识别码ID */
-  readonly clientId: string;
+  readonly clientId: string
 
   /** 输入模式 */
   readonly inputMode: number
@@ -80,4 +80,4 @@ declare class Device {
   readonly playMode: number
 }
 
-declare class LLSE_Device extends Device{}
+declare class LLSE_Device extends Device {}

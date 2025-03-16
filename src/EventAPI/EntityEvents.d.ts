@@ -101,129 +101,129 @@ declare enum DamageCause {
 declare namespace mc {
   /** 生物死亡 */
   function listen(
-    event: "onMobDie",
-    listener: (mob: Entity, source: Entity, cause: number) => void
-  ): boolean;
+    event: 'onMobDie',
+    listener: (mob: Entity, source: Entity, cause: number) => void,
+  ): boolean
 
   /** 生物受伤（包括玩家） */
   function listen(
-    event: "onMobHurt",
+    event: 'onMobHurt',
     listener: (
       mob: Entity,
       source: Entity | null,
       damage: number,
-      cause: DamageCause | number
-    ) => boolean | void
-  ): boolean;
+      cause: DamageCause | number,
+    ) => boolean | void,
+  ): boolean
 
   /** 发生由实体引起的爆炸 */
   function listen(
-    event: "onEntityExplode",
+    event: 'onEntityExplode',
     listener: (
       source: Entity,
       pos: FloatPos,
       radius: number,
       maxResistance: number,
       isDestroy: boolean,
-      isFire: boolean
-    ) => boolean | void
-  ): boolean;
+      isFire: boolean,
+    ) => boolean | void,
+  ): boolean
 
   /** 发生于实体生成
    * @deprecated 请使用 onMobTrySpawn 和 onMobSpawned 事件作为替代
    */
   function listen(
-    event: "onMobSpawn",
-    listener: (typeName: string, pos: FloatPos) => boolean | void
-  ): boolean;
+    event: 'onMobSpawn',
+    listener: (typeName: string, pos: FloatPos) => boolean | void,
+  ): boolean
 
   /**
    * 发生于实体尝试自然生成
-   * 
+   *
    * 在回调函数中:
    * * `typeName`: 生成实体名称
    * * `pos`: 生成的坐标
    */
   function listen(
-    event: "onMobTrySpawn",
-    listener: (typeName: string, pos: FloatPos) => boolean | void
-  ): boolean;
+    event: 'onMobTrySpawn',
+    listener: (typeName: string, pos: FloatPos) => boolean | void,
+  ): boolean
 
   /**
    * 发生于实体自然生成完成
-   * 
+   *
    * 在回调函数中:
    * * `entity`: 生成的实体对象
    * * `pos`: 生成的坐标
    */
   function listen(
-    event: "onMobSpawned",
-    listener: (entity: Entity, pos: FloatPos) => void
-  ): boolean;
+    event: 'onMobSpawned',
+    listener: (entity: Entity | null, pos: FloatPos) => void,
+  ): boolean
 
   /** 实体被弹射物击中 */
   function listen(
-    event: "onProjectileHitEntity",
-    listener: (entity: Entity, source: Entity) => void
-  ): boolean;
+    event: 'onProjectileHitEntity',
+    listener: (entity: Entity, source: Entity) => void,
+  ): boolean
 
   /** 凋零破坏方块 */
   function listen(
-    event: "onWitherBossDestroy",
-    listener: (witherBoss: Entity, AAbb: IntPos, aaBB: IntPos) => boolean | void
-  ): boolean;
+    event: 'onWitherBossDestroy',
+    listener: (witherBoss: Entity, AAbb: IntPos, aaBB: IntPos) => boolean | void,
+  ): boolean
 
   /**
    * 末影龙破坏方块
-   * 
+   *
    * 在回调函数中:
    * * `EnderDragon`: 末影龙的实体对象
    * * `block`: 末影龙破坏的方块对象
    */
   function listen(
-    event: "onEnderDragonDestroy",
-    listener: (EnderDragon: Entity, block: Block) => boolean | void
-  ): boolean;
+    event: 'onEnderDragonDestroy',
+    listener: (EnderDragon: Entity, block: Block) => boolean | void,
+  ): boolean
 
   /** 生物骑乘 */
   function listen(
-    event: "onRide",
-    listener: (entity1: Entity, entity2: Entity) => boolean | void
-  ): boolean;
+    event: 'onRide',
+    listener: (entity1: Entity, entity2: Entity) => boolean | void,
+  ): boolean
 
   /** 生物踩压力板 */
   function listen(
-    event: "onStepOnPressurePlate",
-    listener: (entity: Entity, pressurePlate: Block) => boolean | void
-  ): boolean;
+    event: 'onStepOnPressurePlate',
+    listener: (entity: Entity, pressurePlate: Block) => boolean | void,
+  ): boolean
 
   /** 弹射物创建 */
   function listen(
-    event: "onSpawnProjectile",
-    listener: (shooter: Entity, type: string) => boolean | void
-  ): boolean;
+    event: 'onSpawnProjectile',
+    listener: (shooter: Entity, type: string) => boolean | void,
+  ): boolean
 
   /** 弹射物创建完毕 */
   function listen(
-    event: "onProjectileCreated",
-    listener: (shooter: Entity, entity: Entity) => boolean | void
-  ): boolean;
+    event: 'onProjectileCreated',
+    listener: (shooter: Entity, entity: Entity) => boolean | void,
+  ): boolean
 
   /** NPC执行命令 */
   function listen(
-    event: "onNpcCmd",
-    listener: (npc: Entity, pl: Player, cmd: string) => boolean | void
-  ): boolean;
+    event: 'onNpcCmd',
+    listener: (npc: Entity, pl: Player, cmd: string) => boolean | void,
+  ): boolean
 
   /** 操作盔甲架 */
   function listen(
-    event: "onChangeArmorStand",
-    listener: (as: Entity, pl: Player, slot: number) => boolean | void
-  ): boolean;
+    event: 'onChangeArmorStand',
+    listener: (as: Entity, pl: Player, slot: number) => boolean | void,
+  ): boolean
 
   /** 实体转变 */
   function listen(
-    event: "onEntityTransformation",
-    listener: (uniqueId: string, entity: Entity) => void
-  ): boolean;
+    event: 'onEntityTransformation',
+    listener: (uniqueId: string, entity: Entity) => void,
+  ): boolean
 }

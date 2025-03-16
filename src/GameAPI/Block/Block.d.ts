@@ -15,67 +15,67 @@
  */
 declare class Block {
   /** 游戏内显示的方块名称（例：`Stone`） */
-  readonly name: string;
+  readonly name: string
 
   /** 方块标准类型名（例：`minecraft:stone`） */
-  readonly type: string;
+  readonly type: string
 
   /** 方块的游戏内id */
-  readonly id: number;
+  readonly id: number
 
   /** 方块所在坐标 */
-  readonly pos: IntPos;
+  readonly pos: IntPos
 
   /** 方块数据值 */
-  readonly tileData: number;
+  readonly tileData: number
 
   /** The block variant */
-  readonly variant: number;
+  readonly variant: number
 
   /** 方块透明度 */
-  readonly translucency: number;
+  readonly translucency: number
 
   /** 方块厚度 */
-  readonly thickness: number;
+  readonly thickness: number
 
   /** 方块是否为空气 */
-  readonly isAir: boolean;
+  readonly isAir: boolean
 
   /** 是否为可弹跳方块 */
-  readonly isBounceBlock: boolean;
+  readonly isBounceBlock: boolean
 
   /** 是否为按钮方块 */
-  readonly isButtonBlock: boolean;
+  readonly isButtonBlock: boolean
 
   /** 是否为农作物方块 */
-  readonly isCropBlock: boolean;
+  readonly isCropBlock: boolean
 
   /** 是否为门方块 */
-  readonly isDoorBlock: boolean;
+  readonly isDoorBlock: boolean
 
   /** 是否为栅栏方块 */
-  readonly isFenceBlock: boolean;
+  readonly isFenceBlock: boolean
 
   /** 是否为栅栏门方块 */
-  readonly isFenceGateBlock: boolean;
+  readonly isFenceGateBlock: boolean
 
   /** 是否为细栅栏方块 */
-  readonly isThinFenceBlock: boolean;
+  readonly isThinFenceBlock: boolean
 
   /** 是否为重的方块 */
-  readonly isHeavyBlock: boolean;
+  readonly isHeavyBlock: boolean
 
   /** 是否为干方块 */
-  readonly isStemBlock: boolean;
+  readonly isStemBlock: boolean
 
   /** 是否为半砖方块 */
-  readonly isSlabBlock: boolean;
+  readonly isSlabBlock: boolean
 
   /** 方块是否为不可破坏 */
-  readonly isUnbreakable: boolean;
+  readonly isUnbreakable: boolean
 
   /** 方块是否可阻挡水 */
-  readonly isWaterBlockingBlock: boolean;
+  readonly isWaterBlockingBlock: boolean
 
   /**
    * ### 破坏方块
@@ -83,7 +83,7 @@ declare class Block {
    * @param drop 是否生成掉落物
    * @returns 是否成功破坏
    */
-  destroy(drop: boolean): boolean;
+  destroy(drop: boolean): boolean
 
   /**
    * ### 获取方块对应的NBT对象
@@ -92,13 +92,13 @@ declare class Block {
    *
    * @returns 方块的NBT对象
    */
-  getNbt(): NbtCompound;
+  getNbt(): NbtCompound
 
   /**
    * @deprecated
    * @alias {@linkcode getNbt()}
    */
-  getTag(): NbtCompound;
+  getTag(): NbtCompound
 
   /**
    * ### 写入方块对应的NBT对象
@@ -111,13 +111,13 @@ declare class Block {
    *
    * @returns 是否成功写入
    */
-  setNbt(nbt: NbtCompound): boolean;
+  setNbt(nbt: NbtCompound): boolean
 
   /**
    * @deprecated
    * @alias {@linkcode setNbt()}
    */
-  setTag(nbt: NbtCompound): boolean;
+  setTag(nbt: NbtCompound): boolean
 
   /**
    * ### 获取方块的BlockState
@@ -130,7 +130,7 @@ declare class Block {
    *
    * @returns 方块的BlockState
    */
-  getBlockState(): object;
+  getBlockState(): object
 
   /**
    * ### 判断方块是否拥有容器
@@ -141,7 +141,7 @@ declare class Block {
    *
    * @returns 这个方块是否拥有容器
    */
-  hasContainer(): boolean;
+  hasContainer(): boolean
 
   /**
    * ### 获取方块所拥有的容器对象
@@ -152,7 +152,7 @@ declare class Block {
    *
    * @returns 这个方块所拥有的容器对象
    */
-  getContainer(): Container;
+  getContainer(): Container
 
   /**
    * ### 判断方块是否拥有方块实体
@@ -161,7 +161,7 @@ declare class Block {
    *
    * @returns 这个方块是否拥有方块实体
    */
-  hasBlockEntity(): boolean;
+  hasBlockEntity(): boolean
 
   /**
    * ### 获取方块所拥有的方块实体
@@ -170,7 +170,7 @@ declare class Block {
    *
    * @returns 这个方块所拥有的方块实体
    */
-  getBlockEntity(): BlockEntity;
+  getBlockEntity(): BlockEntity
 
   /**
    * ### 删除方块所拥有的方块实体
@@ -179,10 +179,9 @@ declare class Block {
    *
    * @returns 是否成功删除
    */
-  removeBlockEntity(): boolean;
+  removeBlockEntity(): boolean
 
-  asPointer(): NativePointer;
+  asPointer(): NativePointer
 }
 
-
-declare class LLSE_Block extends Block{}
+declare class LLSE_Block extends Block {}

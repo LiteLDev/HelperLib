@@ -19,10 +19,10 @@
  */
 declare class Container {
   /** 容器拥有的格子总数 */
-  readonly size: number;
+  readonly size: number
 
   /** 容器的类型名 */
-  readonly type: string;
+  readonly type: string
 
   /**
    * ### 放入物品对象到容器中
@@ -33,7 +33,7 @@ declare class Container {
    *
    * @returns 是否成功增加
    */
-  addItem(item: Item): boolean;
+  addItem(item: Item): boolean
 
   /**
    * ### 放入物品对象到容器的第一个空格子
@@ -46,7 +46,7 @@ declare class Container {
    *
    * @returns 是否成功增加
    */
-  addItemToFirstEmptySlot(item: Item): boolean;
+  addItemToFirstEmptySlot(item: Item): boolean
 
   /**
    * ### 检查容器中是否（有空间）可以放入此物品
@@ -55,7 +55,7 @@ declare class Container {
    *
    * @returns 是否可以放入
    */
-  hasRoomFor(item: Item): boolean;
+  hasRoomFor(item: Item): boolean
 
   /**
    * ##d 减少容器中的某个物品对象
@@ -65,7 +65,7 @@ declare class Container {
    *
    * @returns 是否成功减少
    */
-  removeItem(index: number, count: number): boolean;
+  removeItem(index: number, count: number): boolean
 
   /**
    * ### 获取容器某个格子的物品对象
@@ -78,7 +78,7 @@ declare class Container {
    *
    * @returns 格子位置的物品对象
    */
-  getItem(index: number): Item;
+  getItem(index: number): Item
 
   /**
    * ### 设置容器某个格子的物品对象
@@ -90,7 +90,7 @@ declare class Container {
    *
    * @returns 是否设置成功
    */
-  setItem(index: number, item: Item): boolean;
+  setItem(index: number, item: Item): boolean
 
   /**
    * ### 获取容器所有格子的物品对象列表
@@ -101,7 +101,7 @@ declare class Container {
    *
    * @returns 容器中所有的物品对象
    */
-  getAllItems(): Array<Item>;
+  getAllItems(): Item[]
 
   /**
    * ### 清空容器
@@ -110,28 +110,28 @@ declare class Container {
    *
    * @returns 是否成功清空
    */
-  removeAllItems(): boolean;
+  removeAllItems(): boolean
 
   /**
    * ### 判断容器是否为空
    *
    * @returns 判断容器是否为空
    */
-  isEmpty(): boolean;
+  isEmpty(): boolean
 
   /**
    * @deprecated
    * @alias {@linkcode getItem()}
    */
-  getSlot(index: number): Item;
+  getSlot(index: number): Item
 
   /**
    * @deprecated
    * @alias {@linkcode getAllItems()}
    */
-  getAllSlots(): Array<Item>;
+  getAllSlots(): Item[]
 
-  asPointer(): NativePointer;
+  asPointer(): NativePointer
 }
 
-declare class LLSE_Container extends Container{}
+declare class LLSE_Container extends Container {}

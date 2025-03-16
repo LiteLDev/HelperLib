@@ -29,22 +29,21 @@ declare class NBT {
    * @param snbt 你要解析的SNBT字符串
    * @returns NbtCompound 生成的NBT对象
    */
-  static parseSNBT(snbt: string): NbtCompound | null;
+  static parseSNBT(snbt: string): NbtCompound | null
 
   /**
    * 从二进制 NBT 数据生成 NBT 标签对象
    * @param nbt 你要解析的二进制 NBT 数据
    * @returns NbtCompound 生成的NBT对象
    */
-  static parseBinaryNBT(nbt: ArrayBuffer): NbtCompound | null;
+  static parseBinaryNBT(nbt: ArrayBuffer): NbtCompound | null
 
   /** @deprecated */
-  static newTag(arg:NbtEnum):NbtType
+  static newTag(arg: NbtEnum): NbtType
 
   /** @deprecated */
-  static createTag(arg:NbtEnum):NbtType
+  static createTag(arg: NbtEnum): NbtType
 }
-
 
 declare type NbtType =
   | NbtEnd
@@ -57,8 +56,8 @@ declare type NbtType =
   | NbtByteArray
   | NbtString
   | NbtList
-  | NbtCompound;
-declare type NbtValue = 
+  | NbtCompound
+declare type NbtValue =
   | NbtEnd
   | NbtByte
   | NbtShort
@@ -67,6 +66,6 @@ declare type NbtValue =
   | NbtFloat
   | NbtDouble
   | NbtByteArray
-  | NbtString;
+  | NbtString
 
 declare type NbtEnum = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10

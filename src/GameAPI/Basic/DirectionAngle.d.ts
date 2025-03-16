@@ -13,13 +13,13 @@ declare class DirectionAngle {
    * @param pitch 俯仰角（-90° ~ 90°）
    * @param yaw 偏航角（旋转角）
    */
-  constructor(pitch: number, yaw: number);
+  constructor(pitch: number, yaw: number)
 
   /** 俯仰角（-90° ~ 90°） */
-  pitch: number;
+  pitch: number
 
   /** 偏航角（旋转角） */
-  yaw: number;
+  yaw: number
 
   /**
    * ### 将偏航角转换为基本朝向
@@ -29,7 +29,7 @@ declare class DirectionAngle {
    *
    * @returns 当前方向角对象所指示的基本朝向
    */
-  toFacing(): 0 | 1 | 2 | 3;
+  toFacing(): 0 | 1 | 2 | 3
 
-  toString(): string;
+  toString(): string
 }

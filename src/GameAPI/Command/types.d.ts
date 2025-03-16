@@ -88,6 +88,9 @@ declare enum ParamType {
 
   /** `null` - WildcardCommandSelector\<Actor\> */
   WildcardSelector,
+
+  /** `null` */
+  BlockState,
 }
 
 /**
