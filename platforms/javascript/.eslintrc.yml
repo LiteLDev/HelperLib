@@ -5,7 +5,6 @@ env:
 
 ignorePatterns:
   - 'node_modules/'
-  - 'lib/'
   - 'dist/'
 
 extends:
@@ -28,3 +27,6 @@ rules:
         - blankLine: always
           prev: '*'
           next: method
+  generator-star-spacing:
+    - error
+    - before

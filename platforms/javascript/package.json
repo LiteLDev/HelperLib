@@ -1,36 +1,37 @@
 {
-  "name": "levi-lamina-lse",
+  "name": "@levimc-lse/types",
+  "packageManager": "yarn@4.7.0",
   "version": "2.14.1",
-  "description": "",
-  "private": true,
-  "main": "",
+  "description": "TypeScript declaration files for LeviLamina LegacyScriptEngine.",
   "types": "src/index.d.ts",
-  "directories": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LiteLDev/HelperLib"
+    "url": "git+https://github.com/LiteLDev/HelperLib",
+    "directory": "platforms/javascript"
   },
   "author": {
     "name": "LiteLDev",
     "url": "https://github.com/LiteLDev/HelperLib/graphs/contributors"
   },
-  "license": "LGPL-3.0-only",
+  "license": "LGPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/LiteLDev/HelperLib/issues"
   },
   "homepage": "https://github.com/LiteLDev/HelperLib#readme",
   "devDependencies": {
     "@cordisjs/eslint-config": "^1.1.1",
+    "@types/node": "^22.10.7",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
+    "dumble": "^0.2.1",
     "eslint": "^8.57.1",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-n": "^16.6.2",
     "eslint-plugin-promise": "^6.6.0",
     "eslint-plugin-react": "^7.37.4",
-    "eslint-plugin-react-hooks": "^4.6.2"
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
   }
 }

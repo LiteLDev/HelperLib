@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "esnext",
+    "declaration": true,
+    "composite": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true,
+    "removeComments": true,
+    "newLine": "lf",
+    "strict": true,
+    "resolveJsonModule": false,
+    "moduleResolution": "bundler",
+    "emitDeclarationOnly": true // use esbuild
+  }
+}
