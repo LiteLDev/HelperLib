@@ -1,12 +1,13 @@
 {
   "name": "@levilamina/api",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Provides Legacy Script Engine plugin API hints for development guidance on Node.js with full TypeScript support.",
   "bugs": "https://github.com/LiteLDev/HelperLib/issues",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "clean": "rimraf dist",
@@ -28,7 +29,8 @@
   "license": "LGPL-3.0-or-later",
   "devDependencies": {
     "rimraf": "^6.0.1",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "conventional-changelog-cli": "^5.0.0"
   },
   "repository": {
     "type": "git",
