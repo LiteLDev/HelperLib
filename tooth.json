@@ -1,17 +1,17 @@
 {
-    "format_version": 1,
-    "tooth": "github.com/LiteLScript-Dev/HelperLib",
-    "version": "2.14.1",
-    "dependencies": {},
-    "information": {
-        "name": "HelperLib",
-        "description": "TypeScript.d.ts file with auto-completion and code hints for LiteLScript developers",
-        "homepage": "https://github.com/LiteLScript-Dev/HelperLib"
-    },
-    "placement": [
-        {
-            "source": "src/*",
-            "destination": "declaration/llse/*"
-        }
-    ]
+  "format_version": 1,
+  "tooth": "github.com/LiteLDev/HelperLib",
+  "version": "2.14.1",
+  "dependencies": {},
+  "information": {
+    "name": "HelperLib",
+    "description": "TypeScript.d.ts file with auto-completion and code hints for LiteLScript developers",
+    "homepage": "https://github.com/LiteLDev/HelperLib"
+  },
+  "placement": [
+    {
+      "source": "src/*",
+      "destination": "declaration/llse/*"
+    }
+  ]
 }
