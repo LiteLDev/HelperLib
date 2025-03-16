@@ -11,6 +11,7 @@ Please refer to the following table for the corresponding language reference.
 | Platform                      | Reference                                |
 | ----------------------------- | ---------------------------------------- |
 | 📒 JavaScript / 📘 TypeScript | [Here](./platforms/javascript/README.md) |
+| 🐍 Python                     | [Here](./platforms/python/README.md)     |
 
 ## 🤝 Contribute
 

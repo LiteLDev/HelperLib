@@ -1,0 +1,127 @@
+[project]
+name = "llpy-helper-lib"
+version = "2.13.1"
+description = "A typing & util lib for LLSE Python runtime"
+authors = [{ name = "LgCookie", email = "lgc2333@126.com" }]
+dependencies = ["typing-extensions>=4.5.0"]
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.optional-dependencies]
+dev = [
+    # pip
+    "setuptools>=76.0.0",
+    "pip>=25.0.1",
+    # tools
+    "basedpyright>=1.28.1",
+    "ruff>=0.11.0",
+]
+
+[tool.basedpyright]
+pythonVersion = "3.10"
+typeCheckingMode = "standard"
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+ignore = [
+    "B008",
+    "B905",
+    # "COM812",
+    "E501",
+    "F821",    # conflict with pyright
+    "FBT001",
+    "FBT002",
+    "ISC001",
+    "PERF203",
+    "PGH003",
+    "PLC04",
+    "PLC2701",
+    "PLR09",
+    "PLR1702",
+    "PLR2004",
+    "PLR6301",
+    "PLW0603",
+    "PLW1641",
+    "PLW2901",
+    "RUF001",
+    "RUF002",
+    "RUF003",
+    "RUF006",
+    "RUF029",
+    "RUF100",
+    "S101",
+    "S311",
+    "S404",
+    "SIM117",
+    "TC001",
+    "TRY002",
+    "TRY003",
+    "W505",
+]
+select = [
+    "A",
+    "ANN001",
+    "ARG",
+    "ASYNC",
+    "B",
+    "C4",
+    "COM",
+    "DTZ",
+    "E",
+    "F",
+    "FAST",
+    "FBT",
+    "FLY",
+    "FURB",
+    "I",
+    "INP",
+    "ISC",
+    "N",
+    "NPY",
+    "PD",
+    "PERF",
+    "PGH",
+    "PIE",
+    "PL",
+    "PT",
+    "PTH",
+    "PYI",
+    "Q",
+    "RET",
+    "RSE",
+    "RUF",
+    "S",
+    "SIM",
+    "SLF",
+    "SLOT",
+    "TC",
+    "TRY",
+    "UP",
+    "W",
+    "YTT",
+]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+detect-same-package = true
+extra-standard-library = ["typing_extensions"]
+split-on-trailing-comma = true
+
+[tool.ruff.lint.flake8-type-checking]
+quote-annotations = true
+exempt-modules = [
+    "types",
+    "typing",
+    "typing_extensions",
+    "collections",
+    "pathlib",
+    "nonebot",
+    "nonebot_plugin_alconna",
+]
