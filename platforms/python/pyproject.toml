@@ -1,6 +1,6 @@
 [project]
 name = "llpy-helper-lib"
-version = "2.13.1"
+version = "2.13.1.post1"
 description = "A typing & util lib for LLSE Python runtime"
 authors = [{ name = "LgCookie", email = "lgc2333@126.com" }]
 dependencies = ["typing-extensions>=4.5.0"]
