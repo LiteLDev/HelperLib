@@ -14,14 +14,6 @@ Use `pip` or other Python package managers to install globally for type hints.
 pip install llpy-helper-lib
 ```
 
-or you can use lip to install in global LLSE Python `site-packages` path
-
-或者使用 `lip` 安装到全局 LLSE Python `site-packages` 目录
-
-```shell
-lip i llpy-helper-lib
-```
-
 ## Usage / 用法
 
 **[example.py](./example.py)**
