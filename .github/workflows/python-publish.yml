@@ -2,8 +2,8 @@ name: Publish Python 🐍 distributions 📦 to PyPI
 
 on:
   push:
-    branches: [master]
-    tags: ['python-v*']
+    tags:
+      - python-v*
   workflow_dispatch:
 
 jobs:
